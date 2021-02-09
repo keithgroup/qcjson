@@ -1,0 +1,51 @@
+{
+    "schema_name": "qc_schema_output",
+    "schema_version": 1,
+    "qcjson_creator_version": "0.2.0",
+    "provenance": {
+        "creator": "ORCA",
+        "version": "4.2.0"
+    },
+    "molecule": {
+        "geometry": [[3.05495, 5.38999, 5.5298], [4.34528, 5.52832, 1.93888], [3.20539, 6.60048, 5.37104], [1.92704, 5.13131, 5.9609], [3.88266, 4.94664, 6.32833], [3.21223, 4.8632, 4.4156], [4.02066, 4.41381, 1.74534], [4.64708, 6.64588, 2.1399], [2.56592, 7.94495, 7.6808], [3.3278, 7.57487, 8.22165], [2.71393, 7.53665, 6.79237]],
+        "symbols": [ "B", "C", "H", "H", "H", "H", "O", "O", "O", "H", "H" ]
+    },
+    "molecular_charge": -1,
+    "molecular_multiplicity": 1,
+    "name": "neb-bare.0-orca.sp-bp86.def2svp",
+    "atomic_numbers": [5, 6, 1, 1, 1, 1, 8, 8, 8, 1, 1],
+    "driver": "energy",
+    "return_result": -292.071721944,
+    "model": {
+        "method": "BP86",
+        "basis": "Def2-SVP",
+        "aux_basis": "def2/J"
+    },
+    "keywords": {
+        "dispersion": "D3BJ",
+        "scf_convergence_tolerance": "Tight",
+        "rij_approximation": true,
+        "scf_grid_level": 4,
+        "final_grid_level": 5
+    },
+    "properties": {
+        "scf_total_energy": -292.071721944,
+        "scf_dispersion_correction_energy": -0.006705274,
+        "scf_iterations": 18,
+        "scf_dipole_moment": [ 1.6891, 0.46825, -3.18522 ],
+        "return_energy": -292.071721944,
+        "calcinfo_nbasis": 100,
+        "calcinfo_nmo": 100,
+        "nuclear_repulsion_energy": 135.87324654,
+        "scf_one_electron_energy": -674.24991282,
+        "scf_two_electron_energy": 246.31164961,
+        "scf_xc_energy": -37.568847681157,
+        "mulliken_charges": [ -0.481144, 0.220287, -0.132769, -0.100282, -0.117701, -0.094872, -0.124382, -0.118259, -0.352425, 0.140923, 0.160623 ],
+        "loewdin_charges": [ -0.649044, 0.105467, -0.069678, -0.066282, -0.073272, -0.071678, -0.063886, -0.05888, -0.20135, 0.079156, 0.069446 ],
+        "alpha_homo_energy": -0.032595,
+        "alpha_homo_lumo_gap_energy": 0.1464,
+        "beta_homo_energy": -0.032595,
+        "beta_homo_lumo_gap_energy": 0.1464
+    },
+    "success": true
+}

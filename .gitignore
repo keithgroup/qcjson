@@ -1,0 +1,5 @@
+.pytest_cache
+
+# IDE settings
+.vscode/
+.idea/

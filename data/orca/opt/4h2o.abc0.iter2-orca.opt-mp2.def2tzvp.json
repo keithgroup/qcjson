@@ -1,0 +1,711 @@
+[
+    {
+        "schema_name": "qc_schema_output",
+        "schema_version": 1,
+        "qcjson_creator_version": "0.2.0",
+        "provenance": {
+            "creator": "ORCA",
+            "version": "4.2.0"
+        },
+        "molecule": {
+            "geometry": [[1.554484, 1.063664, 0.386441], [2.366154, 1.205, -0.100845], [0.860091, 1.21737, -0.254203], [-1.441481, -1.168274, -0.504385], [-1.445769, -2.057038, -0.859789], [-0.861143, -1.216395, 0.255302], [-0.494858, 1.222659, -1.399062], [-0.8768, 0.374406, -1.173631], [-1.247295, 1.806028, -1.497799], [0.381857, -1.118049, 1.517005], [0.326903, -0.95399, 2.458438], [0.877855, -0.375382, 1.17253]],
+            "symbols": [ "O", "H", "H", "O", "H", "H", "O", "H", "H", "O", "H", "H" ]
+        },
+        "molecular_charge": 0,
+        "molecular_multiplicity": 1,
+        "name": "4h2o.abc0.iter2-orca.opt-mp2.def2tzvp",
+        "atomic_numbers": [8, 1, 1, 8, 1, 1, 8, 1, 1, 8, 1, 1],
+        "driver": "optimization",
+        "model": {
+            "method": "MP2",
+            "basis": "Def2-TZVP"
+        },
+        "keywords": {
+            "scf_convergence_tolerance": "Tight",
+            "scf_grid_level": 2,
+            "geo_rms_gradient_target": 0.0001,
+            "geo_rms_gradient_value": 0.0037731736,
+            "geo_max_gradient_target": 0.0003,
+            "geo_max_gradient_value": 0.0177847574,
+            "geo_rms_step_target": 0.002,
+            "geo_rms_step_value": 0.0175343829,
+            "geo_max_step_target": 0.004,
+            "geo_max_step_value": 0.0682906647,
+            "geo_energy_change_target": 5e-06,
+            "geo_energy_change_value": 0.0,
+            "final_grid_level": 2,
+            "frozen_core": true
+        },
+        "properties": {
+            "scf_total_energy": -304.26920187,
+            "mp2_total_energy": -305.297922758,
+            "mp2_correlation_energy": -1.028720886,
+            "return_energy": -305.297922758,
+            "calcinfo_nbasis": 172,
+            "calcinfo_nmo": 172,
+            "alpha_homo_energy": -0.501381,
+            "alpha_homo_lumo_gap_energy": 0.626745,
+            "beta_homo_energy": -0.501381,
+            "beta_homo_lumo_gap_energy": 0.626745
+        },
+        "success": true
+    },
+    {
+        "schema_name": "qc_schema_output",
+        "schema_version": 1,
+        "qcjson_creator_version": "0.2.0",
+        "provenance": {
+            "creator": "ORCA",
+            "version": "4.2.0"
+        },
+        "molecule": {
+            "geometry": [[1.577669, 1.083008, 0.390752], [2.398873, 1.223116, -0.090012], [0.867262, 1.241693, -0.265425], [-1.464138, -1.188107, -0.509248], [-1.475338, -2.07807, -0.873911], [-0.87078, -1.238435, 0.269098], [-0.504559, 1.239513, -1.422559], [-0.896409, 0.371087, -1.192955], [-1.254044, 1.833693, -1.524355], [0.39103, -1.134414, 1.541054], [0.330501, -0.978738, 2.488282], [0.89993, -0.374346, 1.18928]],
+            "symbols": [ "O", "H", "H", "O", "H", "H", "O", "H", "H", "O", "H", "H" ]
+        },
+        "molecular_charge": 0,
+        "molecular_multiplicity": 1,
+        "name": "4h2o.abc0.iter2-orca.opt-mp2.def2tzvp",
+        "atomic_numbers": [8, 1, 1, 8, 1, 1, 8, 1, 1, 8, 1, 1],
+        "driver": "optimization",
+        "model": {
+            "method": "MP2",
+            "basis": "Def2-TZVP"
+        },
+        "keywords": {
+            "scf_convergence_tolerance": "Tight",
+            "scf_grid_level": 2,
+            "geo_rms_gradient_target": 0.0001,
+            "geo_rms_gradient_value": 0.000458502,
+            "geo_max_gradient_target": 0.0003,
+            "geo_max_gradient_value": 0.001012171,
+            "geo_rms_step_target": 0.002,
+            "geo_rms_step_value": 0.0064335179,
+            "geo_max_step_target": 0.004,
+            "geo_max_step_value": 0.015305403,
+            "geo_energy_change_target": 5e-06,
+            "geo_energy_change_value": -0.0024054009,
+            "final_grid_level": 2,
+            "frozen_core": true
+        },
+        "properties": {
+            "scf_total_energy": -304.26781175,
+            "mp2_total_energy": -305.30032815900006,
+            "mp2_correlation_energy": -1.032516412,
+            "return_energy": -305.30032815900006,
+            "calcinfo_nbasis": 172,
+            "calcinfo_nmo": 172,
+            "alpha_homo_energy": -0.501381,
+            "alpha_homo_lumo_gap_energy": 0.626745,
+            "beta_homo_energy": -0.501381,
+            "beta_homo_lumo_gap_energy": 0.626745
+        },
+        "success": true
+    },
+    {
+        "schema_name": "qc_schema_output",
+        "schema_version": 1,
+        "qcjson_creator_version": "0.2.0",
+        "provenance": {
+            "creator": "ORCA",
+            "version": "4.2.0"
+        },
+        "molecule": {
+            "geometry": [[1.571534, 1.082297, 0.390332], [2.396353, 1.221711, -0.084471], [0.862337, 1.244589, -0.268], [-1.461422, -1.18423, -0.505258], [-1.477571, -2.072265, -0.874491], [-0.869194, -1.23824, 0.275157], [-0.502644, 1.233954, -1.42062], [-0.897889, 0.365046, -1.193729], [-1.247824, 1.833189, -1.524658], [0.392535, -1.132021, 1.535546], [0.329035, -0.982634, 2.483624], [0.90475, -0.371397, 1.186568]],
+            "symbols": [ "O", "H", "H", "O", "H", "H", "O", "H", "H", "O", "H", "H" ]
+        },
+        "molecular_charge": 0,
+        "molecular_multiplicity": 1,
+        "name": "4h2o.abc0.iter2-orca.opt-mp2.def2tzvp",
+        "atomic_numbers": [8, 1, 1, 8, 1, 1, 8, 1, 1, 8, 1, 1],
+        "driver": "optimization",
+        "model": {
+            "method": "MP2",
+            "basis": "Def2-TZVP"
+        },
+        "keywords": {
+            "scf_convergence_tolerance": "Tight",
+            "scf_grid_level": 2,
+            "geo_rms_gradient_target": 0.0001,
+            "geo_rms_gradient_value": 0.0004419629,
+            "geo_max_gradient_target": 0.0003,
+            "geo_max_gradient_value": 0.0009247304,
+            "geo_rms_step_target": 0.002,
+            "geo_rms_step_value": 0.0269407953,
+            "geo_max_step_target": 0.004,
+            "geo_max_step_value": 0.0629909662,
+            "geo_energy_change_target": 5e-06,
+            "geo_energy_change_value": -0.0002478358,
+            "final_grid_level": 2,
+            "frozen_core": true
+        },
+        "properties": {
+            "scf_total_energy": -304.26769372,
+            "mp2_total_energy": -305.3005759949999,
+            "mp2_correlation_energy": -1.032882279,
+            "return_energy": -305.3005759949999,
+            "calcinfo_nbasis": 172,
+            "calcinfo_nmo": 172,
+            "alpha_homo_energy": -0.501381,
+            "alpha_homo_lumo_gap_energy": 0.626745,
+            "beta_homo_energy": -0.501381,
+            "beta_homo_lumo_gap_energy": 0.626745
+        },
+        "success": true
+    },
+    {
+        "schema_name": "qc_schema_output",
+        "schema_version": 1,
+        "qcjson_creator_version": "0.2.0",
+        "provenance": {
+            "creator": "ORCA",
+            "version": "4.2.0"
+        },
+        "molecule": {
+            "geometry": [[1.544171, 1.078129, 0.388534], [2.381972, 1.213282, -0.062909], [0.842898, 1.257878, -0.277538], [-1.44874, -1.166471, -0.488136], [-1.482932, -2.045561, -0.875448], [-0.864543, -1.237839, 0.300131], [-0.493738, 1.209472, -1.411096], [-0.903719, 0.340824, -1.198704], [-1.2212, 1.827867, -1.522293], [0.39831, -1.12113, 1.510698], [0.322152, -0.995587, 2.460654], [0.925369, -0.360864, 1.176108]],
+            "symbols": [ "O", "H", "H", "O", "H", "H", "O", "H", "H", "O", "H", "H" ]
+        },
+        "molecular_charge": 0,
+        "molecular_multiplicity": 1,
+        "name": "4h2o.abc0.iter2-orca.opt-mp2.def2tzvp",
+        "atomic_numbers": [8, 1, 1, 8, 1, 1, 8, 1, 1, 8, 1, 1],
+        "driver": "optimization",
+        "model": {
+            "method": "MP2",
+            "basis": "Def2-TZVP"
+        },
+        "keywords": {
+            "scf_convergence_tolerance": "Tight",
+            "scf_grid_level": 2,
+            "geo_rms_gradient_target": 0.0001,
+            "geo_rms_gradient_value": 0.0002959325,
+            "geo_max_gradient_target": 0.0003,
+            "geo_max_gradient_value": 0.0008446981,
+            "geo_rms_step_target": 0.002,
+            "geo_rms_step_value": 0.0161446314,
+            "geo_max_step_target": 0.004,
+            "geo_max_step_value": 0.0351680484,
+            "geo_energy_change_target": 5e-06,
+            "geo_energy_change_value": -0.0007316778,
+            "final_grid_level": 2,
+            "frozen_core": true
+        },
+        "properties": {
+            "scf_total_energy": -304.26730365,
+            "mp2_total_energy": -305.301307673,
+            "mp2_correlation_energy": -1.034004018,
+            "return_energy": -305.301307673,
+            "calcinfo_nbasis": 172,
+            "calcinfo_nmo": 172,
+            "alpha_homo_energy": -0.501381,
+            "alpha_homo_lumo_gap_energy": 0.626745,
+            "beta_homo_energy": -0.501381,
+            "beta_homo_lumo_gap_energy": 0.626745
+        },
+        "success": true
+    },
+    {
+        "schema_name": "qc_schema_output",
+        "schema_version": 1,
+        "qcjson_creator_version": "0.2.0",
+        "provenance": {
+            "creator": "ORCA",
+            "version": "4.2.0"
+        },
+        "molecule": {
+            "geometry": [[1.529408, 1.077726, 0.388528], [2.374162, 1.210086, -0.050372], [0.834419, 1.269575, -0.282147], [-1.443741, -1.15703, -0.47794], [-1.487298, -2.031093, -0.875277], [-0.865905, -1.240427, 0.31501], [-0.488614, 1.195973, -1.407994], [-0.908398, 0.328428, -1.206081], [-1.206406, 1.824787, -1.522573], [0.402949, -1.116669, 1.497406], [0.319535, -1.003778, 2.448226], [0.939887, -0.357578, 1.173215]],
+            "symbols": [ "O", "H", "H", "O", "H", "H", "O", "H", "H", "O", "H", "H" ]
+        },
+        "molecular_charge": 0,
+        "molecular_multiplicity": 1,
+        "name": "4h2o.abc0.iter2-orca.opt-mp2.def2tzvp",
+        "atomic_numbers": [8, 1, 1, 8, 1, 1, 8, 1, 1, 8, 1, 1],
+        "driver": "optimization",
+        "model": {
+            "method": "MP2",
+            "basis": "Def2-TZVP"
+        },
+        "keywords": {
+            "scf_convergence_tolerance": "Tight",
+            "scf_grid_level": 2,
+            "geo_rms_gradient_target": 0.0001,
+            "geo_rms_gradient_value": 0.0002005034,
+            "geo_max_gradient_target": 0.0003,
+            "geo_max_gradient_value": 0.000648753,
+            "geo_rms_step_target": 0.002,
+            "geo_rms_step_value": 0.0037822826,
+            "geo_max_step_target": 0.004,
+            "geo_max_step_value": 0.0145711233,
+            "geo_energy_change_target": 5e-06,
+            "geo_energy_change_value": -0.0001572435,
+            "final_grid_level": 2,
+            "frozen_core": true
+        },
+        "properties": {
+            "scf_total_energy": -304.26691913,
+            "mp2_total_energy": -305.301464916,
+            "mp2_correlation_energy": -1.03454579,
+            "return_energy": -305.301464916,
+            "calcinfo_nbasis": 172,
+            "calcinfo_nmo": 172,
+            "alpha_homo_energy": -0.501381,
+            "alpha_homo_lumo_gap_energy": 0.626745,
+            "beta_homo_energy": -0.501381,
+            "beta_homo_lumo_gap_energy": 0.626745
+        },
+        "success": true
+    },
+    {
+        "schema_name": "qc_schema_output",
+        "schema_version": 1,
+        "qcjson_creator_version": "0.2.0",
+        "provenance": {
+            "creator": "ORCA",
+            "version": "4.2.0"
+        },
+        "molecule": {
+            "geometry": [[1.530389, 1.080467, 0.389902], [2.374975, 1.21225, -0.049701], [0.837314, 1.274441, -0.281442], [-1.446752, -1.157891, -0.477195], [-1.489394, -2.03207, -0.874609], [-0.870391, -1.243819, 0.315967], [-0.488525, 1.19643, -1.411179], [-0.91018, 0.329862, -1.211308], [-1.206719, 1.825078, -1.524941], [0.40489, -1.119005, 1.498472], [0.32113, -1.005257, 2.449256], [0.943261, -0.360486, 1.17678]],
+            "symbols": [ "O", "H", "H", "O", "H", "H", "O", "H", "H", "O", "H", "H" ]
+        },
+        "molecular_charge": 0,
+        "molecular_multiplicity": 1,
+        "name": "4h2o.abc0.iter2-orca.opt-mp2.def2tzvp",
+        "atomic_numbers": [8, 1, 1, 8, 1, 1, 8, 1, 1, 8, 1, 1],
+        "driver": "optimization",
+        "model": {
+            "method": "MP2",
+            "basis": "Def2-TZVP"
+        },
+        "keywords": {
+            "scf_convergence_tolerance": "Tight",
+            "scf_grid_level": 2,
+            "geo_rms_gradient_target": 0.0001,
+            "geo_rms_gradient_value": 0.0001541695,
+            "geo_max_gradient_target": 0.0003,
+            "geo_max_gradient_value": 0.0004615055,
+            "geo_rms_step_target": 0.002,
+            "geo_rms_step_value": 0.0094046585,
+            "geo_max_step_target": 0.004,
+            "geo_max_step_value": 0.0358092032,
+            "geo_energy_change_target": 5e-06,
+            "geo_energy_change_value": -4.35585e-05,
+            "final_grid_level": 2,
+            "frozen_core": true
+        },
+        "properties": {
+            "scf_total_energy": -304.26712214,
+            "mp2_total_energy": -305.301508475,
+            "mp2_correlation_energy": -1.034386335,
+            "return_energy": -305.301508475,
+            "calcinfo_nbasis": 172,
+            "calcinfo_nmo": 172,
+            "alpha_homo_energy": -0.501381,
+            "alpha_homo_lumo_gap_energy": 0.626745,
+            "beta_homo_energy": -0.501381,
+            "beta_homo_lumo_gap_energy": 0.626745
+        },
+        "success": true
+    },
+    {
+        "schema_name": "qc_schema_output",
+        "schema_version": 1,
+        "qcjson_creator_version": "0.2.0",
+        "provenance": {
+            "creator": "ORCA",
+            "version": "4.2.0"
+        },
+        "molecule": {
+            "geometry": [[1.535341, 1.088097, 0.393512], [2.378454, 1.217903, -0.050217], [0.846406, 1.285306, -0.278878], [-1.455695, -1.161827, -0.47664], [-1.493698, -2.036958, -0.873232], [-0.881955, -1.252395, 0.315984], [-0.489222, 1.199697, -1.420378], [-0.914168, 0.335739, -1.223831], [-1.210022, 1.826511, -1.530541], [0.409578, -1.125967, 1.503506], [0.325258, -1.007454, 2.453994], [0.949721, -0.368652, 1.186722]],
+            "symbols": [ "O", "H", "H", "O", "H", "H", "O", "H", "H", "O", "H", "H" ]
+        },
+        "molecular_charge": 0,
+        "molecular_multiplicity": 1,
+        "name": "4h2o.abc0.iter2-orca.opt-mp2.def2tzvp",
+        "atomic_numbers": [8, 1, 1, 8, 1, 1, 8, 1, 1, 8, 1, 1],
+        "driver": "optimization",
+        "model": {
+            "method": "MP2",
+            "basis": "Def2-TZVP"
+        },
+        "keywords": {
+            "scf_convergence_tolerance": "Tight",
+            "scf_grid_level": 2,
+            "geo_rms_gradient_target": 0.0001,
+            "geo_rms_gradient_value": 0.0001162145,
+            "geo_max_gradient_target": 0.0003,
+            "geo_max_gradient_value": 0.0003244902,
+            "geo_rms_step_target": 0.002,
+            "geo_rms_step_value": 0.0012097934,
+            "geo_max_step_target": 0.004,
+            "geo_max_step_value": 0.0038963534,
+            "geo_energy_change_target": 5e-06,
+            "geo_energy_change_value": -5.48096e-05,
+            "final_grid_level": 2,
+            "frozen_core": true
+        },
+        "properties": {
+            "scf_total_energy": -304.26769459,
+            "mp2_total_energy": -305.301563285,
+            "mp2_correlation_energy": -1.033868699,
+            "return_energy": -305.301563285,
+            "calcinfo_nbasis": 172,
+            "calcinfo_nmo": 172,
+            "alpha_homo_energy": -0.501381,
+            "alpha_homo_lumo_gap_energy": 0.626745,
+            "beta_homo_energy": -0.501381,
+            "beta_homo_lumo_gap_energy": 0.626745
+        },
+        "success": true
+    },
+    {
+        "schema_name": "qc_schema_output",
+        "schema_version": 1,
+        "qcjson_creator_version": "0.2.0",
+        "provenance": {
+            "creator": "ORCA",
+            "version": "4.2.0"
+        },
+        "molecule": {
+            "geometry": [[1.535784, 1.089301, 0.393834], [2.378924, 1.217862, -0.050259], [0.847268, 1.28653, -0.278858], [-1.456822, -1.162398, -0.476248], [-1.493793, -2.037264, -0.87358], [-0.883017, -1.253435, 0.316171], [-0.489438, 1.199837, -1.421675], [-0.914801, 0.336183, -1.225113], [-1.210207, 1.826945, -1.530575], [0.410479, -1.126741, 1.504088], [0.325069, -1.007541, 2.454419], [0.950554, -0.36928, 1.187796]],
+            "symbols": [ "O", "H", "H", "O", "H", "H", "O", "H", "H", "O", "H", "H" ]
+        },
+        "molecular_charge": 0,
+        "molecular_multiplicity": 1,
+        "name": "4h2o.abc0.iter2-orca.opt-mp2.def2tzvp",
+        "atomic_numbers": [8, 1, 1, 8, 1, 1, 8, 1, 1, 8, 1, 1],
+        "driver": "optimization",
+        "model": {
+            "method": "MP2",
+            "basis": "Def2-TZVP"
+        },
+        "keywords": {
+            "scf_convergence_tolerance": "Tight",
+            "scf_grid_level": 2,
+            "geo_rms_gradient_target": 0.0001,
+            "geo_rms_gradient_value": 0.0001174564,
+            "geo_max_gradient_target": 0.0003,
+            "geo_max_gradient_value": 0.0003245861,
+            "geo_rms_step_target": 0.002,
+            "geo_rms_step_value": 0.0098292439,
+            "geo_max_step_target": 0.004,
+            "geo_max_step_value": 0.0227531901,
+            "geo_energy_change_target": 5e-06,
+            "geo_energy_change_value": -6.8156e-06,
+            "final_grid_level": 2,
+            "frozen_core": true
+        },
+        "properties": {
+            "scf_total_energy": -304.26774716,
+            "mp2_total_energy": -305.3015701,
+            "mp2_correlation_energy": -1.033822936,
+            "return_energy": -305.3015701,
+            "calcinfo_nbasis": 172,
+            "calcinfo_nmo": 172,
+            "alpha_homo_energy": -0.501381,
+            "alpha_homo_lumo_gap_energy": 0.626745,
+            "beta_homo_energy": -0.501381,
+            "beta_homo_lumo_gap_energy": 0.626745
+        },
+        "success": true
+    },
+    {
+        "schema_name": "qc_schema_output",
+        "schema_version": 1,
+        "qcjson_creator_version": "0.2.0",
+        "provenance": {
+            "creator": "ORCA",
+            "version": "4.2.0"
+        },
+        "molecule": {
+            "geometry": [[1.537795, 1.098729, 0.395565], [2.381574, 1.212455, -0.051662], [0.852001, 1.293537, -0.27995], [-1.464619, -1.166469, -0.47194], [-1.490252, -2.037588, -0.878639], [-0.888166, -1.260057, 0.317697], [-0.491344, 1.19939, -1.43127], [-0.919444, 0.338232, -1.231965], [-1.21077, 1.830605, -1.525623], [0.41817, -1.131649, 1.507646], [0.319441, -1.00547, 2.455928], [0.955612, -0.371714, 1.194214]],
+            "symbols": [ "O", "H", "H", "O", "H", "H", "O", "H", "H", "O", "H", "H" ]
+        },
+        "molecular_charge": 0,
+        "molecular_multiplicity": 1,
+        "name": "4h2o.abc0.iter2-orca.opt-mp2.def2tzvp",
+        "atomic_numbers": [8, 1, 1, 8, 1, 1, 8, 1, 1, 8, 1, 1],
+        "driver": "optimization",
+        "model": {
+            "method": "MP2",
+            "basis": "Def2-TZVP"
+        },
+        "keywords": {
+            "scf_convergence_tolerance": "Tight",
+            "scf_grid_level": 2,
+            "geo_rms_gradient_target": 0.0001,
+            "geo_rms_gradient_value": 0.0001165191,
+            "geo_max_gradient_target": 0.0003,
+            "geo_max_gradient_value": 0.0002760633,
+            "geo_rms_step_target": 0.002,
+            "geo_rms_step_value": 0.0122345594,
+            "geo_max_step_target": 0.004,
+            "geo_max_step_value": 0.0305930924,
+            "geo_energy_change_target": 5e-06,
+            "geo_energy_change_value": -6.04325e-05,
+            "final_grid_level": 2,
+            "frozen_core": true
+        },
+        "properties": {
+            "scf_total_energy": -304.26807621,
+            "mp2_total_energy": -305.301630533,
+            "mp2_correlation_energy": -1.033554321,
+            "return_energy": -305.301630533,
+            "calcinfo_nbasis": 172,
+            "calcinfo_nmo": 172,
+            "alpha_homo_energy": -0.501381,
+            "alpha_homo_lumo_gap_energy": 0.626745,
+            "beta_homo_energy": -0.501381,
+            "beta_homo_lumo_gap_energy": 0.626745
+        },
+        "success": true
+    },
+    {
+        "schema_name": "qc_schema_output",
+        "schema_version": 1,
+        "qcjson_creator_version": "0.2.0",
+        "provenance": {
+            "creator": "ORCA",
+            "version": "4.2.0"
+        },
+        "molecule": {
+            "geometry": [[1.537596, 1.108028, 0.39643], [2.381971, 1.19931, -0.054998], [0.853932, 1.296837, -0.282656], [-1.471012, -1.169667, -0.465925], [-1.479755, -2.034527, -0.886673], [-0.888944, -1.264425, 0.319199], [-0.493236, 1.196721, -1.44002], [-0.923487, 0.338362, -1.234326], [-1.210022, 1.833945, -1.512492], [0.426653, -1.135082, 1.509515], [0.3078, -0.998725, 2.454168], [0.958502, -0.370777, 1.197779]],
+            "symbols": [ "O", "H", "H", "O", "H", "H", "O", "H", "H", "O", "H", "H" ]
+        },
+        "molecular_charge": 0,
+        "molecular_multiplicity": 1,
+        "name": "4h2o.abc0.iter2-orca.opt-mp2.def2tzvp",
+        "atomic_numbers": [8, 1, 1, 8, 1, 1, 8, 1, 1, 8, 1, 1],
+        "driver": "optimization",
+        "model": {
+            "method": "MP2",
+            "basis": "Def2-TZVP"
+        },
+        "keywords": {
+            "scf_convergence_tolerance": "Tight",
+            "scf_grid_level": 2,
+            "geo_rms_gradient_target": 0.0001,
+            "geo_rms_gradient_value": 0.0001066249,
+            "geo_max_gradient_target": 0.0003,
+            "geo_max_gradient_value": 0.0002833584,
+            "geo_rms_step_target": 0.002,
+            "geo_rms_step_value": 0.0194888964,
+            "geo_max_step_target": 0.004,
+            "geo_max_step_value": 0.0491373194,
+            "geo_energy_change_target": 5e-06,
+            "geo_energy_change_value": -7.23588e-05,
+            "final_grid_level": 2,
+            "frozen_core": true
+        },
+        "properties": {
+            "scf_total_energy": -304.26827529,
+            "mp2_total_energy": -305.301702891,
+            "mp2_correlation_energy": -1.033427605,
+            "return_energy": -305.301702891,
+            "calcinfo_nbasis": 172,
+            "calcinfo_nmo": 172,
+            "alpha_homo_energy": -0.501381,
+            "alpha_homo_lumo_gap_energy": 0.626745,
+            "beta_homo_energy": -0.501381,
+            "beta_homo_lumo_gap_energy": 0.626745
+        },
+        "success": true
+    },
+    {
+        "schema_name": "qc_schema_output",
+        "schema_version": 1,
+        "qcjson_creator_version": "0.2.0",
+        "provenance": {
+            "creator": "ORCA",
+            "version": "4.2.0"
+        },
+        "molecule": {
+            "geometry": [[1.533466, 1.117712, 0.396136], [2.377622, 1.171955, -0.061813], [0.851127, 1.294203, -0.288083], [-1.475563, -1.171314, -0.456571], [-1.45634, -2.024821, -0.899759], [-0.882542, -1.265121, 0.320873], [-0.494942, 1.190018, -1.447963], [-0.926611, 0.335159, -1.229402], [-1.206595, 1.836154, -1.484258], [0.43704, -1.136416, 1.508397], [0.285308, -0.983285, 2.445833], [0.958029, -0.364244, 1.196608]],
+            "symbols": [ "O", "H", "H", "O", "H", "H", "O", "H", "H", "O", "H", "H" ]
+        },
+        "molecular_charge": 0,
+        "molecular_multiplicity": 1,
+        "name": "4h2o.abc0.iter2-orca.opt-mp2.def2tzvp",
+        "atomic_numbers": [8, 1, 1, 8, 1, 1, 8, 1, 1, 8, 1, 1],
+        "driver": "optimization",
+        "model": {
+            "method": "MP2",
+            "basis": "Def2-TZVP"
+        },
+        "keywords": {
+            "scf_convergence_tolerance": "Tight",
+            "scf_grid_level": 2,
+            "geo_rms_gradient_target": 0.0001,
+            "geo_rms_gradient_value": 8.00243e-05,
+            "geo_max_gradient_target": 0.0003,
+            "geo_max_gradient_value": 0.0003021376,
+            "geo_rms_step_target": 0.002,
+            "geo_rms_step_value": 0.0154591991,
+            "geo_max_step_target": 0.004,
+            "geo_max_step_value": 0.0343690847,
+            "geo_energy_change_target": 5e-06,
+            "geo_energy_change_value": -0.0001010649,
+            "final_grid_level": 2,
+            "frozen_core": true
+        },
+        "properties": {
+            "scf_total_energy": -304.26822364,
+            "mp2_total_energy": -305.301803956,
+            "mp2_correlation_energy": -1.033580318,
+            "return_energy": -305.301803956,
+            "calcinfo_nbasis": 172,
+            "calcinfo_nmo": 172,
+            "alpha_homo_energy": -0.501381,
+            "alpha_homo_lumo_gap_energy": 0.626745,
+            "beta_homo_energy": -0.501381,
+            "beta_homo_lumo_gap_energy": 0.626745
+        },
+        "success": true
+    },
+    {
+        "schema_name": "qc_schema_output",
+        "schema_version": 1,
+        "qcjson_creator_version": "0.2.0",
+        "provenance": {
+            "creator": "ORCA",
+            "version": "4.2.0"
+        },
+        "molecule": {
+            "geometry": [[1.526556, 1.119427, 0.394453], [2.369765, 1.147094, -0.067744], [0.843343, 1.285035, -0.292783], [-1.473229, -1.168793, -0.450112], [-1.433991, -2.013375, -0.908953], [-0.870952, -1.259477, 0.3216], [-0.494604, 1.182717, -1.447622], [-0.925475, 0.329449, -1.217876], [-1.201921, 1.834629, -1.457974], [0.441278, -1.133351, 1.503281], [0.266143, -0.968345, 2.434674], [0.953086, -0.35501, 1.189055]],
+            "symbols": [ "O", "H", "H", "O", "H", "H", "O", "H", "H", "O", "H", "H" ]
+        },
+        "molecular_charge": 0,
+        "molecular_multiplicity": 1,
+        "name": "4h2o.abc0.iter2-orca.opt-mp2.def2tzvp",
+        "atomic_numbers": [8, 1, 1, 8, 1, 1, 8, 1, 1, 8, 1, 1],
+        "driver": "optimization",
+        "model": {
+            "method": "MP2",
+            "basis": "Def2-TZVP"
+        },
+        "keywords": {
+            "scf_convergence_tolerance": "Tight",
+            "scf_grid_level": 2,
+            "geo_rms_gradient_target": 0.0001,
+            "geo_rms_gradient_value": 4.64055e-05,
+            "geo_max_gradient_target": 0.0003,
+            "geo_max_gradient_value": 0.0001724583,
+            "geo_rms_step_target": 0.002,
+            "geo_rms_step_value": 0.0061958646,
+            "geo_max_step_target": 0.004,
+            "geo_max_step_value": 0.0240077373,
+            "geo_energy_change_target": 5e-06,
+            "geo_energy_change_value": -6.29945e-05,
+            "final_grid_level": 2,
+            "frozen_core": true
+        },
+        "properties": {
+            "scf_total_energy": -304.26782476,
+            "mp2_total_energy": -305.3018669510001,
+            "mp2_correlation_energy": -1.034042191,
+            "return_energy": -305.3018669510001,
+            "calcinfo_nbasis": 172,
+            "calcinfo_nmo": 172,
+            "alpha_homo_energy": -0.501381,
+            "alpha_homo_lumo_gap_energy": 0.626745,
+            "beta_homo_energy": -0.501381,
+            "beta_homo_lumo_gap_energy": 0.626745
+        },
+        "success": true
+    },
+    {
+        "schema_name": "qc_schema_output",
+        "schema_version": 1,
+        "qcjson_creator_version": "0.2.0",
+        "provenance": {
+            "creator": "ORCA",
+            "version": "4.2.0"
+        },
+        "molecule": {
+            "geometry": [[1.521975, 1.11523, 0.393113], [2.365047, 1.139148, -0.069571], [0.837346, 1.277768, -0.294204], [-1.468171, -1.165038, -0.44927], [-1.426188, -2.008285, -0.910346], [-0.863452, -1.253601, 0.321452], [-0.493014, 1.179372, -1.442457], [-0.922574, 0.325671, -1.209623], [-1.199617, 1.832124, -1.44919], [0.43921, -1.129564, 1.498615], [0.260755, -0.962984, 2.429111], [0.948682, -0.34984, 1.182372]],
+            "symbols": [ "O", "H", "H", "O", "H", "H", "O", "H", "H", "O", "H", "H" ]
+        },
+        "molecular_charge": 0,
+        "molecular_multiplicity": 1,
+        "name": "4h2o.abc0.iter2-orca.opt-mp2.def2tzvp",
+        "atomic_numbers": [8, 1, 1, 8, 1, 1, 8, 1, 1, 8, 1, 1],
+        "driver": "optimization",
+        "model": {
+            "method": "MP2",
+            "basis": "Def2-TZVP"
+        },
+        "keywords": {
+            "scf_convergence_tolerance": "Tight",
+            "scf_grid_level": 2,
+            "geo_rms_gradient_target": 0.0001,
+            "geo_rms_gradient_value": 3.05807e-05,
+            "geo_max_gradient_target": 0.0003,
+            "geo_max_gradient_value": 6.26984e-05,
+            "geo_rms_step_target": 0.002,
+            "geo_rms_step_value": 0.0019802458,
+            "geo_max_step_target": 0.004,
+            "geo_max_step_value": 0.0052251479,
+            "geo_energy_change_target": 5e-06,
+            "geo_energy_change_value": -1.75615e-05,
+            "final_grid_level": 2,
+            "frozen_core": true
+        },
+        "properties": {
+            "scf_total_energy": -304.26748374,
+            "mp2_total_energy": -305.301884512,
+            "mp2_correlation_energy": -1.034400774,
+            "return_energy": -305.301884512,
+            "calcinfo_nbasis": 172,
+            "calcinfo_nmo": 172,
+            "alpha_homo_energy": -0.501381,
+            "alpha_homo_lumo_gap_energy": 0.626745,
+            "beta_homo_energy": -0.501381,
+            "beta_homo_lumo_gap_energy": 0.626745
+        },
+        "success": true
+    },
+    {
+        "schema_name": "qc_schema_output",
+        "schema_version": 1,
+        "qcjson_creator_version": "0.2.0",
+        "provenance": {
+            "creator": "ORCA",
+            "version": "4.2.0"
+        },
+        "molecule": {
+            "geometry": [[1.521309, 1.11308, 0.393073], [2.364276, 1.140146, -0.069582], [0.836238, 1.276204, -0.29389], [-1.466577, -1.163747, -0.450198], [-1.42656, -2.008225, -0.909142], [-0.862336, -1.252045, 0.32113], [-0.492192, 1.179373, -1.440362], [-0.921458, 0.325184, -1.20811], [-1.199659, 1.831119, -1.449953], [0.437461, -1.128707, 1.497487], [0.261939, -0.963037, 2.42868], [0.947557, -0.349345, 1.180868]],
+            "symbols": [ "O", "H", "H", "O", "H", "H", "O", "H", "H", "O", "H", "H" ]
+        },
+        "molecular_charge": 0,
+        "molecular_multiplicity": 1,
+        "name": "4h2o.abc0.iter2-orca.opt-mp2.def2tzvp",
+        "atomic_numbers": [8, 1, 1, 8, 1, 1, 8, 1, 1, 8, 1, 1],
+        "driver": "optimization",
+        "model": {
+            "method": "MP2",
+            "basis": "Def2-TZVP"
+        },
+        "keywords": {
+            "scf_convergence_tolerance": "Tight",
+            "scf_grid_level": 2,
+            "geo_rms_gradient_target": 0.0001,
+            "geo_max_gradient_target": 0.0003,
+            "geo_rms_step_target": 0.002,
+            "geo_max_step_target": 0.004,
+            "geo_energy_change_target": 5e-06,
+            "final_grid_level": 2,
+            "frozen_core": true
+        },
+        "properties": {
+            "scf_total_energy": -304.26739849,
+            "mp2_total_energy": -305.301886332,
+            "mp2_correlation_energy": -1.034487846,
+            "return_energy": -305.301886332,
+            "calcinfo_nbasis": 172,
+            "calcinfo_nmo": 172,
+            "alpha_homo_energy": -0.501381,
+            "alpha_homo_lumo_gap_energy": 0.626745,
+            "beta_homo_energy": -0.501381,
+            "beta_homo_lumo_gap_energy": 0.626745
+        },
+        "success": true
+    }
+]
