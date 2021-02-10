@@ -24,6 +24,7 @@ This repository contains scripts for the creation and use of Quantum Chemistry J
 The following computational packages and calculation types are currently supported (versions tested):
 
 - ORCA (v4.2) optimizations, single point energies, gradients, frequencies.
+- xtb (v6.3.3) optimizations, single point energies, molecular dynamics.
 
 ## Requirements
 
