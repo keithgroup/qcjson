@@ -31,30 +31,6 @@ class orcaParser(outfileParser):
     def __init__(self, outfile_path):
         super().__init__(outfile_path)
     
-    def parse_output(self):
-        """Parse output file using cclib and custom parser.
-
-        Parameters
-        ----------
-        outfile_path : :obj:`str`
-            Path to computational chemistry output file.
-        """
-        filename_with_extension = os.path.basename(self.outfile_path)
-        self.path = os.path.abspath(self.outfile_path)
-        self.name = '.'.join(filename_with_extension.split('.')[:-1])
-
-        # cclib parsed information.
-        self.cclib_data = cclib.io.ccread(self.outfile_path)
-        if self.cclib_data.atomcoords.shape[0] > 1:
-            self.multiple = True
-        elif self.cclib_data.atomcoords.shape[0] == 1:
-            self.multiple = False
-        
-        # Custom parsed information.
-        self.parser = orcaParser(self.path)
-        self.parser.parse()
-        self.parsed_data = self.parser.data
-    
     def extract(self, outfile, line):
         """Extracts all possible information from trajectory file.
 

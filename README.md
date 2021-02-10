@@ -62,6 +62,8 @@ Python script that creates QCJSON files from computational chemistry output file
 - `-o`, `--overwrite`: Overwrite JSON file if it already exists.
 - `-r`, `--recursive`: Recursively find output files to make QCJSONs.
 - `-p`, `--prettify`: Indent JSON properties.
+- `--geom_split`: Geometries are in a separate file.
+  For some programs this is required and disables recursive operation (xtb).
 - `--save_dir`: Path to directory to store JSON files; for example, `--save_dir json_dir`.
   Defaults to current directory.
 - `--exclude`: Does not include file paths that have these strings in their path; for example, `--exclude bad bp86` will not include any files with 'bad' or 'bp86' in the path.
@@ -92,6 +94,7 @@ Making QCJSON for neb-bare.0-orca.sp-wb97x.def2tzvp
 Making QCJSON for neb-bare.0-orca.sp-bp86.def2svp
 
 0 file(s) encountered errors and not written
+$
 ```
 
 ORCA calculation examples descriptions.
@@ -103,6 +106,30 @@ ORCA calculation examples descriptions.
 - `5h2o.abc0.iter1.mp2.md.300k.iter1.mol0,1,2,3,4-orca.engrad-mp2.def2tzvp.out`: An ORCA job running multiple energy+gradient calculations on different configurations of the same system.
 - `alo4h5-orca.freq-bp86.def2svp.out`: An analytical frequency calculation with zero imaginary frequencies.
 - `alo3h3.h2o-orca.freq-bp86.def2svp.cpcm.out`: An analytical frequency calculation with an implicit solvent and one imaginary frequency.
+
+The xtb program is one example where the geometries during the calculation are not printed directly in the output file.
+Instead, they are put into a `.log` or a `.trj` file.
+This forces us to use the ``--geom_split`` option to provide two files to create the QCJSON for every calculation type.
+
+Here is an example used to create a QCJSON for an xtb optimization.
+
+```text
+$ qcjson-creator.py -opd 5h2o.example-xtb.opt-gfn2.out --geom_split 5h2o.example-xtb.opt-gfn2.log
+QCJSON creator v0.2.0
+Written by Alex M. Maldonado (@aalexmmaldonado)
+Energies and distances are Hartrees and Angstroms
+
+Making QCJSON for 5h2o.example-xtb.opt-gfn2.out
+
+0 file(s) encountered errors and not written
+$
+```
+
+Here are the example calculations provided in the `data/xtb` directory.
+
+- `5h2o.example-xtb.sp-gfn2.out`: A single point energy using GFN2-xTB.
+- `5h2o.example-xtb.opt-gfn2.out`: An optimization using GFN2-xTB.
+- `5h2o.example.xtb-xtb.md-gfn2.md`: A NVT molecular dynamics simulation using GFN2-xTB with no pre-optimization.
 
 ## QCJSON Format
 

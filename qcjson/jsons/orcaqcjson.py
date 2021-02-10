@@ -27,8 +27,8 @@ from qcjson.utils import methods
 from qcjson.utils import basis_sets
 from qcjson.utils import atoms_by_element
 from qcjson.utils import convert_forces
-from qcjson.jsons.qcjson import QCJSON
-from qcjson.parsers.orcaparser import orcaParser
+from qcjson.jsons import QCJSON
+from qcjson.parsers import orcaParser
 
 class orcaJSON(QCJSON):
     """ORCA specific QCJSON information.
@@ -605,6 +605,7 @@ class orcaJSON(QCJSON):
 
         :type: :obj:`dict`
         """
+        # pylint: disable=undefined-variable
         if not hasattr(self, '_json'):
 
             all_jsons = []
@@ -638,6 +639,8 @@ class orcaJSON(QCJSON):
                     if debug:
                         raise
                     else:
+                        # These functions and variables are in the qcjson-creator
+                        # script.
                         if self.path not in error_files:
                             error_out(self.path, 'Uncaught exceptions.')
                         self._json = all_jsons

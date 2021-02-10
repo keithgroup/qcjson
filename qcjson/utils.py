@@ -155,6 +155,22 @@ def atoms_by_element(atom_list):
     """
     return [_z_to_element[i] for i in atom_list]
 
+def atoms_by_number(atom_list):
+    """Converts a list of atoms identified by their atomic number to their
+    elemental symbol in the same order.
+    
+    Parameters
+    ----------
+    atom_list : :obj:`list` [:obj:`int`]
+        Atomic numbers of atoms within a structure.
+    
+    Returns
+    -------
+    :obj:`list` [:obj:`str`]
+        Element symbols of atoms within a structure.
+    """
+    return [_element_to_z[i] for i in atom_list]
+
 def get_files(path, expression, recursive=True):
     """Returns paths to all files in a given directory that matches a provided
     expression in the file name. Commonly used to find all files of a certain
@@ -295,7 +311,47 @@ def select_files(all_files, exclude=[], include=[]):
         )
     return all_files
 
-### Runtime Functions ###
+def parse_stringfile(stringfile_path):
+    """Parses data from string file.
+
+    A string file is data presented as consecutive xyz data. The data could be
+    three Cartesian coordinates for each atom, three atomic force vector
+    components, or both coordinates and atomic forces in one line (referred to
+    as extended xyz).
+    
+    Parameters
+    ----------
+    stringfile_path : :obj:`str`
+        Path to string file.
+    
+    Returns
+    -------
+    :obj:`tuple` [:obj:`list`]
+        Parsed atoms (as element symbols :obj:`str`), comments, and data as
+        :obj:`float` from string file.
+    """
+    z, comments, data = [], [], []
+    with open(stringfile_path, 'r') as f:
+        for _, line in enumerate(f):
+            line = line.strip()
+            if not line:
+                # Skips blank lines
+                pass
+            else:
+                line_split = line.split()
+                if len(line_split) == 1 \
+                    and float(line_split[0]) % int(line_split[0]) == 0.0:
+                    # Skips number of atoms line, adds comment line, and
+                    # prepares next z and data item.
+                    comment_line = next(f)
+                    comments.append(comment_line.strip())
+                    z.append([])
+                    data.append([])
+                else:
+                    # Grabs z and data information.
+                    z[-1].append(line_split[0])
+                    data[-1].append([float(i) for i in line_split[1:]])
+    return z, comments, data
 
 def cclib_version_check():
     """Ensures cclib version is at least 1.7.

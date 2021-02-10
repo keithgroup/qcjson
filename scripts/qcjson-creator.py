@@ -27,6 +27,7 @@ import argparse
 
 from qcjson import __version__ as qcjson_version
 from qcjson.creator import qcjson_creator
+from qcjson.creator import qcjson_creator_split
 from qcjson.utils import cclib_version_check
 from qcjson.utils import get_files
 from qcjson.utils import select_files
@@ -42,6 +43,10 @@ def main():
     parser.add_argument(
         'outputs', metavar='outputs', type=str, nargs='?', default='.',
         help='Path to directory or specific computational chemistry output file.'
+    )
+    parser.add_argument(
+        '--geom_split', metavar='geom_split', type=str, nargs='?', default='',
+        help='XYZ file containing all structures from the calculation.'
     )
     parser.add_argument(
         '--save_dir', metavar='save_dir', type=str, nargs='?', default='.',
@@ -83,55 +88,68 @@ def main():
     if save_dir[-1] != '/':
         save_dir += '/'
     outputs = args.outputs
+    geomfile = args.geom_split
 
-    # A file was provided for the outputs.
-    if os.path.isfile(outputs):
-        print(f'Making QCJSON for {outputs}')
-        qcjson_creator(outputs, save_dir, args.debug, args.prettify)
-    
-    # A directory was provided for the outputs.
-    elif os.path.isdir(outputs):
-
-        if outputs[-1] != '/':
-            outputs += '/'
-        
+    if geomfile != '':
         if args.recursive:
-            print(f'Looking for output files in {outputs}, recursively')
-        else:
-            print(f'Looking for output files in {outputs}')
-        all_outfiles = get_files(outputs, 'out', recursive=args.recursive)
+            print('Split geometry output files are not supported recursively.')
         
-        print(f'Found {len(all_outfiles)} output files\n')
+        print(f'Making QCJSON for {outputs}')
+        qcjson_creator_split(outputs, geomfile, save_dir, args.debug, args.prettify)
 
-        all_outfiles = select_files(all_outfiles, exclude=[], include=[])
-
-        for outfile in all_outfiles:
-            file_name = '.'.join(os.path.basename(outfile).split('.')[:-1])
-            if save_dir == './':
-                abs_path = os.path.dirname(os.path.abspath(outfile))
-                if not args.overwrite \
-                   and os.path.exists(f'{abs_path}/{file_name}.json'):
-                    print(
-                        f'\n\u001b[36;1m{file_name}.json already exists.\u001b[0m'
-                    )
-                    continue
-            else:
-                if not args.overwrite \
-                   and os.path.exists(f'{save_dir}/{file_name}.json'):
-                    print(
-                        f'\n\u001b[36;1m{file_name}.json already exists.\u001b[0m'
-                    )
-                    continue
-            print(f'Making QCJSON for {file_name}')
-            qcjson_creator(outfile, save_dir, args.debug, args.prettify)
-            
+        print(f'\n{len(error_files)} file(s) encountered errors and not written')
+        for i in error_files:
+            i_name = os.path.basename(i)
+            print(f'\u001b[31;1m    {i_name}\u001b[0m')
     else:
-        raise ValueError(f'{outputs} is an unsupported type.')
-    
-    print(f'\n{len(error_files)} file(s) encountered errors and not written')
-    for i in error_files:
-        i_name = os.path.basename(i)
-        print(f'\u001b[31;1m    {i_name}\u001b[0m')
+        # A file was provided for the outputs.
+        if os.path.isfile(outputs):
+            print(f'Making QCJSON for {outputs}')
+            qcjson_creator(outputs, save_dir, args.debug, args.prettify)
+        
+        # A directory was provided for the outputs.
+        elif os.path.isdir(outputs):
+
+            if outputs[-1] != '/':
+                outputs += '/'
+            
+            if args.recursive:
+                print(f'Looking for output files in {outputs}, recursively')
+            else:
+                print(f'Looking for output files in {outputs}')
+            all_outfiles = get_files(outputs, 'out', recursive=args.recursive)
+            
+            print(f'Found {len(all_outfiles)} output files\n')
+
+            all_outfiles = select_files(all_outfiles, exclude=[], include=[])
+
+            for outfile in all_outfiles:
+                file_name = '.'.join(os.path.basename(outfile).split('.')[:-1])
+                if save_dir == './':
+                    abs_path = os.path.dirname(os.path.abspath(outfile))
+                    if not args.overwrite \
+                    and os.path.exists(f'{abs_path}/{file_name}.json'):
+                        print(
+                            f'\n\u001b[36;1m{file_name}.json already exists.\u001b[0m'
+                        )
+                        continue
+                else:
+                    if not args.overwrite \
+                    and os.path.exists(f'{save_dir}/{file_name}.json'):
+                        print(
+                            f'\n\u001b[36;1m{file_name}.json already exists.\u001b[0m'
+                        )
+                        continue
+                print(f'Making QCJSON for {file_name}')
+                qcjson_creator(outfile, save_dir, args.debug, args.prettify)
+                
+        else:
+            raise ValueError(f'{outputs} is an unsupported type.')
+        
+        print(f'\n{len(error_files)} file(s) encountered errors and not written')
+        for i in error_files:
+            i_name = os.path.basename(i)
+            print(f'\u001b[31;1m    {i_name}\u001b[0m')
 
 
 if __name__ == "__main__":
