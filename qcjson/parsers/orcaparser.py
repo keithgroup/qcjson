@@ -250,7 +250,7 @@ class orcaParser(outfileParser):
             self.data['keywords']['final_grid_level'] = lebedev_to_level[lebedev_num]
     
     def _extract_scf_energies(self, outfile, line):
-        """The nulear repulsion, one- and two-electron energy, and
+        """The nuclear repulsion, one- and two-electron energy, and
         exchange-correlation energy after a SCF cycle.
 
         This is called directly after the ``'TOTAL SCF ENERGY'`` trigger, and 
@@ -492,7 +492,7 @@ class orcaParser(outfileParser):
             line = next(outfile)
     
     def _extract_frequencies(self, outfile, line):
-        """Extract vibrational frequencies, omegas. Includes 0.00 freqencies.
+        """Extract vibrational frequencies, omegas. Includes 0.00 frequencies.
 
         Based on https://github.com/MolSSI/QCSchema/pull/50#issuecomment-499155251.
 

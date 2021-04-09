@@ -180,7 +180,7 @@ class orcaJSON(QCJSON):
                 break
         
         # Need a separate keyword iteration for basis sets because
-        # dispersion-corrected functionals messes up the indicies for pop.
+        # dispersion-corrected functionals messes up the indices for pop.
         for kw in self.orca_keywords:
             kw_lower = kw.lower()
             if kw_lower in basis_sets['orca']:
@@ -613,7 +613,7 @@ class orcaJSON(QCJSON):
             for i in range(0, self.cclib_data.atomcoords.shape[0]):
                 # Optimizations are iterative with only a single set of
                 # keywords; this is different than consecutive jobs (e.g., 
-                # energies) that have repeated keywords. So, we reinitialzie the
+                # energies) that have repeated keywords. So, we reinitialize the
                 # keywords for each optimization iteration.
                 if hasattr(self, 'calc_driver') \
                    and self.calc_driver == 'optimization':
