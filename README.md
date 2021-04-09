@@ -17,6 +17,7 @@ This repository contains scripts for the creation and use of Quantum Chemistry J
     - [qcjson-creator examples](#qcjson-creator-examples)
 - [QCJSON Format](#qcjson-format)
   - [Keys](#keys)
+- [Units](#units)
 - [License](#license)
 
 ## Supported packages
@@ -103,7 +104,7 @@ ORCA calculation examples descriptions.
 - `4h2o.abc0.iter2-orca.opt-mp2.def2tzvp.out`: An optimization using MP2/def2-TZVP with the default frozen core approximation.
 - `neb-bare.0-orca.sp-bp86.def2svp.out`: A single-point energy calculation using BP86-D3BJ/def2-TZVP.
 - `neb-bare.0-orca.sp-bp86.def2tzvp.smd.out`: A single-point energy calculation using BP86-D3BJ/def2-TZVP with a water implicit solvent model (SMD).
-- `neb-bare.0-orca.sp-wb97x.def2tzvp.out`: A single-point energy calculation using $\omega$B97X-D3BJ/def2-TZVP.
+- `neb-bare.0-orca.sp-wb97x.def2tzvp.out`: A single-point energy calculation using &omega;B97X-D3BJ/def2-TZVP.
 - `5h2o.abc0.iter1.mp2.md.300k.iter1.mol0,1,2,3,4-orca.engrad-mp2.def2tzvp.out`: An ORCA job running multiple energy+gradient calculations on different configurations of the same system.
 - `alo4h5-orca.freq-bp86.def2svp.out`: An analytical frequency calculation with zero imaginary frequencies.
 - `alo3h3.h2o-orca.freq-bp86.def2svp.cpcm.out`: An analytical frequency calculation with an implicit solvent and one imaginary frequency.
@@ -232,6 +233,12 @@ All custom keys are marked with a *, and the Python type is specified.
       Not yet implemented in this script.
     - ``"error_message"``: str, specific program message.
       Not yet implemented in this script.
+
+## Units
+
+All QCJSONs use Angstroms and Hartrees as the units of distance and energies, respectively.
+Derived units adhere to this specification as well; for example, gradients will be in Hartrees/Angstroms.
+If properties use other units (e.g., cm<sup>-1</sup> for vibrational frequencies) these are specified in the key descriptions above.
 
 ## License
 
