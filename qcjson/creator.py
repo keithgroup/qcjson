@@ -27,7 +27,8 @@ from qcjson.utils import get_files
 from qcjson.utils import select_files
 from qcjson.utils import cclib_version_check
 
-from qcjson.jsons.orcaqcjson import orcaJSON
+from qcjson.jsons import orcaJSON
+from qcjson.jsons import xtbJSON
 
 def identify_package(outfile_path):
     """Identifies computational chemistry package.
@@ -67,7 +68,8 @@ def error_out(outfile, error_message):
 
 # Triggers to identify output files.
 triggers = [
-    (orcaJSON, ["O   R   C   A"], True)
+    (orcaJSON, ["O   R   C   A"], True),
+    (xtbJSON, ["x T B"], True)
 ]
 
 def qcjson_creator(output_file, save_dir, debug, prettify):
@@ -87,7 +89,13 @@ def qcjson_creator(output_file, save_dir, debug, prettify):
     prettify : :obj:`bool`
         Indent each JSON property.
     """
+    geom_splits = [xtbJSON]
+
     json_package = identify_package(output_file)
+    
+    if json_package in geom_splits:
+        raise TypeError('This code needs to be used as geom_split')
+    
     out_json = json_package(output_file)
     json_dict = out_json.get_json(debug=debug)
     if out_json.path not in error_files:
@@ -100,3 +108,35 @@ def qcjson_creator(output_file, save_dir, debug, prettify):
             out_json.name, json_dict, abs_path, prettify=prettify
         )
 
+def qcjson_creator_split(output_file, geom_file, save_dir, debug, prettify):
+    """Creates a single QCJSON file from an output file and xyz file.
+
+    This is called by the qcjson-creator.py script.
+
+    Parameters
+    ----------
+    output_file : :obj:`str`
+        Path to output file.
+    geom_file : :obj:`str`
+        Path to file containing xyz geometries.
+    save_dir : :obj:`str`
+        Directory to save the QCJSON to.
+    debug : :obj:`bool`
+        Whether or not to raise errors during the QCJSON process instead of
+        just skipping over the file.
+    prettify : :obj:`bool`
+        Indent each JSON property.
+    """
+    # pylint: disable=too-many-function-args
+    json_package = identify_package(output_file)
+    out_json = json_package(output_file, geom_file)
+    json_dict = out_json.get_json(debug=debug)
+    if out_json.path not in error_files:
+        if save_dir == './':
+            abs_path = os.path.dirname(out_json.path)
+        else:
+            abs_path = save_dir
+        
+        out_json.write(
+            out_json.name, json_dict, abs_path, prettify=prettify
+        )
