@@ -148,96 +148,96 @@ Custom modifications are made to [QCSchema](https://github.com/MolSSI/QCSchema) 
 
 Here are definitions of all [QCSchema](https://github.com/MolSSI/QCSchema) and custom keys used in this script.
 Not all QCJSONs will have every key all the time; some are method dependent like the frozen core approximation.
-All custom keys are marked with a *, and the Python type is specified.
+All custom keys are marked with a **\***.
 
-- ``"schema_name"``: str, specifies the type of QCJSON. Always equal to "qc_schema_output".
-- ``"schema_version"``: int, specifies the [QCSchema](https://github.com/MolSSI/QCSchema) version.
-  Current version is 1.
-- ``"qcjson_creator_version"``*: str, specifies the qcjson-creator script version.
-- ``"provenance"``: dict, a brief description of the program, version, and routine used to generate the output.
-  Can include more detailed information such as computation time, processor information, and host location.
-    - ``"creator"``: str, name of the QC package.
-    - ``"version"``: str, version of the QC package.
+- ``"atomic_numbers"``: list [int, int, ...], atomic numbers, nuclear charge for atoms.
+  Ghostedness should be indicated through ‘real’ field, not zeros here.
+- ``"driver"``: str, what are you looking to calculate: energy, gradient, Hessian, or property.
+  Note, we implement other driver options: optimization.
+- ``"error"``: dict, for unsuccessful computations standard errors will be placed in the output such as convergence, IO errors, etc.
+    - ``"error_message"``: str, specific program message.
+      Not yet implemented in this script.
+    - ``"error_type"``: str, what caused the error.
+      Not yet implemented in this script.
+- ``"keywords"``: dict, various tunable parameters for the calculation.
+  These vary widely, depending on the basis and model chemistry.
+  These represent the keywords of individual programs currently.
+    - ``"cosx_approximation"``**\***: bool, if the chain-of-spheres integration approximation to the exchange term (COSX) is used.
+      Note, this property is only included if true.
+    - ``"dispersion"``**\***: str, if empirical dispersion corrections are used (with DFT), this specifies the method.
+    - ``"final_grid_level"``**\***: int, specifies program-specific integration grid level for the final energy calculation.
+    - ``"implicit_solvent"``**\***: str, the implicit solvent model if used.
+      For example, "SMD" or "CPCM".
+      Note, this property is only included if included.
+    - ``"rij_approximation"``**\***: bool, if the resolution of identity approximation for the Coulomb integrals (RI-J) is used.
+      Note, this property is only included if true.
+    - ``"scf_convergence_tolerance"``**\***: str, program-specific SCF convergence criteria.
+      For example, "tight".
+    - ``"scf_grid_level"``**\***: int, specifies program-specific integration grid level for the scf cycle.
+    - ``"solvent_name"``**\***: str, name of the solvent.
+      For example, "water".
+      Note, this property is only included if an implicit solvent is used.
+- ``"model"``: dict, the overall mathematical model we are using for our calculation.
+  Another way to think about this is the largest superset that still obtains roughly the same result.
+  In QM, this is the Hamiltonian (HF, DFT, ...) combined with the overall basis of the calculation.
+  An example in QM would be HF/STO-3G or B3LYP/6-311G**.
+  Custom basis sets can be handled with custom keywords.
+    - ``"aux_basis"``**\***: str, auxillary basis set if RI approximation is used.
+    - ``"basis"``: str, overall basis set.
+    - ``"method"``: str, primary method or level of theory.
 - ``"molecule"``: dict, a full description of the overall molecule(s) (e.g., its geometry, fragments, and charges).
     - ``"geometry"``: list [[float, float, float], [float, float, float], ...], vector of XYZ coordinates of the atoms of length equal to the number of atoms.
     - ``"symbols"``: list [str, str, ...], atom symbols in title case (e.g., "H" and "Na").
 - ``"molecular_charge"``: int, the overall charge of the molecule.
 - ``"molecular_multiplicity"``: int, the overall multiplicity of the molecule.
 - ``"name"``: str, desired name of the molecule or system (currently is just the file name).
-- ``"atomic_numbers"``: list [int, int, ...], atomic numbers, nuclear charge for atoms.
-  Ghostedness should be indicated through ‘real’ field, not zeros here.
-- ``"driver"``: str, what are you looking to calculate: energy, gradient, Hessian, or property.
-  Note, we implement other driver options: optimization.
-- ``"return_result"``: str, the “primary” return of a given computation.
-  For energy, gradient, and Hessian quantities these are either single numbers or a array representing the derivative quantity.
-- ``"model"``: dict, the overall mathematical model we are using for our calculation.
-  Another way to think about this is the largest superset that still obtains roughly the same result.
-  In QM, this is the Hamiltonian (HF, DFT, ...) combined with the overall basis of the calculation.
-  An example in QM would be HF/STO-3G or B3LYP/6-311G**.
-  Custom basis sets can be handled with custom keywords.
-    - ``"method"``: str, primary method or level of theory.
-    - ``"basis"``: str, overall basis set.
-    - ``"aux_basis"``*: str, auxillary basis set if RI approximation is used.
-- ``"keywords"``: dict, various tunable parameters for the calculation.
-  These vary widely, depending on the basis and model chemistry.
-  These represent the keywords of individual programs currently.
-    - ``"scf_convergence_tolerance"``*: str, program-specific SCF convergence criteria.
-      For example, "tight".
-    - ``"dispersion"``*: str, if empirical dispersion corrections are used (with DFT), this specifies the method.
-    - ``"scf_grid_level"``*: int, specifies program-specific integration grid level for the scf cycle.
-    - ``"final_grid_level"``*: int, specifies program-specific integration grid level for the final energy calculation.
-    - ``"implicit_solvent"``*: str, the implicit solvent model if used.
-      For example, "SMD" or "CPCM".
-      Note, this property is only included if included.
-    - ``"solvent_name"``*: str, name of the solvent.
-      For example, "water".
-      Note, this property is only included if an implicit solvent is used.
-    - ``"rij_approximation"``*: bool, if the resolution of identity approximation for the Coulomb integrals (RI-J) is used.
-      Note, this property is only included if true.
-    - ``"cosx_approximation"``*: bool, if the chain-of-spheres integration approximation to the exchange term (COSX) is used.
-      Note, this property is only included if true.
 - ``"properties"``: dict, a list of valid quantum chemistry properties tracked by the schema.
+    - ``"alpha_homo_energy"``**\***: float, highest occupied molecular orbital energy of the alpha electron.
+    - ``"alpha_homo_lumo_gap_energy"``**\***: float, energy difference between lowest unoccupied and highest occupied molecule orbital of the alpha electron.
+    - ``"beta_homo_energy"``**\***: float, highest occupied molecular orbital energy of the beta electron.
+    - ``"beta_homo_lumo_gap_energy"``**\***: float, energy difference between lowest unoccupied and highest occupied molecule orbital of the alpha electron.
     - ``"calcinfo_nbasis"``: int, the number of basis functions for the computation.
     - ``"calcinfo_nmo"``: int, the number of molecular orbitals for the computation.
-    - ``"return_energy"``: float, the energy of the requested method, identical to return_value for energy computations.
-      For frequency calculations, this will be the Gibbs free energy.
-    - ``"scf_total_energy"``: float, the total electronic energy of the SCF stage of the calculation.
-      This is represented as the sum of the ... quantities.
-    - ``"scf_iterations"``: int, the number of SCF iterations taken before convergence.
-    - ``"scf_dispersion_correction_energy"``: float, the dispersion correction appended to an underlying functional when a DFT-D method is requested.
-    - ``"scf_one_electron_energy"``: float, the one-electron (core Hamiltonian) energy contribution to the total SCF energy.
-    - ``"scf_two_electron_energy"``: float, the two-electron energy contribution to the total SCF energy.
-    - ``"scf_xc_energy"``: float, the functional energy contribution to the total SCF energy.
-    - ``"scf_dipole_moment"``: list [float, float, ...], the x, y, and z dipole components.
-    - ``"nuclear_repulsion_energy"``: float, the nuclear repulsion energy contribution to the total SCF energy.
+    - ``"enthalpic_corrections"``**\***: float, the thermal enthalpy corrections for the electronic energy at the specified temperature.
+    - ``"entropic_corrections"``**\***: float, the translational, rotational, and vibrational entropic corrections to enthalpy to get Gibbs free energy (i.e., TS).
+    - ``"loewdin_charges"``**\***: list [float, float, ...], the Loewdin atomic charges.
     - ``"mp2_total_energy"``: float, the total MP2 energy (MP2 correlation energy + HF energy).
     - ``"mp2_correlation_energy"``: float, the MP2 correlation energy.
     - ``"mp2_dipole_moment"``: list [float, float, ...], the x, y, and z dipole components.
-    - ``"alpha_homo_energy"``*: float, highest occupied molecular orbital energy of the alpha electron.
-    - ``"alpha_homo_lumo_gap_energy"``*: float, energy difference between lowest unoccupied and highest occupied molecule orbital of the alpha electron.
-    - ``"beta_homo_energy"``*: float, highest occupied molecular orbital energy of the beta electron.
-    - ``"beta_homo_lumo_gap_energy"``*: float, energy difference between lowest unoccupied and highest occupied molecule orbital of the alpha electron.
-    - ``"mulliken_charges"``*: list [float, float, ...], the Mulliken atomic charges.
-    - ``"loewdin_charges"``*: list [float, float, ...], the Loewdin atomic charges.
-    - ``"omega"``*: list [float, float, ...], vibrational frequencies in cm<sup>-1</sup>.
+    - ``"mulliken_charges"``**\***: list [float, float, ...], the Mulliken atomic charges.
+    - ``"nuclear_repulsion_energy"``: float, the nuclear repulsion energy contribution to the total SCF energy.
+    - ``"omega"``**\***: list [float, float, ...], vibrational frequencies in cm<sup>-1</sup>.
       Includes zero frequencies.
-    - ``"q"``*: list [[float, float, ...], [float, float, ...], ...], the normalized, mass-weighted normal modes.
-    - ``"temperature"``*: float, the temperature, in Kelvin, used for thermochemistry.
-    - ``"zero_point_vibrational_correction"``*: float, the zero-point vibrational energy correction at 0 K to the electronic energy.
-    - ``"thermal_energy_corrections"``*: float, the thermal vibrational, rotational, and translational correction to the electronic energy.
-    - ``"enthalpic_corrections"``*: float, the thermal enthalpy corrections for the electronic energy at the specified temperature.
-    - ``"entropic_corrections"``*: float, the translational, rotational, and vibrational entropic corrections to enthalpy to get Gibbs free energy (i.e., TS).
+    - ``"q"``**\***: list [[float, float, ...], [float, float, ...], ...], the normalized, mass-weighted normal modes.
+    - ``"return_energy"``: float, the energy of the requested method, identical to return_value for energy computations.
+      For frequency calculations, this will be the Gibbs free energy.
+    - ``"scf_dipole_moment"``: list [float, float, ...], the x, y, and z dipole components.
+    - ``"scf_dispersion_correction_energy"``: float, the dispersion correction appended to an underlying functional when a DFT-D method is requested.
+    - ``"scf_iterations"``: int, the number of SCF iterations taken before convergence.
+    - ``"scf_one_electron_energy"``: float, the one-electron (core Hamiltonian) energy contribution to the total SCF energy.
+    - ``"scf_total_energy"``: float, the total electronic energy of the SCF stage of the calculation.
+      This is represented as the sum of the ... quantities.
+    - ``"scf_two_electron_energy"``: float, the two-electron energy contribution to the total SCF energy.
+    - ``"scf_xc_energy"``: float, the functional energy contribution to the total SCF energy.
+    - ``"temperature"``**\***: float, the temperature, in Kelvin, used for thermochemistry.
+    - ``"thermal_energy_corrections"``**\***: float, the thermal vibrational, rotational, and translational correction to the electronic energy.
+    - ``"zero_point_vibrational_correction"``**\***: float, the zero-point vibrational energy correction at 0 K to the electronic energy.
+- ``"provenance"``: dict, a brief description of the program, version, and routine used to generate the output.
+  Can include more detailed information such as computation time, processor information, and host location.
+    - ``"creator"``: str, name of the QC package.
+    - ``"version"``: str, version of the QC package.
+- ``"qcjson_creator_version"``**\***: str, specifies the qcjson-creator script version.
+- ``"return_result"``: str, the “primary” return of a given computation.
+  For energy, gradient, and Hessian quantities these are either single numbers or a array representing the derivative quantity.
+- ``"schema_name"``: str, specifies the type of QCJSON. Always equal to "qc_schema_output".
+- ``"schema_version"``: int, specifies the [QCSchema](https://github.com/MolSSI/QCSchema) version.
+  Current version is 1.
 - ``"success"``: bool, a description if the computation was successful or not.
-- ``"error"``: dict, for unsuccessful computations standard errors will be placed in the output such as convergence, IO errors, etc.
-    - ``"error_type"``: str, what caused the error.
-      Not yet implemented in this script.
-    - ``"error_message"``: str, specific program message.
-      Not yet implemented in this script.
 
 ## Units
 
-All QCJSONs use Angstroms and Hartrees as the units of distance and energies, respectively.
-Derived units adhere to this specification as well; for example, gradients will be in Hartrees/Angstroms.
+All QCJSONs use Angstrom and Hartree as the units of distance and energy, respectively.
+Derived units adhere to this specification as well; for example, gradients will be in Hartree/Angstrom.
 If properties use other units (e.g., cm<sup>-1</sup> for vibrational frequencies) these are specified in the key descriptions above.
 
 ## License
