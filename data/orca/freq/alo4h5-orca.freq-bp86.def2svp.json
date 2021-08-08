@@ -79,10 +79,10 @@
         "thermal_energy_corrections": 0.00868494,
         "enthalpic_corrections": 0.00094421,
         "entropic_corrections": 0.04136711,
-        "alpha_homo_energy": -0.22924199999999997,
-        "alpha_homo_lumo_gap_energy": 0.21306799999999998,
-        "beta_homo_energy": -0.22924199999999997,
-        "beta_homo_lumo_gap_energy": 0.21306799999999998
+        "alpha_homo_energy": -0.229242,
+        "alpha_homo_lumo_gap_energy": 0.213068,
+        "beta_homo_energy": -0.229242,
+        "beta_homo_lumo_gap_energy": 0.213068
     },
     "success": true
 }

@@ -102,6 +102,8 @@ def main():
             i_name = os.path.basename(i)
             print(f'\u001b[31;1m    {i_name}\u001b[0m')
     else:
+        all_error_files = []
+
         # A file was provided for the outputs.
         if os.path.isfile(outputs):
             print(f'Making QCJSON for {outputs}')
@@ -118,7 +120,6 @@ def main():
             else:
                 print(f'Looking for output files in {outputs}')
             all_outfiles = get_files(outputs, 'out', recursive=args.recursive)
-            all_error_files = []
             
             print(f'Found {len(all_outfiles)} output files\n')
 

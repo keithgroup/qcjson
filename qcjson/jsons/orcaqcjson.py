@@ -325,6 +325,13 @@ class orcaJSON(QCJSON):
                     _remove_keywords.append(kw)
                 else:
                     break
+            
+            # Removes parallelization keywords.
+            if 'pal' in kw_lower and kw_lower[3].isnumeric():
+                if kw not in _remove_keywords:
+                    _remove_keywords.append(kw)
+                else:
+                    break
         
         for kw in _remove_keywords:
             self.orca_keywords.remove(kw)
@@ -399,9 +406,10 @@ class orcaJSON(QCJSON):
         if self.method_type == 'scf':
             properties['scf_total_energy'] = self._get_scf_energy(iteration=iteration)
             electronic_energy = properties['scf_total_energy']
-            properties['scf_dispersion_correction_energy'] = cclib.parser.utils.convertor(
-                self.cclib_data.dispersionenergies[iteration], 'eV', 'hartree'
-            )
+            if hasattr(self.cclib_data, 'dispersionenergies'):
+                properties['scf_dispersion_correction_energy'] = cclib.parser.utils.convertor(
+                    self.cclib_data.dispersionenergies[iteration], 'eV', 'hartree'
+                )
             properties['scf_iterations'] = self.cclib_data.scfvalues[0].shape[0]
             if 'dipole_moment' in self.parsed_data['properties'].keys():
                 properties['scf_dipole_moment'] = self.parsed_data['properties']['dipole_moment']
@@ -418,8 +426,23 @@ class orcaJSON(QCJSON):
                     data_merge = {info: data}
                     properties = {**properties, **data_merge}
         elif self.method_type == 'coupled cluster':
-            # TODO
-            pass
+            properties['scf_total_energy'] = self._get_scf_energy(iteration=iteration)
+            properties['mp2_correlation_energy'] = \
+                self.parsed_data['properties']['mp2_correlation_energy'][iteration]
+            properties['mp2_total_energy'] = \
+                self.parsed_data['properties']['mp2_total_energy'][iteration]
+            properties['ccsd_total_energy'] = \
+                self.parsed_data['properties']['ccsd_total_energy'][iteration]
+            properties['t1_diagnostic'] = \
+                self.parsed_data['properties']['t1_diagnostic'][iteration]
+
+            # If CCSD(T).
+            if 'ccsd(t)_total_energy' in self.parsed_data['properties'].keys():
+                properties['ccsd(t)_total_energy'] = \
+                    self.parsed_data['properties']['ccsd(t)_total_energy'][iteration]
+                electronic_energy = properties['ccsd(t)_total_energy']
+            else:
+                electronic_energy = properties['ccsd_total_energy']
         else:
             raise ValueError('Unknown method type.')
         
@@ -456,7 +479,7 @@ class orcaJSON(QCJSON):
                     elif self.method_type == 'moller-plesset':
                         prefix = 'mp2'
                     elif self.method_type == 'coupled cluster':
-                        pass
+                        prefix = 'cc'
                     info = prefix + '_' + info
 
                 data_merge = {info: data}
@@ -479,10 +502,17 @@ class orcaJSON(QCJSON):
             self.cclib_data.moenergies[-1][homo_idx_beta + 1], 'eV', 'hartree'
         )
         beta_gap_energy = beta_lumo_energy - beta_homo_energy
-        properties['alpha_homo_energy'] = alpha_homo_energy
-        properties['alpha_homo_lumo_gap_energy'] = alpha_gap_energy
-        properties['beta_homo_energy'] = beta_homo_energy
-        properties['beta_homo_lumo_gap_energy'] = beta_gap_energy
+        properties['alpha_homo_energy'] = round(alpha_homo_energy, 6)
+        properties['alpha_homo_lumo_gap_energy'] = round(alpha_gap_energy, 6)
+        properties['beta_homo_energy'] = round(beta_homo_energy, 6)
+        properties['beta_homo_lumo_gap_energy'] = round(beta_gap_energy, 6)
+
+        # UHF spin contamination.
+        if 'uhf_calculated_average_total_spin_squared' in self.parsed_data['properties'].keys():
+            properties['uhf_calculated_average_total_spin_squared'] = \
+                self.parsed_data['properties']['uhf_calculated_average_total_spin_squared'][iteration]
+            properties['uhf_ideal_average_total_spin_squared'] = \
+                self.parsed_data['properties']['uhf_ideal_average_total_spin_squared'][iteration]
         
         return properties
     
@@ -557,8 +587,10 @@ class orcaJSON(QCJSON):
         if not hasattr(self, 'calc_driver') or self.calc_driver == 'energy':
             self.calc_driver = 'energy'
             driver['driver'] = self.calc_driver
-            if hasattr(self.cclib_data, 'ccenergies'):
-                return_result = self.cclib_data.ccenergies[iteration]
+            if 'ccsd_total_energy' in self.parsed_data['properties'].keys():
+                return_result = self.parsed_data['properties']['ccsd_total_energy'][iteration]
+            elif 'ccsd(t)_total_energy' in self.parsed_data['properties'].keys():
+                return_result = self.parsed_data['properties']['ccsd(t)_total_energy'][iteration]
             elif hasattr(self.cclib_data, 'mpenergies'):
                 return_result = self._get_mp_energy(
                 iteration=iteration

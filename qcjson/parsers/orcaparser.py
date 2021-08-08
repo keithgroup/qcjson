@@ -67,6 +67,16 @@ class orcaParser(outfileParser):
         # ----------------
         if 'TOTAL SCF ENERGY' == line.strip():
             self._extract_scf_energies(outfile, line)
+
+        # ----------------------
+        # UHF SPIN CONTAMINATION
+        # ----------------------
+        #
+        # Expectation value of <S**2>     :     0.750016
+        # Ideal value S*(S+1) for S=0.5   :     0.750000
+        # Deviation                       :     0.000016
+        if 'UHF SPIN CONTAMINATION' == line.strip():
+            self._extract_uhf_spin_contamination(outfile, line)
         
         #                       .--------------------.
         # ----------------------|Geometry convergence|-------------------------
@@ -90,6 +100,18 @@ class orcaParser(outfileParser):
         # ----------------------------------------------------------
         if 'ORCA  MP2' == line.strip():
             self._extract_mp_energies(outfile, line)
+        
+        # ------------------------------------------------
+        #                   RHF COUPLED CLUSTER ITERATIONS
+        # ------------------------------------------------
+        #
+        # or
+        #
+        # ------------------------------------------------
+        #                   UHF COUPLED CLUSTER ITERATIONS
+        # ------------------------------------------------
+        if 'HF COUPLED CLUSTER ITERATIONS' == line.strip()[1:]:
+            self._extract_cc_properties(outfile, line)
         
         # -----------------------
         # MULLIKEN ATOMIC CHARGES
@@ -301,6 +323,34 @@ class orcaParser(outfileParser):
 
             line = next(outfile)
     
+    def _extract_uhf_spin_contamination(self, outfile, line):
+        """Spin contamination from unrestricted Hartree-Fock calculations.
+
+        Parameters
+        ----------
+        outfile : :obj:`io.TextIOWrapper`
+            Buffered text stream of the output file.
+        line : :obj:`str`
+            Parsed line from ``outfile``.
+        """
+        for _ in range(0, 3):
+            line = next(outfile)
+        
+        if 'uhf_ideal_average_total_spin_squared' not in self.data['properties'].keys():
+            self.data['properties']['uhf_ideal_average_total_spin_squared'] = []
+        if 'uhf_calculated_average_total_spin_squared' not in self.data['properties'].keys():
+            self.data['properties']['uhf_calculated_average_total_spin_squared'] = []
+
+        # Expectation value of <S**2>     :     0.750016
+        self.data['properties']['uhf_calculated_average_total_spin_squared'].append(
+            float(line.split()[5])
+        )
+        line = next(outfile)
+        # Ideal value S*(S+1) for S=0.5   :     0.750000
+        self.data['properties']['uhf_ideal_average_total_spin_squared'].append(
+            float(line.split()[6])
+        )
+
     def _extract_mp_energies(self, outfile, line):
         """Moller-Plesset calculation properties.
 
@@ -331,6 +381,75 @@ class orcaParser(outfileParser):
                     float(line.split()[index])
                 )
                 break
+            
+            line = next(outfile)
+    
+    def _extract_cc_properties(self, outfile, line):
+        """Coupled cluster properties.
+
+        This is called directly after the ``'COUPLED CLUSTER ITERATIONS'``
+        trigger, and will terminate once the ``'ORCA POPULATION ANALYSIS'``
+        trigger is reached.
+
+        Parameters
+        ----------
+        outfile : :obj:`io.TextIOWrapper`
+            Buffered text stream of the output file.
+        line : :obj:`str`
+            Parsed line from ``outfile``.
+        """
+        while 'ORCA POPULATION ANALYSIS' != line.strip():
+            # Iter       E(tot)           E(Corr)          Delta-E          Residual     Time      <S|S>**1/2
+            #  0     -7.469294707     -0.036553055      0.000000000      0.027013328    0.05      0.000000001
+            #
+            # or
+            #
+            # Iter       E(tot)           E(Corr)          Delta-E          Residual     Time
+            #   0     -2.897443580     -0.035772194      0.000000000      0.027217829    0.00
+            if line.strip()[:79] == 'Iter       E(tot)           E(Corr)          Delta-E          Residual     Time':
+                # Extracts MP2 energies under the initial line.
+                line = next(outfile)
+                if 'mp2_correlation_energy' not in self.data['properties'].keys():
+                    self.data['properties']['mp2_correlation_energy'] = []
+                if 'mp2_total_energy' not in self.data['properties'].keys():
+                    self.data['properties']['mp2_total_energy'] = []
+                
+                self.data['properties']['mp2_correlation_energy'].append(
+                    float(line.split()[2])
+                )
+                self.data['properties']['mp2_total_energy'].append(
+                    float(line.split()[1])
+                )
+            
+            # E(TOT)                                     ...     -7.473852176
+            if line.strip()[:6] == 'E(TOT)':
+                # Extracts total CCSD energy.
+                if 'ccsd_total_energy' not in self.data['properties'].keys():
+                    self.data['properties']['ccsd_total_energy'] = []
+                
+                self.data['properties']['ccsd_total_energy'].append(
+                    float(line.split()[2])
+                )
+            
+            # T1 diagnostic                              ...      0.001316573 
+            if line.strip()[:13] == 'T1 diagnostic':
+                # Extracts T1 diagnostic.
+                if 't1_diagnostic' not in self.data['properties'].keys():
+                    self.data['properties']['t1_diagnostic'] = []
+                
+                self.data['properties']['t1_diagnostic'].append(
+                    float(line.split()[3])
+                )
+            
+            # E(CCSD(T))                                 ...     -7.473882409
+            if line.strip()[:10] == 'E(CCSD(T))':
+                # Extracts total CCSD(T) energy..
+                if 'ccsd(t)_total_energy' not in self.data['properties'].keys():
+                    self.data['properties']['ccsd(t)_total_energy'] = []
+                
+                self.data['properties']['ccsd(t)_total_energy'].append(
+                    float(line.split()[2])
+                )
             
             line = next(outfile)
 

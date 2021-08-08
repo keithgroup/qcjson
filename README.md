@@ -84,16 +84,19 @@ Written by Alex M. Maldonado (@aalexmmaldonado)
 Energies and distances are Hartrees and Angstroms
 
 Looking for output files in ./, recursively
-Found 8 output files
+Found 11 output files
 
-Making QCJSON for 4h2o.abc0.iter2-orca.opt-mp2.def2tzvp
 Making QCJSON for 12h2o.su.etal-orca.sp-mp2.def2tzvp.frozencore
-Making QCJSON for alo3h3.h2o-orca.freq-bp86.def2svp.cpcm
 Making QCJSON for neb-bare.0-orca.sp-bp86.def2tzvp.smd
-Making QCJSON for 5h2o.abc0.iter1.mp2.md.300k.iter1.mol0,1,2,3,4-orca.engrad-mp2.def2tzvp
-Making QCJSON for alo4h5-orca.freq-bp86.def2svp
+Making QCJSON for li.chrg0.mult2-orca.sp-ccsdt.anopvqz.vtightscf.sym
+Making QCJSON for he.chrg0.mult1-orca.sp-ccsd.anopvqz.vtightscf.sym
+Making QCJSON for he.chrg1.mult2-orca.sp-hf.anopvqz.vtightscf.sym
 Making QCJSON for neb-bare.0-orca.sp-wb97x.def2tzvp
 Making QCJSON for neb-bare.0-orca.sp-bp86.def2svp
+Making QCJSON for alo3h3.h2o-orca.freq-bp86.def2svp.cpcm
+Making QCJSON for alo4h5-orca.freq-bp86.def2svp
+Making QCJSON for 5h2o.abc0.iter1.mp2.md.300k.iter1.mol0,1,2,3,4-orca.engrad-mp2.def2tzvp
+Making QCJSON for 4h2o.abc0.iter2-orca.opt-mp2.def2tzvp
 
 0 file(s) encountered errors and not written
 $
@@ -102,12 +105,15 @@ $
 ORCA calculation examples descriptions.
 
 - `4h2o.abc0.iter2-orca.opt-mp2.def2tzvp.out`: An optimization using MP2/def2-TZVP with the default frozen core approximation.
+- `5h2o.abc0.iter1.mp2.md.300k.iter1.mol0,1,2,3,4-orca.engrad-mp2.def2tzvp.out`: An ORCA job running multiple energy+gradient calculations on different configurations of the same system.
+- `alo3h3.h2o-orca.freq-bp86.def2svp.cpcm.out`: An analytical frequency calculation with an implicit solvent and one imaginary frequency.
+- `alo4h5-orca.freq-bp86.def2svp.out`: An analytical frequency calculation with zero imaginary frequencies.
+- `he.chrg1.mult2-orca.sp-hf.anopvqz.vtightscf.sym.out`: A UHF/ano-pVQZ calculation on He<sup>+</sup>.
+- `he.chrg0.mult1-orca.sp-ccsd.anopvqz.vtightscf.sym.out`: A CCSD/ano-pVQZ calculation on He.
+- `li.chrg0.mult2-orca.sp-ccsdt.anopvqz.vtightscf.sym.out`: A CCSD(T)/ano-pVQZ calculation on Li.
 - `neb-bare.0-orca.sp-bp86.def2svp.out`: A single-point energy calculation using BP86-D3BJ/def2-TZVP.
 - `neb-bare.0-orca.sp-bp86.def2tzvp.smd.out`: A single-point energy calculation using BP86-D3BJ/def2-TZVP with a water implicit solvent model (SMD).
 - `neb-bare.0-orca.sp-wb97x.def2tzvp.out`: A single-point energy calculation using &omega;B97X-D3BJ/def2-TZVP.
-- `5h2o.abc0.iter1.mp2.md.300k.iter1.mol0,1,2,3,4-orca.engrad-mp2.def2tzvp.out`: An ORCA job running multiple energy+gradient calculations on different configurations of the same system.
-- `alo4h5-orca.freq-bp86.def2svp.out`: An analytical frequency calculation with zero imaginary frequencies.
-- `alo3h3.h2o-orca.freq-bp86.def2svp.cpcm.out`: An analytical frequency calculation with an implicit solvent and one imaginary frequency.
 
 The xtb program is one example where the geometries during the calculation are not printed directly in the output file.
 Instead, they are put into a `.log` or a `.trj` file.
@@ -198,6 +204,8 @@ All custom keys are marked with a **\***.
     - ``"beta_homo_lumo_gap_energy"``**\***: float, energy difference between lowest unoccupied and highest occupied molecule orbital of the alpha electron.
     - ``"calcinfo_nbasis"``: int, the number of basis functions for the computation.
     - ``"calcinfo_nmo"``: int, the number of molecular orbitals for the computation.
+    - ``"ccsd_total_energy"``**\***: float, the total CCSD energy.
+    - ``"ccsd(t)_total_energy"``**\***: float, the total CCSD(T) energy.
     - ``"enthalpic_corrections"``**\***: float, the thermal enthalpy corrections for the electronic energy at the specified temperature.
     - ``"entropic_corrections"``**\***: float, the translational, rotational, and vibrational entropic corrections to enthalpy to get Gibbs free energy (i.e., TS).
     - ``"loewdin_charges"``**\***: list [float, float, ...], the Loewdin atomic charges.
@@ -216,11 +224,15 @@ All custom keys are marked with a **\***.
     - ``"scf_iterations"``: int, the number of SCF iterations taken before convergence.
     - ``"scf_one_electron_energy"``: float, the one-electron (core Hamiltonian) energy contribution to the total SCF energy.
     - ``"scf_total_energy"``: float, the total electronic energy of the SCF stage of the calculation.
-      This is represented as the sum of the ... quantities.
+      For Moller&ndash;Plesset and coupled cluster calculations this is the Hartree&ndash;Fock energy.
     - ``"scf_two_electron_energy"``: float, the two-electron energy contribution to the total SCF energy.
     - ``"scf_xc_energy"``: float, the functional energy contribution to the total SCF energy.
+    - ``"t1_diagnostic"``**\***: float, the T1 diagnostic from coupled cluster calculations.
     - ``"temperature"``**\***: float, the temperature, in Kelvin, used for thermochemistry.
     - ``"thermal_energy_corrections"``**\***: float, the thermal vibrational, rotational, and translational correction to the electronic energy.
+    - ``"uhf_ideal_average_total_spin_squared"``**\***: float, the ideal value of <&Scirc;<sup>2</sup>> = S(S + 1) where S is the unpaired spin (e.g., 0 for singlets, 1/2 for doublets, 1 for triplets, etc.).
+    - ``"uhf_calculated_average_total_spin_squared"``**\***: float, the expectation value of &Scirc;<sup>2</sup> (i.e., <&Scirc;<sup>2</sup>>) from an unrestricted Hartree&ndash;Fock calculation.
+      Deviations from the ideal value represents spin contamination from different electronic spin-states.
     - ``"zero_point_vibrational_correction"``**\***: float, the zero-point vibrational energy correction at 0 K to the electronic energy.
 - ``"provenance"``: dict, a brief description of the program, version, and routine used to generate the output.
   Can include more detailed information such as computation time, processor information, and host location.
