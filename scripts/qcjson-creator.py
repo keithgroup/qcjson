@@ -123,7 +123,7 @@ def main():
             
             print(f'Found {len(all_outfiles)} output files\n')
 
-            all_outfiles = select_files(all_outfiles, exclude=[], include=[])
+            all_outfiles = select_files(all_outfiles, exclude=args.exclude, include=args.include)
 
             for outfile in all_outfiles:
                 file_name = '.'.join(os.path.basename(outfile).split('.')[:-1])
