@@ -641,8 +641,9 @@ class orcaJSON(QCJSON):
                     else:
                         # These functions and variables are in the qcjson-creator
                         # script.
-                        if self.path not in error_files:
-                            error_out(self.path, 'Uncaught exceptions.')
+                        global error_files
+                        if self.path not in self.error_files:
+                            self.error_out(self.path, 'Uncaught exceptions.')
                         self._json = all_jsons
                         break
         

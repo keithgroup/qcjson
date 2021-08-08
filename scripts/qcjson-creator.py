@@ -32,8 +32,6 @@ from qcjson.utils import cclib_version_check
 from qcjson.utils import get_files
 from qcjson.utils import select_files
 
-error_files = []
-
 def main():
     
     parser = argparse.ArgumentParser(
@@ -95,7 +93,9 @@ def main():
             print('Split geometry output files are not supported recursively.')
         
         print(f'Making QCJSON for {outputs}')
-        qcjson_creator_split(outputs, geomfile, save_dir, args.debug, args.prettify)
+        error_files = qcjson_creator_split(
+            outputs, geomfile, save_dir, args.debug, args.prettify
+        )
 
         print(f'\n{len(error_files)} file(s) encountered errors and not written')
         for i in error_files:
@@ -118,6 +118,7 @@ def main():
             else:
                 print(f'Looking for output files in {outputs}')
             all_outfiles = get_files(outputs, 'out', recursive=args.recursive)
+            all_error_files = []
             
             print(f'Found {len(all_outfiles)} output files\n')
 
@@ -141,13 +142,16 @@ def main():
                         )
                         continue
                 print(f'Making QCJSON for {file_name}')
-                qcjson_creator(outfile, save_dir, args.debug, args.prettify)
+                error_files = qcjson_creator(
+                    outfile, save_dir, args.debug, args.prettify
+                )
+                all_error_files.extend(error_files)
                 
         else:
             raise ValueError(f'{outputs} is an unsupported type.')
         
-        print(f'\n{len(error_files)} file(s) encountered errors and not written')
-        for i in error_files:
+        print(f'\n{len(all_error_files)} file(s) encountered errors and not written')
+        for i in all_error_files:
             i_name = os.path.basename(i)
             print(f'\u001b[31;1m    {i_name}\u001b[0m')
 

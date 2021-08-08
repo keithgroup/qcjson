@@ -55,17 +55,6 @@ def identify_package(outfile_path):
 
 ### Runtime Functions ###
 
-error_files = []
-
-def error_out(outfile, error_message):
-    """Controls what happens when an error is encountered.
-
-    Prints error and does not write file.
-    """
-    global error_files
-    error_files.append(outfile)
-    print(f'\u001b[31;1mError: {error_message}\u001b[0m')
-
 # Triggers to identify output files.
 triggers = [
     (orcaJSON, ["O   R   C   A"], True),
@@ -88,6 +77,11 @@ def qcjson_creator(output_file, save_dir, debug, prettify):
         just skipping over the file.
     prettify : :obj:`bool`
         Indent each JSON property.
+    
+    Returns
+    -------
+    :obj:`list`
+        All file paths that encountered errors if ``debug`` is ``True``.
     """
     geom_splits = [xtbJSON]
 
@@ -98,7 +92,7 @@ def qcjson_creator(output_file, save_dir, debug, prettify):
     
     out_json = json_package(output_file)
     json_dict = out_json.get_json(debug=debug)
-    if out_json.path not in error_files:
+    if out_json.path not in out_json.error_files:
         if save_dir == './':
             abs_path = os.path.dirname(out_json.path)
         else:
@@ -107,6 +101,8 @@ def qcjson_creator(output_file, save_dir, debug, prettify):
         out_json.write(
             out_json.name, json_dict, abs_path, prettify=prettify
         )
+    
+    return out_json.error_files
 
 def qcjson_creator_split(output_file, geom_file, save_dir, debug, prettify):
     """Creates a single QCJSON file from an output file and xyz file.
@@ -126,12 +122,17 @@ def qcjson_creator_split(output_file, geom_file, save_dir, debug, prettify):
         just skipping over the file.
     prettify : :obj:`bool`
         Indent each JSON property.
+    
+    Returns
+    -------
+    :obj:`list`
+        All file paths that encountered errors if ``debug`` is ``True``.
     """
     # pylint: disable=too-many-function-args
     json_package = identify_package(output_file)
     out_json = json_package(output_file, geom_file)
     json_dict = out_json.get_json(debug=debug)
-    if out_json.path not in error_files:
+    if out_json.path not in out_json.error_files:
         if save_dir == './':
             abs_path = os.path.dirname(out_json.path)
         else:
@@ -140,3 +141,5 @@ def qcjson_creator_split(output_file, geom_file, save_dir, debug, prettify):
         out_json.write(
             out_json.name, json_dict, abs_path, prettify=prettify
         )
+
+    return out_json.error_files

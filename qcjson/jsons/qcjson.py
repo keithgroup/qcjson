@@ -44,6 +44,15 @@ class QCJSON:
         self.name = 'qcjson'
         self.cclib_data = None
         self.path = None
+        self.error_files = []
+    
+    def error_out(self, outfile, error_message):
+        """Controls what happens when an error is encountered.
+
+        Prints error and does not write file.
+        """
+        self.error_files.append(outfile)
+        print(f'\u001b[31;1mError: {error_message}\u001b[0m')
 
     def write(self, name, json_dict, save_dir, prettify=True):
         """Writes JSON.

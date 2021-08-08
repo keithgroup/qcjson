@@ -194,7 +194,6 @@ class orcaParser(outfileParser):
         line_split = line.strip().split(':')
         self.data['model']['aux_basis'] = line_split[-1].strip()
 
-
     def _extract_grid_info(self, outfile, line):
         """DFT integration grid information.
 
