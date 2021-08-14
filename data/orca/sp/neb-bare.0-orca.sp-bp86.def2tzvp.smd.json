@@ -25,9 +25,9 @@
         "dispersion": "D3BJ",
         "scf_convergence_tolerance": "Tight",
         "implicit_solvent": "SMD",
+        "solvent_name": "WATER",
         "rij_approximation": true,
         "scf_grid_level": 4,
-        "solvent_name": "WATER",
         "final_grid_level": 5
     },
     "properties": {

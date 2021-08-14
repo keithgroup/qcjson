@@ -281,6 +281,9 @@ class orcaJSON(QCJSON):
                     keywords['implicit_solvent'] = 'SMD'
                 else:
                     keywords['implicit_solvent'] = 'CPCM'
+                if '(' in kw_lower and ')' == kw_lower[-1]:
+                    solvent_name = kw_lower[:-1].split('(')[-1]
+                    keywords['solvent_name'] = solvent_name
                 if kw not in _remove_keywords:
                     _remove_keywords.append(kw)
                 else:
