@@ -22,6 +22,7 @@
     },
     "keywords": {
         "scf_convergence_tolerance": "VeryTight",
+        "hf_type": "UHF",
         "scf_grid_level": 2,
         "final_grid_level": 2,
         "other": [ "UseSym", "KeepDens" ]

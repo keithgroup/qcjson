@@ -22,6 +22,7 @@
     },
     "keywords": {
         "scf_convergence_tolerance": "Tight",
+        "hf_type": "RHF",
         "scf_grid_level": 4,
         "frozen_electrons": 24,
         "final_grid_level": 4,

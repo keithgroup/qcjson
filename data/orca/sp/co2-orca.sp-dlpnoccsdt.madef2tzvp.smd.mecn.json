@@ -24,6 +24,7 @@
         "scf_convergence_tolerance": "Tight",
         "frozen_core": false,
         "implicit_solvent": "SMD",
+        "hf_type": "RHF",
         "scf_grid_level": 5,
         "solvent_name": "ACETONITRILE",
         "final_grid_level": 5,

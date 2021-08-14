@@ -174,6 +174,7 @@ All custom keys are marked with a **\***.
     - ``"final_grid_level"``**\***: int, specifies program-specific integration grid level for the final energy calculation.
     - ``"frozen_core"``**\***: bool, if the core electrons are frozen.
     - ``"frozen_electrons"``**\***: int, the number of frozen core electrons.
+    - ``"hf_type"``**\***: str, Hartree&ndash;Fock type (RHF or UHF) for ab initio methods.
     - ``"implicit_solvent"``**\***: str, the implicit solvent model if used.
       For example, "SMD" or "CPCM".
       Note, this property is only included if included.

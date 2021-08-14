@@ -543,6 +543,20 @@ class orcaParser(outfileParser):
                 term (COSX).
         """
         while 'Total time needed     ' not in line.strip():
+            # Hamiltonian:
+            #  Ab initio Hamiltonian  Method          .... Hartree-Fock(GTOs)
+
+
+            # General Settings:
+            #  Integral files         IntName         .... al.chrg0.mult2-orca.sp.esp-ccsdt.anopvqz.vtightscf.sym-lambda0
+            #  Hartree-Fock type      HFTyp           .... UHF
+            if 'Ab initio Hamiltonian' == line.strip()[:21]:
+                # We only include the HF type in the keywords.
+                for _ in range(0, 5):
+                    line = next(outfile)
+                hf_type = line.split()[4]
+                self.data['keywords']['hf_type'] = hf_type
+
             #  RI-approximation to the Coulomb term is turned on
             if 'RI-approximation to the Coulomb term is turned on' in line:
                 self.data['keywords']['rij_approximation'] = True

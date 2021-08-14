@@ -22,6 +22,7 @@
     },
     "keywords": {
         "scf_convergence_tolerance": "VeryTight",
+        "hf_type": "RHF",
         "scf_grid_level": 2,
         "frozen_core": false,
         "final_grid_level": 2,

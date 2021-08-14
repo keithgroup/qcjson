@@ -9,6 +9,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Support for xtb optimizations, single-point energies, and molecular dynamics. (xtb)
 - Support for additional functionals. (ORCA)
 - Support for coupled cluster calculations. (ORCA)
+- Track Hartree&ndash;Fock type for ab initio methods. (ORCA)
 
 ### Changed
 

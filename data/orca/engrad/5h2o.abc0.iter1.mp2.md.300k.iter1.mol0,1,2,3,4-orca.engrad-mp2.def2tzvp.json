@@ -24,6 +24,7 @@
         "keywords": {
             "scf_convergence_tolerance": "Tight",
             "frozen_core": true,
+            "hf_type": "RHF",
             "scf_grid_level": 2,
             "frozen_electrons": 10,
             "final_grid_level": 2,
@@ -74,6 +75,7 @@
         "keywords": {
             "scf_convergence_tolerance": "Tight",
             "frozen_core": true,
+            "hf_type": "RHF",
             "scf_grid_level": 2,
             "frozen_electrons": 10,
             "final_grid_level": 2,
@@ -124,6 +126,7 @@
         "keywords": {
             "scf_convergence_tolerance": "Tight",
             "frozen_core": true,
+            "hf_type": "RHF",
             "scf_grid_level": 2,
             "frozen_electrons": 10,
             "final_grid_level": 2,
@@ -174,6 +177,7 @@
         "keywords": {
             "scf_convergence_tolerance": "Tight",
             "frozen_core": true,
+            "hf_type": "RHF",
             "scf_grid_level": 2,
             "frozen_electrons": 10,
             "final_grid_level": 2,
@@ -224,6 +228,7 @@
         "keywords": {
             "scf_convergence_tolerance": "Tight",
             "frozen_core": true,
+            "hf_type": "RHF",
             "scf_grid_level": 2,
             "frozen_electrons": 10,
             "final_grid_level": 2,
@@ -274,6 +279,7 @@
         "keywords": {
             "scf_convergence_tolerance": "Tight",
             "frozen_core": true,
+            "hf_type": "RHF",
             "scf_grid_level": 2,
             "frozen_electrons": 10,
             "final_grid_level": 2,
@@ -324,6 +330,7 @@
         "keywords": {
             "scf_convergence_tolerance": "Tight",
             "frozen_core": true,
+            "hf_type": "RHF",
             "scf_grid_level": 2,
             "frozen_electrons": 10,
             "final_grid_level": 2,
@@ -374,6 +381,7 @@
         "keywords": {
             "scf_convergence_tolerance": "Tight",
             "frozen_core": true,
+            "hf_type": "RHF",
             "scf_grid_level": 2,
             "frozen_electrons": 10,
             "final_grid_level": 2,
@@ -424,6 +432,7 @@
         "keywords": {
             "scf_convergence_tolerance": "Tight",
             "frozen_core": true,
+            "hf_type": "RHF",
             "scf_grid_level": 2,
             "frozen_electrons": 10,
             "final_grid_level": 2,
@@ -474,6 +483,7 @@
         "keywords": {
             "scf_convergence_tolerance": "Tight",
             "frozen_core": true,
+            "hf_type": "RHF",
             "scf_grid_level": 2,
             "frozen_electrons": 10,
             "final_grid_level": 2,
@@ -524,6 +534,7 @@
         "keywords": {
             "scf_convergence_tolerance": "Tight",
             "frozen_core": true,
+            "hf_type": "RHF",
             "scf_grid_level": 2,
             "frozen_electrons": 10,
             "final_grid_level": 2,
@@ -574,6 +585,7 @@
         "keywords": {
             "scf_convergence_tolerance": "Tight",
             "frozen_core": true,
+            "hf_type": "RHF",
             "scf_grid_level": 2,
             "frozen_electrons": 10,
             "final_grid_level": 2,
@@ -624,6 +636,7 @@
         "keywords": {
             "scf_convergence_tolerance": "Tight",
             "frozen_core": true,
+            "hf_type": "RHF",
             "scf_grid_level": 2,
             "frozen_electrons": 10,
             "final_grid_level": 2,
@@ -674,6 +687,7 @@
         "keywords": {
             "scf_convergence_tolerance": "Tight",
             "frozen_core": true,
+            "hf_type": "RHF",
             "scf_grid_level": 2,
             "frozen_electrons": 10,
             "final_grid_level": 2,
@@ -724,6 +738,7 @@
         "keywords": {
             "scf_convergence_tolerance": "Tight",
             "frozen_core": true,
+            "hf_type": "RHF",
             "scf_grid_level": 2,
             "frozen_electrons": 10,
             "final_grid_level": 2,
@@ -774,6 +789,7 @@
         "keywords": {
             "scf_convergence_tolerance": "Tight",
             "frozen_core": true,
+            "hf_type": "RHF",
             "scf_grid_level": 2,
             "frozen_electrons": 10,
             "final_grid_level": 2,
@@ -824,6 +840,7 @@
         "keywords": {
             "scf_convergence_tolerance": "Tight",
             "frozen_core": true,
+            "hf_type": "RHF",
             "scf_grid_level": 2,
             "frozen_electrons": 10,
             "final_grid_level": 2,
@@ -874,6 +891,7 @@
         "keywords": {
             "scf_convergence_tolerance": "Tight",
             "frozen_core": true,
+            "hf_type": "RHF",
             "scf_grid_level": 2,
             "frozen_electrons": 10,
             "final_grid_level": 2,
@@ -924,6 +942,7 @@
         "keywords": {
             "scf_convergence_tolerance": "Tight",
             "frozen_core": true,
+            "hf_type": "RHF",
             "scf_grid_level": 2,
             "frozen_electrons": 10,
             "final_grid_level": 2,
@@ -974,6 +993,7 @@
         "keywords": {
             "scf_convergence_tolerance": "Tight",
             "frozen_core": true,
+            "hf_type": "RHF",
             "scf_grid_level": 2,
             "frozen_electrons": 10,
             "final_grid_level": 2,
@@ -1024,6 +1044,7 @@
         "keywords": {
             "scf_convergence_tolerance": "Tight",
             "frozen_core": true,
+            "hf_type": "RHF",
             "scf_grid_level": 2,
             "frozen_electrons": 10,
             "final_grid_level": 2,
@@ -1074,6 +1095,7 @@
         "keywords": {
             "scf_convergence_tolerance": "Tight",
             "frozen_core": true,
+            "hf_type": "RHF",
             "scf_grid_level": 2,
             "frozen_electrons": 10,
             "final_grid_level": 2,
@@ -1124,6 +1146,7 @@
         "keywords": {
             "scf_convergence_tolerance": "Tight",
             "frozen_core": true,
+            "hf_type": "RHF",
             "scf_grid_level": 2,
             "frozen_electrons": 10,
             "final_grid_level": 2,
@@ -1174,6 +1197,7 @@
         "keywords": {
             "scf_convergence_tolerance": "Tight",
             "frozen_core": true,
+            "hf_type": "RHF",
             "scf_grid_level": 2,
             "frozen_electrons": 10,
             "final_grid_level": 2,
@@ -1224,6 +1248,7 @@
         "keywords": {
             "scf_convergence_tolerance": "Tight",
             "frozen_core": true,
+            "hf_type": "RHF",
             "scf_grid_level": 2,
             "frozen_electrons": 10,
             "final_grid_level": 2,
@@ -1274,6 +1299,7 @@
         "keywords": {
             "scf_convergence_tolerance": "Tight",
             "frozen_core": true,
+            "hf_type": "RHF",
             "scf_grid_level": 2,
             "frozen_electrons": 10,
             "final_grid_level": 2,
@@ -1324,6 +1350,7 @@
         "keywords": {
             "scf_convergence_tolerance": "Tight",
             "frozen_core": true,
+            "hf_type": "RHF",
             "scf_grid_level": 2,
             "frozen_electrons": 10,
             "final_grid_level": 2,
@@ -1374,6 +1401,7 @@
         "keywords": {
             "scf_convergence_tolerance": "Tight",
             "frozen_core": true,
+            "hf_type": "RHF",
             "scf_grid_level": 2,
             "frozen_electrons": 10,
             "final_grid_level": 2,
@@ -1424,6 +1452,7 @@
         "keywords": {
             "scf_convergence_tolerance": "Tight",
             "frozen_core": true,
+            "hf_type": "RHF",
             "scf_grid_level": 2,
             "frozen_electrons": 10,
             "final_grid_level": 2,
@@ -1474,6 +1503,7 @@
         "keywords": {
             "scf_convergence_tolerance": "Tight",
             "frozen_core": true,
+            "hf_type": "RHF",
             "scf_grid_level": 2,
             "frozen_electrons": 10,
             "final_grid_level": 2,
@@ -1524,6 +1554,7 @@
         "keywords": {
             "scf_convergence_tolerance": "Tight",
             "frozen_core": true,
+            "hf_type": "RHF",
             "scf_grid_level": 2,
             "frozen_electrons": 10,
             "final_grid_level": 2,
@@ -1574,6 +1605,7 @@
         "keywords": {
             "scf_convergence_tolerance": "Tight",
             "frozen_core": true,
+            "hf_type": "RHF",
             "scf_grid_level": 2,
             "frozen_electrons": 10,
             "final_grid_level": 2,
@@ -1624,6 +1656,7 @@
         "keywords": {
             "scf_convergence_tolerance": "Tight",
             "frozen_core": true,
+            "hf_type": "RHF",
             "scf_grid_level": 2,
             "frozen_electrons": 10,
             "final_grid_level": 2,
@@ -1674,6 +1707,7 @@
         "keywords": {
             "scf_convergence_tolerance": "Tight",
             "frozen_core": true,
+            "hf_type": "RHF",
             "scf_grid_level": 2,
             "frozen_electrons": 10,
             "final_grid_level": 2,
@@ -1724,6 +1758,7 @@
         "keywords": {
             "scf_convergence_tolerance": "Tight",
             "frozen_core": true,
+            "hf_type": "RHF",
             "scf_grid_level": 2,
             "frozen_electrons": 10,
             "final_grid_level": 2,
@@ -1774,6 +1809,7 @@
         "keywords": {
             "scf_convergence_tolerance": "Tight",
             "frozen_core": true,
+            "hf_type": "RHF",
             "scf_grid_level": 2,
             "frozen_electrons": 10,
             "final_grid_level": 2,
@@ -1824,6 +1860,7 @@
         "keywords": {
             "scf_convergence_tolerance": "Tight",
             "frozen_core": true,
+            "hf_type": "RHF",
             "scf_grid_level": 2,
             "frozen_electrons": 10,
             "final_grid_level": 2,
@@ -1874,6 +1911,7 @@
         "keywords": {
             "scf_convergence_tolerance": "Tight",
             "frozen_core": true,
+            "hf_type": "RHF",
             "scf_grid_level": 2,
             "frozen_electrons": 10,
             "final_grid_level": 2,
@@ -1924,6 +1962,7 @@
         "keywords": {
             "scf_convergence_tolerance": "Tight",
             "frozen_core": true,
+            "hf_type": "RHF",
             "scf_grid_level": 2,
             "frozen_electrons": 10,
             "final_grid_level": 2,
@@ -1974,6 +2013,7 @@
         "keywords": {
             "scf_convergence_tolerance": "Tight",
             "frozen_core": true,
+            "hf_type": "RHF",
             "scf_grid_level": 2,
             "frozen_electrons": 10,
             "final_grid_level": 2,
@@ -2024,6 +2064,7 @@
         "keywords": {
             "scf_convergence_tolerance": "Tight",
             "frozen_core": true,
+            "hf_type": "RHF",
             "scf_grid_level": 2,
             "frozen_electrons": 10,
             "final_grid_level": 2,
@@ -2074,6 +2115,7 @@
         "keywords": {
             "scf_convergence_tolerance": "Tight",
             "frozen_core": true,
+            "hf_type": "RHF",
             "scf_grid_level": 2,
             "frozen_electrons": 10,
             "final_grid_level": 2,
@@ -2124,6 +2166,7 @@
         "keywords": {
             "scf_convergence_tolerance": "Tight",
             "frozen_core": true,
+            "hf_type": "RHF",
             "scf_grid_level": 2,
             "frozen_electrons": 10,
             "final_grid_level": 2,
@@ -2174,6 +2217,7 @@
         "keywords": {
             "scf_convergence_tolerance": "Tight",
             "frozen_core": true,
+            "hf_type": "RHF",
             "scf_grid_level": 2,
             "frozen_electrons": 10,
             "final_grid_level": 2,
@@ -2224,6 +2268,7 @@
         "keywords": {
             "scf_convergence_tolerance": "Tight",
             "frozen_core": true,
+            "hf_type": "RHF",
             "scf_grid_level": 2,
             "frozen_electrons": 10,
             "final_grid_level": 2,
@@ -2274,6 +2319,7 @@
         "keywords": {
             "scf_convergence_tolerance": "Tight",
             "frozen_core": true,
+            "hf_type": "RHF",
             "scf_grid_level": 2,
             "frozen_electrons": 10,
             "final_grid_level": 2,
@@ -2324,6 +2370,7 @@
         "keywords": {
             "scf_convergence_tolerance": "Tight",
             "frozen_core": true,
+            "hf_type": "RHF",
             "scf_grid_level": 2,
             "frozen_electrons": 10,
             "final_grid_level": 2,
@@ -2374,6 +2421,7 @@
         "keywords": {
             "scf_convergence_tolerance": "Tight",
             "frozen_core": true,
+            "hf_type": "RHF",
             "scf_grid_level": 2,
             "frozen_electrons": 10,
             "final_grid_level": 2,
@@ -2424,6 +2472,7 @@
         "keywords": {
             "scf_convergence_tolerance": "Tight",
             "frozen_core": true,
+            "hf_type": "RHF",
             "scf_grid_level": 2,
             "frozen_electrons": 10,
             "final_grid_level": 2,
@@ -2474,6 +2523,7 @@
         "keywords": {
             "scf_convergence_tolerance": "Tight",
             "frozen_core": true,
+            "hf_type": "RHF",
             "scf_grid_level": 2,
             "frozen_electrons": 10,
             "final_grid_level": 2,
@@ -2524,6 +2574,7 @@
         "keywords": {
             "scf_convergence_tolerance": "Tight",
             "frozen_core": true,
+            "hf_type": "RHF",
             "scf_grid_level": 2,
             "frozen_electrons": 10,
             "final_grid_level": 2,
@@ -2574,6 +2625,7 @@
         "keywords": {
             "scf_convergence_tolerance": "Tight",
             "frozen_core": true,
+            "hf_type": "RHF",
             "scf_grid_level": 2,
             "frozen_electrons": 10,
             "final_grid_level": 2,
@@ -2624,6 +2676,7 @@
         "keywords": {
             "scf_convergence_tolerance": "Tight",
             "frozen_core": true,
+            "hf_type": "RHF",
             "scf_grid_level": 2,
             "frozen_electrons": 10,
             "final_grid_level": 2,
@@ -2674,6 +2727,7 @@
         "keywords": {
             "scf_convergence_tolerance": "Tight",
             "frozen_core": true,
+            "hf_type": "RHF",
             "scf_grid_level": 2,
             "frozen_electrons": 10,
             "final_grid_level": 2,
@@ -2724,6 +2778,7 @@
         "keywords": {
             "scf_convergence_tolerance": "Tight",
             "frozen_core": true,
+            "hf_type": "RHF",
             "scf_grid_level": 2,
             "frozen_electrons": 10,
             "final_grid_level": 2,
@@ -2774,6 +2829,7 @@
         "keywords": {
             "scf_convergence_tolerance": "Tight",
             "frozen_core": true,
+            "hf_type": "RHF",
             "scf_grid_level": 2,
             "frozen_electrons": 10,
             "final_grid_level": 2,
@@ -2824,6 +2880,7 @@
         "keywords": {
             "scf_convergence_tolerance": "Tight",
             "frozen_core": true,
+            "hf_type": "RHF",
             "scf_grid_level": 2,
             "frozen_electrons": 10,
             "final_grid_level": 2,
@@ -2874,6 +2931,7 @@
         "keywords": {
             "scf_convergence_tolerance": "Tight",
             "frozen_core": true,
+            "hf_type": "RHF",
             "scf_grid_level": 2,
             "frozen_electrons": 10,
             "final_grid_level": 2,
@@ -2924,6 +2982,7 @@
         "keywords": {
             "scf_convergence_tolerance": "Tight",
             "frozen_core": true,
+            "hf_type": "RHF",
             "scf_grid_level": 2,
             "frozen_electrons": 10,
             "final_grid_level": 2,
@@ -2974,6 +3033,7 @@
         "keywords": {
             "scf_convergence_tolerance": "Tight",
             "frozen_core": true,
+            "hf_type": "RHF",
             "scf_grid_level": 2,
             "frozen_electrons": 10,
             "final_grid_level": 2,
@@ -3024,6 +3084,7 @@
         "keywords": {
             "scf_convergence_tolerance": "Tight",
             "frozen_core": true,
+            "hf_type": "RHF",
             "scf_grid_level": 2,
             "frozen_electrons": 10,
             "final_grid_level": 2,
@@ -3074,6 +3135,7 @@
         "keywords": {
             "scf_convergence_tolerance": "Tight",
             "frozen_core": true,
+            "hf_type": "RHF",
             "scf_grid_level": 2,
             "frozen_electrons": 10,
             "final_grid_level": 2,
@@ -3124,6 +3186,7 @@
         "keywords": {
             "scf_convergence_tolerance": "Tight",
             "frozen_core": true,
+            "hf_type": "RHF",
             "scf_grid_level": 2,
             "frozen_electrons": 10,
             "final_grid_level": 2,
@@ -3174,6 +3237,7 @@
         "keywords": {
             "scf_convergence_tolerance": "Tight",
             "frozen_core": true,
+            "hf_type": "RHF",
             "scf_grid_level": 2,
             "frozen_electrons": 10,
             "final_grid_level": 2,
@@ -3224,6 +3288,7 @@
         "keywords": {
             "scf_convergence_tolerance": "Tight",
             "frozen_core": true,
+            "hf_type": "RHF",
             "scf_grid_level": 2,
             "frozen_electrons": 10,
             "final_grid_level": 2,
@@ -3274,6 +3339,7 @@
         "keywords": {
             "scf_convergence_tolerance": "Tight",
             "frozen_core": true,
+            "hf_type": "RHF",
             "scf_grid_level": 2,
             "frozen_electrons": 10,
             "final_grid_level": 2,
@@ -3324,6 +3390,7 @@
         "keywords": {
             "scf_convergence_tolerance": "Tight",
             "frozen_core": true,
+            "hf_type": "RHF",
             "scf_grid_level": 2,
             "frozen_electrons": 10,
             "final_grid_level": 2,
@@ -3374,6 +3441,7 @@
         "keywords": {
             "scf_convergence_tolerance": "Tight",
             "frozen_core": true,
+            "hf_type": "RHF",
             "scf_grid_level": 2,
             "frozen_electrons": 10,
             "final_grid_level": 2,
@@ -3424,6 +3492,7 @@
         "keywords": {
             "scf_convergence_tolerance": "Tight",
             "frozen_core": true,
+            "hf_type": "RHF",
             "scf_grid_level": 2,
             "frozen_electrons": 10,
             "final_grid_level": 2,
@@ -3474,6 +3543,7 @@
         "keywords": {
             "scf_convergence_tolerance": "Tight",
             "frozen_core": true,
+            "hf_type": "RHF",
             "scf_grid_level": 2,
             "frozen_electrons": 10,
             "final_grid_level": 2,
@@ -3524,6 +3594,7 @@
         "keywords": {
             "scf_convergence_tolerance": "Tight",
             "frozen_core": true,
+            "hf_type": "RHF",
             "scf_grid_level": 2,
             "frozen_electrons": 10,
             "final_grid_level": 2,
@@ -3574,6 +3645,7 @@
         "keywords": {
             "scf_convergence_tolerance": "Tight",
             "frozen_core": true,
+            "hf_type": "RHF",
             "scf_grid_level": 2,
             "frozen_electrons": 10,
             "final_grid_level": 2,
@@ -3624,6 +3696,7 @@
         "keywords": {
             "scf_convergence_tolerance": "Tight",
             "frozen_core": true,
+            "hf_type": "RHF",
             "scf_grid_level": 2,
             "frozen_electrons": 10,
             "final_grid_level": 2,
@@ -3674,6 +3747,7 @@
         "keywords": {
             "scf_convergence_tolerance": "Tight",
             "frozen_core": true,
+            "hf_type": "RHF",
             "scf_grid_level": 2,
             "frozen_electrons": 10,
             "final_grid_level": 2,
@@ -3724,6 +3798,7 @@
         "keywords": {
             "scf_convergence_tolerance": "Tight",
             "frozen_core": true,
+            "hf_type": "RHF",
             "scf_grid_level": 2,
             "frozen_electrons": 10,
             "final_grid_level": 2,
@@ -3774,6 +3849,7 @@
         "keywords": {
             "scf_convergence_tolerance": "Tight",
             "frozen_core": true,
+            "hf_type": "RHF",
             "scf_grid_level": 2,
             "frozen_electrons": 10,
             "final_grid_level": 2,
@@ -3824,6 +3900,7 @@
         "keywords": {
             "scf_convergence_tolerance": "Tight",
             "frozen_core": true,
+            "hf_type": "RHF",
             "scf_grid_level": 2,
             "frozen_electrons": 10,
             "final_grid_level": 2,
@@ -3874,6 +3951,7 @@
         "keywords": {
             "scf_convergence_tolerance": "Tight",
             "frozen_core": true,
+            "hf_type": "RHF",
             "scf_grid_level": 2,
             "frozen_electrons": 10,
             "final_grid_level": 2,
@@ -3924,6 +4002,7 @@
         "keywords": {
             "scf_convergence_tolerance": "Tight",
             "frozen_core": true,
+            "hf_type": "RHF",
             "scf_grid_level": 2,
             "frozen_electrons": 10,
             "final_grid_level": 2,
@@ -3974,6 +4053,7 @@
         "keywords": {
             "scf_convergence_tolerance": "Tight",
             "frozen_core": true,
+            "hf_type": "RHF",
             "scf_grid_level": 2,
             "frozen_electrons": 10,
             "final_grid_level": 2,
@@ -4024,6 +4104,7 @@
         "keywords": {
             "scf_convergence_tolerance": "Tight",
             "frozen_core": true,
+            "hf_type": "RHF",
             "scf_grid_level": 2,
             "frozen_electrons": 10,
             "final_grid_level": 2,
@@ -4074,6 +4155,7 @@
         "keywords": {
             "scf_convergence_tolerance": "Tight",
             "frozen_core": true,
+            "hf_type": "RHF",
             "scf_grid_level": 2,
             "frozen_electrons": 10,
             "final_grid_level": 2,
@@ -4124,6 +4206,7 @@
         "keywords": {
             "scf_convergence_tolerance": "Tight",
             "frozen_core": true,
+            "hf_type": "RHF",
             "scf_grid_level": 2,
             "frozen_electrons": 10,
             "final_grid_level": 2,
@@ -4174,6 +4257,7 @@
         "keywords": {
             "scf_convergence_tolerance": "Tight",
             "frozen_core": true,
+            "hf_type": "RHF",
             "scf_grid_level": 2,
             "frozen_electrons": 10,
             "final_grid_level": 2,
@@ -4224,6 +4308,7 @@
         "keywords": {
             "scf_convergence_tolerance": "Tight",
             "frozen_core": true,
+            "hf_type": "RHF",
             "scf_grid_level": 2,
             "frozen_electrons": 10,
             "final_grid_level": 2,
@@ -4274,6 +4359,7 @@
         "keywords": {
             "scf_convergence_tolerance": "Tight",
             "frozen_core": true,
+            "hf_type": "RHF",
             "scf_grid_level": 2,
             "frozen_electrons": 10,
             "final_grid_level": 2,
@@ -4324,6 +4410,7 @@
         "keywords": {
             "scf_convergence_tolerance": "Tight",
             "frozen_core": true,
+            "hf_type": "RHF",
             "scf_grid_level": 2,
             "frozen_electrons": 10,
             "final_grid_level": 2,
@@ -4374,6 +4461,7 @@
         "keywords": {
             "scf_convergence_tolerance": "Tight",
             "frozen_core": true,
+            "hf_type": "RHF",
             "scf_grid_level": 2,
             "frozen_electrons": 10,
             "final_grid_level": 2,
@@ -4424,6 +4512,7 @@
         "keywords": {
             "scf_convergence_tolerance": "Tight",
             "frozen_core": true,
+            "hf_type": "RHF",
             "scf_grid_level": 2,
             "frozen_electrons": 10,
             "final_grid_level": 2,
@@ -4474,6 +4563,7 @@
         "keywords": {
             "scf_convergence_tolerance": "Tight",
             "frozen_core": true,
+            "hf_type": "RHF",
             "scf_grid_level": 2,
             "frozen_electrons": 10,
             "final_grid_level": 2,
@@ -4524,6 +4614,7 @@
         "keywords": {
             "scf_convergence_tolerance": "Tight",
             "frozen_core": true,
+            "hf_type": "RHF",
             "scf_grid_level": 2,
             "frozen_electrons": 10,
             "final_grid_level": 2,
@@ -4574,6 +4665,7 @@
         "keywords": {
             "scf_convergence_tolerance": "Tight",
             "frozen_core": true,
+            "hf_type": "RHF",
             "scf_grid_level": 2,
             "frozen_electrons": 10,
             "final_grid_level": 2,
@@ -4624,6 +4716,7 @@
         "keywords": {
             "scf_convergence_tolerance": "Tight",
             "frozen_core": true,
+            "hf_type": "RHF",
             "scf_grid_level": 2,
             "frozen_electrons": 10,
             "final_grid_level": 2,
@@ -4674,6 +4767,7 @@
         "keywords": {
             "scf_convergence_tolerance": "Tight",
             "frozen_core": true,
+            "hf_type": "RHF",
             "scf_grid_level": 2,
             "frozen_electrons": 10,
             "final_grid_level": 2,
@@ -4724,6 +4818,7 @@
         "keywords": {
             "scf_convergence_tolerance": "Tight",
             "frozen_core": true,
+            "hf_type": "RHF",
             "scf_grid_level": 2,
             "frozen_electrons": 10,
             "final_grid_level": 2,
@@ -4774,6 +4869,7 @@
         "keywords": {
             "scf_convergence_tolerance": "Tight",
             "frozen_core": true,
+            "hf_type": "RHF",
             "scf_grid_level": 2,
             "frozen_electrons": 10,
             "final_grid_level": 2,
@@ -4824,6 +4920,7 @@
         "keywords": {
             "scf_convergence_tolerance": "Tight",
             "frozen_core": true,
+            "hf_type": "RHF",
             "scf_grid_level": 2,
             "frozen_electrons": 10,
             "final_grid_level": 2,
@@ -4874,6 +4971,7 @@
         "keywords": {
             "scf_convergence_tolerance": "Tight",
             "frozen_core": true,
+            "hf_type": "RHF",
             "scf_grid_level": 2,
             "frozen_electrons": 10,
             "final_grid_level": 2,
@@ -4924,6 +5022,7 @@
         "keywords": {
             "scf_convergence_tolerance": "Tight",
             "frozen_core": true,
+            "hf_type": "RHF",
             "scf_grid_level": 2,
             "frozen_electrons": 10,
             "final_grid_level": 2,
@@ -4974,6 +5073,7 @@
         "keywords": {
             "scf_convergence_tolerance": "Tight",
             "frozen_core": true,
+            "hf_type": "RHF",
             "scf_grid_level": 2,
             "frozen_electrons": 10,
             "final_grid_level": 2
