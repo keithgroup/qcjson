@@ -281,9 +281,6 @@ class orcaJSON(QCJSON):
                     keywords['implicit_solvent'] = 'SMD'
                 else:
                     keywords['implicit_solvent'] = 'CPCM'
-                if '(' in kw_lower and ')' == kw_lower[-1]:
-                    solvent_name = kw_lower[:-1].split('(')[-1]
-                    keywords['solvent_name'] = solvent_name
                 if kw not in _remove_keywords:
                     _remove_keywords.append(kw)
                 else:
@@ -587,10 +584,10 @@ class orcaJSON(QCJSON):
         if not hasattr(self, 'calc_driver') or self.calc_driver == 'energy':
             self.calc_driver = 'energy'
             driver['driver'] = self.calc_driver
-            if 'ccsd_total_energy' in self.parsed_data['properties'].keys():
-                return_result = self.parsed_data['properties']['ccsd_total_energy'][iteration]
-            elif 'ccsd(t)_total_energy' in self.parsed_data['properties'].keys():
+            if 'ccsd(t)_total_energy' in self.parsed_data['properties'].keys():
                 return_result = self.parsed_data['properties']['ccsd(t)_total_energy'][iteration]
+            elif 'ccsd_total_energy' in self.parsed_data['properties'].keys():
+                return_result = self.parsed_data['properties']['ccsd_total_energy'][iteration]
             elif hasattr(self.cclib_data, 'mpenergies'):
                 return_result = self._get_mp_energy(
                 iteration=iteration

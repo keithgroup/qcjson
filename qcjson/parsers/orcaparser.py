@@ -20,8 +20,6 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-import os
-import cclib
 from qcjson.parsers.parser import outfileParser
 
 class orcaParser(outfileParser):
@@ -61,6 +59,12 @@ class orcaParser(outfileParser):
         # ------------
         if 'SCF SETTINGS' == line.strip():
             self._extract_scf_info(outfile, line)
+        
+        # --------------------
+        # CPCM SOLVATION MODEL
+        # --------------------
+        if 'CPCM SOLVATION MODEL' == line.strip():
+            self._extract_implicit_solvent(outfile, line)
 
         # ----------------
         # TOTAL SCF ENERGY
@@ -270,6 +274,23 @@ class orcaParser(outfileParser):
             lebedev_num = line.strip().split('-')[-1]
             self.data['keywords']['final_grid_level'] = lebedev_to_level[lebedev_num]
     
+    def _extract_implicit_solvent(self, outfile, line):
+        """Implicit solvent properties.
+
+        Parameters
+        ----------
+        outfile : :obj:`io.TextIOWrapper`
+            Buffered text stream of the output file.
+        line : :obj:`str`
+            Parsed line from ``outfile``.
+        """
+        while 'Overall time for CPCM initialization' != line.strip()[:36]:
+            # Solvent:                                     ... ACETONITRILE
+            if 'Solvent:' == line[:8]:
+                self.data['keywords']['solvent_name'] = line.split()[2]
+            
+            line = next(outfile)
+    
     def _extract_scf_energies(self, outfile, line):
         """The nuclear repulsion, one- and two-electron energy, and
         exchange-correlation energy after a SCF cycle.
@@ -398,7 +419,8 @@ class orcaParser(outfileParser):
         line : :obj:`str`
             Parsed line from ``outfile``.
         """
-        while 'ORCA POPULATION ANALYSIS' != line.strip():
+        while 'ORCA POPULATION ANALYSIS' != line.strip() \
+        and '*     ORCA property calculations      *' != line.strip():
             # Iter       E(tot)           E(Corr)          Delta-E          Residual     Time      <S|S>**1/2
             #  0     -7.469294707     -0.036553055      0.000000000      0.027013328    0.05      0.000000001
             #

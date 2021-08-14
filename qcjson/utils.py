@@ -93,7 +93,7 @@ basis_sets = {
         '6-311g(3df)','6-311g(3df,3pd)', '6-31+g', '6-31++g(d,p)',
         'def2-svp', 'def2-sv(p)', 'def2-tzvp', 'def2-tzvp(-f)', 'def2-tzvpp',
         'def2-qzvpp', 'sv', 'sv(p)', 'svp', 'tzv', 'tzv(p)', 'tzvp', 'tzvpp',
-        'qzvp', 'qzvpp', 'ma-def2-svp', 'ma-def2-sv(p)', 'ma-def2-tavp',
+        'qzvp', 'qzvpp', 'ma-def2-svp', 'ma-def2-sv(p)', 'ma-def2-tzvp',
         'ma-def2-tzvp(-f)', 'ma-def2-tzvpp', 'ma-def2-qzvpp', 'def2-svpd',
         'def2-tzvpd', 'def2-tzvppd', 'def2-qzvpd', 'def2-qzvppd',
         'dkh-def2-svp', 'zora-def2-svp', 'dkh-def2-sv(p)', 'zora-def2-sv(p)',

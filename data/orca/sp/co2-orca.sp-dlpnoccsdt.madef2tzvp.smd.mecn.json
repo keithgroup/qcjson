@@ -1,0 +1,54 @@
+{
+    "schema_name": "qc_schema_output",
+    "schema_version": 1,
+    "qcjson_creator_version": "0.2.0",
+    "provenance": {
+        "creator": "ORCA",
+        "version": "4.2.0"
+    },
+    "molecule": {
+        "geometry": [[0.0, 0.0, 0.0], [1.159982, -0.0, -0.0], [-1.159982, -0.0, -0.0]],
+        "symbols": [ "C", "O", "O" ]
+    },
+    "molecular_charge": 0,
+    "molecular_multiplicity": 1,
+    "name": "co2-orca.sp-dlpnoccsdt.madef2tzvp.smd.mecn",
+    "atomic_numbers": [6, 8, 8],
+    "driver": "energy",
+    "return_result": -188.393098128,
+    "model": {
+        "method": "DLPNO-CCSD(T)",
+        "basis": "ma-def2-TZVP"
+    },
+    "keywords": {
+        "scf_convergence_tolerance": "Tight",
+        "frozencore": false,
+        "implicit_solvent": "SMD",
+        "scf_grid_level": 5,
+        "solvent_name": "ACETONITRILE",
+        "final_grid_level": 5,
+        "other": [ "AUTOAUX" ]
+    },
+    "properties": {
+        "scf_total_energy": -187.71770705,
+        "mp2_correlation_energy": -0.62486985,
+        "mp2_total_energy": -188.345703611,
+        "ccsd_total_energy": -188.366999417,
+        "t1_diagnostic": 0.014894662,
+        "ccsd(t)_total_energy": -188.393098128,
+        "return_energy": -188.393098128,
+        "calcinfo_nbasis": 105,
+        "calcinfo_nmo": 105,
+        "nuclear_repulsion_energy": 58.39287391,
+        "scf_one_electron_energy": -372.50939409,
+        "scf_two_electron_energy": 126.39881313,
+        "mulliken_charges": [ 0.777377, -0.388689, -0.388689 ],
+        "loewdin_charges": [ -0.214662, 0.107331, 0.107331 ],
+        "cc_dipole_moment": [ 0.0, -0.0, 0.0 ],
+        "alpha_homo_energy": -0.538636,
+        "alpha_homo_lumo_gap_energy": 0.580938,
+        "beta_homo_energy": -0.538636,
+        "beta_homo_lumo_gap_energy": 0.580938
+    },
+    "success": true
+}
