@@ -121,7 +121,14 @@ class orcaParser(outfileParser):
         # ------------------------------------------------
         #                   UHF COUPLED CLUSTER ITERATIONS
         # ------------------------------------------------
-        if 'HF COUPLED CLUSTER ITERATIONS' == line.strip()[1:]:
+        #
+        # or
+        #
+        # ----------------------------------------------------------
+        #                      OPEN-SHELL COUPLED CLUSTER ITERATIONS
+        # ----------------------------------------------------------
+        if 'HF COUPLED CLUSTER ITERATIONS' == line.strip()[1:] \
+        or 'OPEN-SHELL COUPLED CLUSTER ITERATIONS' == line.strip():
             self._extract_cc_properties(outfile, line)
         
         # -----------------------

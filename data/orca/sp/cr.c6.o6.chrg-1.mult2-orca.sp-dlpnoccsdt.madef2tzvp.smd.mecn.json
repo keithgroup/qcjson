@@ -1,0 +1,55 @@
+{
+    "schema_name": "qc_schema_output",
+    "schema_version": 1,
+    "qcjson_creator_version": "0.2.0",
+    "provenance": {
+        "creator": "ORCA",
+        "version": "4.2.0"
+    },
+    "molecule": {
+        "geometry": [[29.208409, 18.178336, -0.169447], [30.094099, 19.839526, -0.061397], [31.182236, 21.383666, 0.029616], [30.21492, 19.649766, 1.810731], [30.17818, 19.913199, -1.949395], [28.53355, 20.794743, 0.021321], [32.011266, 18.489014, -0.031986], [28.665412, 17.154893, -0.233564], [31.827561, 22.346445, 0.081416], [30.290265, 19.530104, 2.962416], [30.210334, 19.977239, -3.107355], [27.532304, 21.387692, 0.089193], [32.281327, 17.517269, 0.555016]],
+        "symbols": [ "C", "Cr", "C", "C", "C", "C", "C", "O", "O", "O", "O", "O", "O" ]
+    },
+    "molecular_charge": -1,
+    "molecular_multiplicity": 2,
+    "name": "cr.c6.o6.chrg-1.mult2-orca.sp-dlpnoccsdt.madef2tzvp.smd.mecn",
+    "atomic_numbers": [6, 24, 6, 6, 6, 6, 6, 8, 8, 8, 8, 8, 8],
+    "driver": "energy",
+    "return_result": -1723.148746656,
+    "model": {
+        "method": "DLPNO-CCSD(T)",
+        "basis": "ma-Def2-TZVP"
+    },
+    "keywords": {
+        "scf_convergence_tolerance": "Tight",
+        "frozen_core": false,
+        "implicit_solvent": "SMD",
+        "hf_type": "UHF",
+        "scf_grid_level": 5,
+        "solvent_name": "ACETONITRILE",
+        "final_grid_level": 5,
+        "other": [ "AutoAux" ]
+    },
+    "properties": {
+        "scf_total_energy": -1719.95337988,
+        "mp2_correlation_energy": -2.916722295,
+        "mp2_total_energy": -1722.865850831,
+        "ccsd_total_energy": -1722.994341618,
+        "t1_diagnostic": 0.020894224,
+        "ccsd(t)_total_energy": -1723.148746656,
+        "return_energy": -1723.148746656,
+        "calcinfo_nbasis": 469,
+        "calcinfo_nmo": 469,
+        "nuclear_repulsion_energy": 972.15341849,
+        "scf_one_electron_energy": -4315.15070166,
+        "scf_two_electron_energy": 1623.04390329,
+        "uhf_ideal_average_total_spin_squared": 0.75,
+        "uhf_calculated_average_total_spin_squared": 1.948701,
+        "cc_dipole_moment": [ -0.60033, 0.47995, -0.04857 ],
+        "alpha_homo_energy": -0.200697,
+        "alpha_homo_lumo_gap_energy": 0.223556,
+        "beta_homo_energy": -0.437452,
+        "beta_homo_lumo_gap_energy": 0.460049
+    },
+    "success": true
+}
