@@ -23,8 +23,9 @@
         },
         "keywords": {
             "scf_convergence_tolerance": "Tight",
-            "frozencore": true,
+            "frozen_core": true,
             "scf_grid_level": 2,
+            "frozen_electrons": 10,
             "final_grid_level": 2,
             "other": [  ]
         },
@@ -72,8 +73,9 @@
         },
         "keywords": {
             "scf_convergence_tolerance": "Tight",
-            "frozencore": true,
+            "frozen_core": true,
             "scf_grid_level": 2,
+            "frozen_electrons": 10,
             "final_grid_level": 2,
             "other": [  ]
         },
@@ -121,8 +123,9 @@
         },
         "keywords": {
             "scf_convergence_tolerance": "Tight",
-            "frozencore": true,
+            "frozen_core": true,
             "scf_grid_level": 2,
+            "frozen_electrons": 10,
             "final_grid_level": 2,
             "other": [  ]
         },
@@ -170,8 +173,9 @@
         },
         "keywords": {
             "scf_convergence_tolerance": "Tight",
-            "frozencore": true,
+            "frozen_core": true,
             "scf_grid_level": 2,
+            "frozen_electrons": 10,
             "final_grid_level": 2,
             "other": [  ]
         },
@@ -219,8 +223,9 @@
         },
         "keywords": {
             "scf_convergence_tolerance": "Tight",
-            "frozencore": true,
+            "frozen_core": true,
             "scf_grid_level": 2,
+            "frozen_electrons": 10,
             "final_grid_level": 2,
             "other": [  ]
         },
@@ -268,8 +273,9 @@
         },
         "keywords": {
             "scf_convergence_tolerance": "Tight",
-            "frozencore": true,
+            "frozen_core": true,
             "scf_grid_level": 2,
+            "frozen_electrons": 10,
             "final_grid_level": 2,
             "other": [  ]
         },
@@ -317,8 +323,9 @@
         },
         "keywords": {
             "scf_convergence_tolerance": "Tight",
-            "frozencore": true,
+            "frozen_core": true,
             "scf_grid_level": 2,
+            "frozen_electrons": 10,
             "final_grid_level": 2,
             "other": [  ]
         },
@@ -366,8 +373,9 @@
         },
         "keywords": {
             "scf_convergence_tolerance": "Tight",
-            "frozencore": true,
+            "frozen_core": true,
             "scf_grid_level": 2,
+            "frozen_electrons": 10,
             "final_grid_level": 2,
             "other": [  ]
         },
@@ -415,8 +423,9 @@
         },
         "keywords": {
             "scf_convergence_tolerance": "Tight",
-            "frozencore": true,
+            "frozen_core": true,
             "scf_grid_level": 2,
+            "frozen_electrons": 10,
             "final_grid_level": 2,
             "other": [  ]
         },
@@ -464,8 +473,9 @@
         },
         "keywords": {
             "scf_convergence_tolerance": "Tight",
-            "frozencore": true,
+            "frozen_core": true,
             "scf_grid_level": 2,
+            "frozen_electrons": 10,
             "final_grid_level": 2,
             "other": [  ]
         },
@@ -513,8 +523,9 @@
         },
         "keywords": {
             "scf_convergence_tolerance": "Tight",
-            "frozencore": true,
+            "frozen_core": true,
             "scf_grid_level": 2,
+            "frozen_electrons": 10,
             "final_grid_level": 2,
             "other": [  ]
         },
@@ -562,8 +573,9 @@
         },
         "keywords": {
             "scf_convergence_tolerance": "Tight",
-            "frozencore": true,
+            "frozen_core": true,
             "scf_grid_level": 2,
+            "frozen_electrons": 10,
             "final_grid_level": 2,
             "other": [  ]
         },
@@ -611,8 +623,9 @@
         },
         "keywords": {
             "scf_convergence_tolerance": "Tight",
-            "frozencore": true,
+            "frozen_core": true,
             "scf_grid_level": 2,
+            "frozen_electrons": 10,
             "final_grid_level": 2,
             "other": [  ]
         },
@@ -660,8 +673,9 @@
         },
         "keywords": {
             "scf_convergence_tolerance": "Tight",
-            "frozencore": true,
+            "frozen_core": true,
             "scf_grid_level": 2,
+            "frozen_electrons": 10,
             "final_grid_level": 2,
             "other": [  ]
         },
@@ -709,8 +723,9 @@
         },
         "keywords": {
             "scf_convergence_tolerance": "Tight",
-            "frozencore": true,
+            "frozen_core": true,
             "scf_grid_level": 2,
+            "frozen_electrons": 10,
             "final_grid_level": 2,
             "other": [  ]
         },
@@ -758,8 +773,9 @@
         },
         "keywords": {
             "scf_convergence_tolerance": "Tight",
-            "frozencore": true,
+            "frozen_core": true,
             "scf_grid_level": 2,
+            "frozen_electrons": 10,
             "final_grid_level": 2,
             "other": [  ]
         },
@@ -807,8 +823,9 @@
         },
         "keywords": {
             "scf_convergence_tolerance": "Tight",
-            "frozencore": true,
+            "frozen_core": true,
             "scf_grid_level": 2,
+            "frozen_electrons": 10,
             "final_grid_level": 2,
             "other": [  ]
         },
@@ -856,8 +873,9 @@
         },
         "keywords": {
             "scf_convergence_tolerance": "Tight",
-            "frozencore": true,
+            "frozen_core": true,
             "scf_grid_level": 2,
+            "frozen_electrons": 10,
             "final_grid_level": 2,
             "other": [  ]
         },
@@ -905,8 +923,9 @@
         },
         "keywords": {
             "scf_convergence_tolerance": "Tight",
-            "frozencore": true,
+            "frozen_core": true,
             "scf_grid_level": 2,
+            "frozen_electrons": 10,
             "final_grid_level": 2,
             "other": [  ]
         },
@@ -954,8 +973,9 @@
         },
         "keywords": {
             "scf_convergence_tolerance": "Tight",
-            "frozencore": true,
+            "frozen_core": true,
             "scf_grid_level": 2,
+            "frozen_electrons": 10,
             "final_grid_level": 2,
             "other": [  ]
         },
@@ -1003,8 +1023,9 @@
         },
         "keywords": {
             "scf_convergence_tolerance": "Tight",
-            "frozencore": true,
+            "frozen_core": true,
             "scf_grid_level": 2,
+            "frozen_electrons": 10,
             "final_grid_level": 2,
             "other": [  ]
         },
@@ -1052,8 +1073,9 @@
         },
         "keywords": {
             "scf_convergence_tolerance": "Tight",
-            "frozencore": true,
+            "frozen_core": true,
             "scf_grid_level": 2,
+            "frozen_electrons": 10,
             "final_grid_level": 2,
             "other": [  ]
         },
@@ -1101,8 +1123,9 @@
         },
         "keywords": {
             "scf_convergence_tolerance": "Tight",
-            "frozencore": true,
+            "frozen_core": true,
             "scf_grid_level": 2,
+            "frozen_electrons": 10,
             "final_grid_level": 2,
             "other": [  ]
         },
@@ -1150,8 +1173,9 @@
         },
         "keywords": {
             "scf_convergence_tolerance": "Tight",
-            "frozencore": true,
+            "frozen_core": true,
             "scf_grid_level": 2,
+            "frozen_electrons": 10,
             "final_grid_level": 2,
             "other": [  ]
         },
@@ -1199,8 +1223,9 @@
         },
         "keywords": {
             "scf_convergence_tolerance": "Tight",
-            "frozencore": true,
+            "frozen_core": true,
             "scf_grid_level": 2,
+            "frozen_electrons": 10,
             "final_grid_level": 2,
             "other": [  ]
         },
@@ -1248,8 +1273,9 @@
         },
         "keywords": {
             "scf_convergence_tolerance": "Tight",
-            "frozencore": true,
+            "frozen_core": true,
             "scf_grid_level": 2,
+            "frozen_electrons": 10,
             "final_grid_level": 2,
             "other": [  ]
         },
@@ -1297,8 +1323,9 @@
         },
         "keywords": {
             "scf_convergence_tolerance": "Tight",
-            "frozencore": true,
+            "frozen_core": true,
             "scf_grid_level": 2,
+            "frozen_electrons": 10,
             "final_grid_level": 2,
             "other": [  ]
         },
@@ -1346,8 +1373,9 @@
         },
         "keywords": {
             "scf_convergence_tolerance": "Tight",
-            "frozencore": true,
+            "frozen_core": true,
             "scf_grid_level": 2,
+            "frozen_electrons": 10,
             "final_grid_level": 2,
             "other": [  ]
         },
@@ -1395,8 +1423,9 @@
         },
         "keywords": {
             "scf_convergence_tolerance": "Tight",
-            "frozencore": true,
+            "frozen_core": true,
             "scf_grid_level": 2,
+            "frozen_electrons": 10,
             "final_grid_level": 2,
             "other": [  ]
         },
@@ -1444,8 +1473,9 @@
         },
         "keywords": {
             "scf_convergence_tolerance": "Tight",
-            "frozencore": true,
+            "frozen_core": true,
             "scf_grid_level": 2,
+            "frozen_electrons": 10,
             "final_grid_level": 2,
             "other": [  ]
         },
@@ -1493,8 +1523,9 @@
         },
         "keywords": {
             "scf_convergence_tolerance": "Tight",
-            "frozencore": true,
+            "frozen_core": true,
             "scf_grid_level": 2,
+            "frozen_electrons": 10,
             "final_grid_level": 2,
             "other": [  ]
         },
@@ -1542,8 +1573,9 @@
         },
         "keywords": {
             "scf_convergence_tolerance": "Tight",
-            "frozencore": true,
+            "frozen_core": true,
             "scf_grid_level": 2,
+            "frozen_electrons": 10,
             "final_grid_level": 2,
             "other": [  ]
         },
@@ -1591,8 +1623,9 @@
         },
         "keywords": {
             "scf_convergence_tolerance": "Tight",
-            "frozencore": true,
+            "frozen_core": true,
             "scf_grid_level": 2,
+            "frozen_electrons": 10,
             "final_grid_level": 2,
             "other": [  ]
         },
@@ -1640,8 +1673,9 @@
         },
         "keywords": {
             "scf_convergence_tolerance": "Tight",
-            "frozencore": true,
+            "frozen_core": true,
             "scf_grid_level": 2,
+            "frozen_electrons": 10,
             "final_grid_level": 2,
             "other": [  ]
         },
@@ -1689,8 +1723,9 @@
         },
         "keywords": {
             "scf_convergence_tolerance": "Tight",
-            "frozencore": true,
+            "frozen_core": true,
             "scf_grid_level": 2,
+            "frozen_electrons": 10,
             "final_grid_level": 2,
             "other": [  ]
         },
@@ -1738,8 +1773,9 @@
         },
         "keywords": {
             "scf_convergence_tolerance": "Tight",
-            "frozencore": true,
+            "frozen_core": true,
             "scf_grid_level": 2,
+            "frozen_electrons": 10,
             "final_grid_level": 2,
             "other": [  ]
         },
@@ -1787,8 +1823,9 @@
         },
         "keywords": {
             "scf_convergence_tolerance": "Tight",
-            "frozencore": true,
+            "frozen_core": true,
             "scf_grid_level": 2,
+            "frozen_electrons": 10,
             "final_grid_level": 2,
             "other": [  ]
         },
@@ -1836,8 +1873,9 @@
         },
         "keywords": {
             "scf_convergence_tolerance": "Tight",
-            "frozencore": true,
+            "frozen_core": true,
             "scf_grid_level": 2,
+            "frozen_electrons": 10,
             "final_grid_level": 2,
             "other": [  ]
         },
@@ -1885,8 +1923,9 @@
         },
         "keywords": {
             "scf_convergence_tolerance": "Tight",
-            "frozencore": true,
+            "frozen_core": true,
             "scf_grid_level": 2,
+            "frozen_electrons": 10,
             "final_grid_level": 2,
             "other": [  ]
         },
@@ -1934,8 +1973,9 @@
         },
         "keywords": {
             "scf_convergence_tolerance": "Tight",
-            "frozencore": true,
+            "frozen_core": true,
             "scf_grid_level": 2,
+            "frozen_electrons": 10,
             "final_grid_level": 2,
             "other": [  ]
         },
@@ -1983,8 +2023,9 @@
         },
         "keywords": {
             "scf_convergence_tolerance": "Tight",
-            "frozencore": true,
+            "frozen_core": true,
             "scf_grid_level": 2,
+            "frozen_electrons": 10,
             "final_grid_level": 2,
             "other": [  ]
         },
@@ -2032,8 +2073,9 @@
         },
         "keywords": {
             "scf_convergence_tolerance": "Tight",
-            "frozencore": true,
+            "frozen_core": true,
             "scf_grid_level": 2,
+            "frozen_electrons": 10,
             "final_grid_level": 2,
             "other": [  ]
         },
@@ -2081,8 +2123,9 @@
         },
         "keywords": {
             "scf_convergence_tolerance": "Tight",
-            "frozencore": true,
+            "frozen_core": true,
             "scf_grid_level": 2,
+            "frozen_electrons": 10,
             "final_grid_level": 2,
             "other": [  ]
         },
@@ -2130,8 +2173,9 @@
         },
         "keywords": {
             "scf_convergence_tolerance": "Tight",
-            "frozencore": true,
+            "frozen_core": true,
             "scf_grid_level": 2,
+            "frozen_electrons": 10,
             "final_grid_level": 2,
             "other": [  ]
         },
@@ -2179,8 +2223,9 @@
         },
         "keywords": {
             "scf_convergence_tolerance": "Tight",
-            "frozencore": true,
+            "frozen_core": true,
             "scf_grid_level": 2,
+            "frozen_electrons": 10,
             "final_grid_level": 2,
             "other": [  ]
         },
@@ -2228,8 +2273,9 @@
         },
         "keywords": {
             "scf_convergence_tolerance": "Tight",
-            "frozencore": true,
+            "frozen_core": true,
             "scf_grid_level": 2,
+            "frozen_electrons": 10,
             "final_grid_level": 2,
             "other": [  ]
         },
@@ -2277,8 +2323,9 @@
         },
         "keywords": {
             "scf_convergence_tolerance": "Tight",
-            "frozencore": true,
+            "frozen_core": true,
             "scf_grid_level": 2,
+            "frozen_electrons": 10,
             "final_grid_level": 2,
             "other": [  ]
         },
@@ -2326,8 +2373,9 @@
         },
         "keywords": {
             "scf_convergence_tolerance": "Tight",
-            "frozencore": true,
+            "frozen_core": true,
             "scf_grid_level": 2,
+            "frozen_electrons": 10,
             "final_grid_level": 2,
             "other": [  ]
         },
@@ -2375,8 +2423,9 @@
         },
         "keywords": {
             "scf_convergence_tolerance": "Tight",
-            "frozencore": true,
+            "frozen_core": true,
             "scf_grid_level": 2,
+            "frozen_electrons": 10,
             "final_grid_level": 2,
             "other": [  ]
         },
@@ -2424,8 +2473,9 @@
         },
         "keywords": {
             "scf_convergence_tolerance": "Tight",
-            "frozencore": true,
+            "frozen_core": true,
             "scf_grid_level": 2,
+            "frozen_electrons": 10,
             "final_grid_level": 2,
             "other": [  ]
         },
@@ -2473,8 +2523,9 @@
         },
         "keywords": {
             "scf_convergence_tolerance": "Tight",
-            "frozencore": true,
+            "frozen_core": true,
             "scf_grid_level": 2,
+            "frozen_electrons": 10,
             "final_grid_level": 2,
             "other": [  ]
         },
@@ -2522,8 +2573,9 @@
         },
         "keywords": {
             "scf_convergence_tolerance": "Tight",
-            "frozencore": true,
+            "frozen_core": true,
             "scf_grid_level": 2,
+            "frozen_electrons": 10,
             "final_grid_level": 2,
             "other": [  ]
         },
@@ -2571,8 +2623,9 @@
         },
         "keywords": {
             "scf_convergence_tolerance": "Tight",
-            "frozencore": true,
+            "frozen_core": true,
             "scf_grid_level": 2,
+            "frozen_electrons": 10,
             "final_grid_level": 2,
             "other": [  ]
         },
@@ -2620,8 +2673,9 @@
         },
         "keywords": {
             "scf_convergence_tolerance": "Tight",
-            "frozencore": true,
+            "frozen_core": true,
             "scf_grid_level": 2,
+            "frozen_electrons": 10,
             "final_grid_level": 2,
             "other": [  ]
         },
@@ -2669,8 +2723,9 @@
         },
         "keywords": {
             "scf_convergence_tolerance": "Tight",
-            "frozencore": true,
+            "frozen_core": true,
             "scf_grid_level": 2,
+            "frozen_electrons": 10,
             "final_grid_level": 2,
             "other": [  ]
         },
@@ -2718,8 +2773,9 @@
         },
         "keywords": {
             "scf_convergence_tolerance": "Tight",
-            "frozencore": true,
+            "frozen_core": true,
             "scf_grid_level": 2,
+            "frozen_electrons": 10,
             "final_grid_level": 2,
             "other": [  ]
         },
@@ -2767,8 +2823,9 @@
         },
         "keywords": {
             "scf_convergence_tolerance": "Tight",
-            "frozencore": true,
+            "frozen_core": true,
             "scf_grid_level": 2,
+            "frozen_electrons": 10,
             "final_grid_level": 2,
             "other": [  ]
         },
@@ -2816,8 +2873,9 @@
         },
         "keywords": {
             "scf_convergence_tolerance": "Tight",
-            "frozencore": true,
+            "frozen_core": true,
             "scf_grid_level": 2,
+            "frozen_electrons": 10,
             "final_grid_level": 2,
             "other": [  ]
         },
@@ -2865,8 +2923,9 @@
         },
         "keywords": {
             "scf_convergence_tolerance": "Tight",
-            "frozencore": true,
+            "frozen_core": true,
             "scf_grid_level": 2,
+            "frozen_electrons": 10,
             "final_grid_level": 2,
             "other": [  ]
         },
@@ -2914,8 +2973,9 @@
         },
         "keywords": {
             "scf_convergence_tolerance": "Tight",
-            "frozencore": true,
+            "frozen_core": true,
             "scf_grid_level": 2,
+            "frozen_electrons": 10,
             "final_grid_level": 2,
             "other": [  ]
         },
@@ -2963,8 +3023,9 @@
         },
         "keywords": {
             "scf_convergence_tolerance": "Tight",
-            "frozencore": true,
+            "frozen_core": true,
             "scf_grid_level": 2,
+            "frozen_electrons": 10,
             "final_grid_level": 2,
             "other": [  ]
         },
@@ -3012,8 +3073,9 @@
         },
         "keywords": {
             "scf_convergence_tolerance": "Tight",
-            "frozencore": true,
+            "frozen_core": true,
             "scf_grid_level": 2,
+            "frozen_electrons": 10,
             "final_grid_level": 2,
             "other": [  ]
         },
@@ -3061,8 +3123,9 @@
         },
         "keywords": {
             "scf_convergence_tolerance": "Tight",
-            "frozencore": true,
+            "frozen_core": true,
             "scf_grid_level": 2,
+            "frozen_electrons": 10,
             "final_grid_level": 2,
             "other": [  ]
         },
@@ -3110,8 +3173,9 @@
         },
         "keywords": {
             "scf_convergence_tolerance": "Tight",
-            "frozencore": true,
+            "frozen_core": true,
             "scf_grid_level": 2,
+            "frozen_electrons": 10,
             "final_grid_level": 2,
             "other": [  ]
         },
@@ -3159,8 +3223,9 @@
         },
         "keywords": {
             "scf_convergence_tolerance": "Tight",
-            "frozencore": true,
+            "frozen_core": true,
             "scf_grid_level": 2,
+            "frozen_electrons": 10,
             "final_grid_level": 2,
             "other": [  ]
         },
@@ -3208,8 +3273,9 @@
         },
         "keywords": {
             "scf_convergence_tolerance": "Tight",
-            "frozencore": true,
+            "frozen_core": true,
             "scf_grid_level": 2,
+            "frozen_electrons": 10,
             "final_grid_level": 2,
             "other": [  ]
         },
@@ -3257,8 +3323,9 @@
         },
         "keywords": {
             "scf_convergence_tolerance": "Tight",
-            "frozencore": true,
+            "frozen_core": true,
             "scf_grid_level": 2,
+            "frozen_electrons": 10,
             "final_grid_level": 2,
             "other": [  ]
         },
@@ -3306,8 +3373,9 @@
         },
         "keywords": {
             "scf_convergence_tolerance": "Tight",
-            "frozencore": true,
+            "frozen_core": true,
             "scf_grid_level": 2,
+            "frozen_electrons": 10,
             "final_grid_level": 2,
             "other": [  ]
         },
@@ -3355,8 +3423,9 @@
         },
         "keywords": {
             "scf_convergence_tolerance": "Tight",
-            "frozencore": true,
+            "frozen_core": true,
             "scf_grid_level": 2,
+            "frozen_electrons": 10,
             "final_grid_level": 2,
             "other": [  ]
         },
@@ -3404,8 +3473,9 @@
         },
         "keywords": {
             "scf_convergence_tolerance": "Tight",
-            "frozencore": true,
+            "frozen_core": true,
             "scf_grid_level": 2,
+            "frozen_electrons": 10,
             "final_grid_level": 2,
             "other": [  ]
         },
@@ -3453,8 +3523,9 @@
         },
         "keywords": {
             "scf_convergence_tolerance": "Tight",
-            "frozencore": true,
+            "frozen_core": true,
             "scf_grid_level": 2,
+            "frozen_electrons": 10,
             "final_grid_level": 2,
             "other": [  ]
         },
@@ -3502,8 +3573,9 @@
         },
         "keywords": {
             "scf_convergence_tolerance": "Tight",
-            "frozencore": true,
+            "frozen_core": true,
             "scf_grid_level": 2,
+            "frozen_electrons": 10,
             "final_grid_level": 2,
             "other": [  ]
         },
@@ -3551,8 +3623,9 @@
         },
         "keywords": {
             "scf_convergence_tolerance": "Tight",
-            "frozencore": true,
+            "frozen_core": true,
             "scf_grid_level": 2,
+            "frozen_electrons": 10,
             "final_grid_level": 2,
             "other": [  ]
         },
@@ -3600,8 +3673,9 @@
         },
         "keywords": {
             "scf_convergence_tolerance": "Tight",
-            "frozencore": true,
+            "frozen_core": true,
             "scf_grid_level": 2,
+            "frozen_electrons": 10,
             "final_grid_level": 2,
             "other": [  ]
         },
@@ -3649,8 +3723,9 @@
         },
         "keywords": {
             "scf_convergence_tolerance": "Tight",
-            "frozencore": true,
+            "frozen_core": true,
             "scf_grid_level": 2,
+            "frozen_electrons": 10,
             "final_grid_level": 2,
             "other": [  ]
         },
@@ -3698,8 +3773,9 @@
         },
         "keywords": {
             "scf_convergence_tolerance": "Tight",
-            "frozencore": true,
+            "frozen_core": true,
             "scf_grid_level": 2,
+            "frozen_electrons": 10,
             "final_grid_level": 2,
             "other": [  ]
         },
@@ -3747,8 +3823,9 @@
         },
         "keywords": {
             "scf_convergence_tolerance": "Tight",
-            "frozencore": true,
+            "frozen_core": true,
             "scf_grid_level": 2,
+            "frozen_electrons": 10,
             "final_grid_level": 2,
             "other": [  ]
         },
@@ -3796,8 +3873,9 @@
         },
         "keywords": {
             "scf_convergence_tolerance": "Tight",
-            "frozencore": true,
+            "frozen_core": true,
             "scf_grid_level": 2,
+            "frozen_electrons": 10,
             "final_grid_level": 2,
             "other": [  ]
         },
@@ -3845,8 +3923,9 @@
         },
         "keywords": {
             "scf_convergence_tolerance": "Tight",
-            "frozencore": true,
+            "frozen_core": true,
             "scf_grid_level": 2,
+            "frozen_electrons": 10,
             "final_grid_level": 2,
             "other": [  ]
         },
@@ -3894,8 +3973,9 @@
         },
         "keywords": {
             "scf_convergence_tolerance": "Tight",
-            "frozencore": true,
+            "frozen_core": true,
             "scf_grid_level": 2,
+            "frozen_electrons": 10,
             "final_grid_level": 2,
             "other": [  ]
         },
@@ -3943,8 +4023,9 @@
         },
         "keywords": {
             "scf_convergence_tolerance": "Tight",
-            "frozencore": true,
+            "frozen_core": true,
             "scf_grid_level": 2,
+            "frozen_electrons": 10,
             "final_grid_level": 2,
             "other": [  ]
         },
@@ -3992,8 +4073,9 @@
         },
         "keywords": {
             "scf_convergence_tolerance": "Tight",
-            "frozencore": true,
+            "frozen_core": true,
             "scf_grid_level": 2,
+            "frozen_electrons": 10,
             "final_grid_level": 2,
             "other": [  ]
         },
@@ -4041,8 +4123,9 @@
         },
         "keywords": {
             "scf_convergence_tolerance": "Tight",
-            "frozencore": true,
+            "frozen_core": true,
             "scf_grid_level": 2,
+            "frozen_electrons": 10,
             "final_grid_level": 2,
             "other": [  ]
         },
@@ -4090,8 +4173,9 @@
         },
         "keywords": {
             "scf_convergence_tolerance": "Tight",
-            "frozencore": true,
+            "frozen_core": true,
             "scf_grid_level": 2,
+            "frozen_electrons": 10,
             "final_grid_level": 2,
             "other": [  ]
         },
@@ -4139,8 +4223,9 @@
         },
         "keywords": {
             "scf_convergence_tolerance": "Tight",
-            "frozencore": true,
+            "frozen_core": true,
             "scf_grid_level": 2,
+            "frozen_electrons": 10,
             "final_grid_level": 2,
             "other": [  ]
         },
@@ -4188,8 +4273,9 @@
         },
         "keywords": {
             "scf_convergence_tolerance": "Tight",
-            "frozencore": true,
+            "frozen_core": true,
             "scf_grid_level": 2,
+            "frozen_electrons": 10,
             "final_grid_level": 2,
             "other": [  ]
         },
@@ -4237,8 +4323,9 @@
         },
         "keywords": {
             "scf_convergence_tolerance": "Tight",
-            "frozencore": true,
+            "frozen_core": true,
             "scf_grid_level": 2,
+            "frozen_electrons": 10,
             "final_grid_level": 2,
             "other": [  ]
         },
@@ -4286,8 +4373,9 @@
         },
         "keywords": {
             "scf_convergence_tolerance": "Tight",
-            "frozencore": true,
+            "frozen_core": true,
             "scf_grid_level": 2,
+            "frozen_electrons": 10,
             "final_grid_level": 2,
             "other": [  ]
         },
@@ -4335,8 +4423,9 @@
         },
         "keywords": {
             "scf_convergence_tolerance": "Tight",
-            "frozencore": true,
+            "frozen_core": true,
             "scf_grid_level": 2,
+            "frozen_electrons": 10,
             "final_grid_level": 2,
             "other": [  ]
         },
@@ -4384,8 +4473,9 @@
         },
         "keywords": {
             "scf_convergence_tolerance": "Tight",
-            "frozencore": true,
+            "frozen_core": true,
             "scf_grid_level": 2,
+            "frozen_electrons": 10,
             "final_grid_level": 2,
             "other": [  ]
         },
@@ -4433,8 +4523,9 @@
         },
         "keywords": {
             "scf_convergence_tolerance": "Tight",
-            "frozencore": true,
+            "frozen_core": true,
             "scf_grid_level": 2,
+            "frozen_electrons": 10,
             "final_grid_level": 2,
             "other": [  ]
         },
@@ -4482,8 +4573,9 @@
         },
         "keywords": {
             "scf_convergence_tolerance": "Tight",
-            "frozencore": true,
+            "frozen_core": true,
             "scf_grid_level": 2,
+            "frozen_electrons": 10,
             "final_grid_level": 2,
             "other": [  ]
         },
@@ -4531,8 +4623,9 @@
         },
         "keywords": {
             "scf_convergence_tolerance": "Tight",
-            "frozencore": true,
+            "frozen_core": true,
             "scf_grid_level": 2,
+            "frozen_electrons": 10,
             "final_grid_level": 2,
             "other": [  ]
         },
@@ -4580,8 +4673,9 @@
         },
         "keywords": {
             "scf_convergence_tolerance": "Tight",
-            "frozencore": true,
+            "frozen_core": true,
             "scf_grid_level": 2,
+            "frozen_electrons": 10,
             "final_grid_level": 2,
             "other": [  ]
         },
@@ -4629,8 +4723,9 @@
         },
         "keywords": {
             "scf_convergence_tolerance": "Tight",
-            "frozencore": true,
+            "frozen_core": true,
             "scf_grid_level": 2,
+            "frozen_electrons": 10,
             "final_grid_level": 2,
             "other": [  ]
         },
@@ -4678,8 +4773,9 @@
         },
         "keywords": {
             "scf_convergence_tolerance": "Tight",
-            "frozencore": true,
+            "frozen_core": true,
             "scf_grid_level": 2,
+            "frozen_electrons": 10,
             "final_grid_level": 2,
             "other": [  ]
         },
@@ -4727,8 +4823,9 @@
         },
         "keywords": {
             "scf_convergence_tolerance": "Tight",
-            "frozencore": true,
+            "frozen_core": true,
             "scf_grid_level": 2,
+            "frozen_electrons": 10,
             "final_grid_level": 2,
             "other": [  ]
         },
@@ -4776,8 +4873,9 @@
         },
         "keywords": {
             "scf_convergence_tolerance": "Tight",
-            "frozencore": true,
+            "frozen_core": true,
             "scf_grid_level": 2,
+            "frozen_electrons": 10,
             "final_grid_level": 2,
             "other": [  ]
         },
@@ -4825,8 +4923,9 @@
         },
         "keywords": {
             "scf_convergence_tolerance": "Tight",
-            "frozencore": true,
+            "frozen_core": true,
             "scf_grid_level": 2,
+            "frozen_electrons": 10,
             "final_grid_level": 2,
             "other": [  ]
         },
@@ -4874,8 +4973,9 @@
         },
         "keywords": {
             "scf_convergence_tolerance": "Tight",
-            "frozencore": true,
+            "frozen_core": true,
             "scf_grid_level": 2,
+            "frozen_electrons": 10,
             "final_grid_level": 2
         },
         "properties": {

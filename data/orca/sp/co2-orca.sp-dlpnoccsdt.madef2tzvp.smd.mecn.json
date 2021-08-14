@@ -22,7 +22,7 @@
     },
     "keywords": {
         "scf_convergence_tolerance": "Tight",
-        "frozencore": false,
+        "frozen_core": false,
         "implicit_solvent": "SMD",
         "scf_grid_level": 5,
         "solvent_name": "ACETONITRILE",

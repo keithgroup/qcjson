@@ -14,6 +14,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 - Fixed handling of errors in recursive QCJSON creator operations.
 - Fixed including and excluding keywords in paths.
+- More consistent information about frozen core electrons. Also changed
+  `'frozencore'` to ``'frozen_core'``.
 
 ## [0.2.0] 2021-02-09
 

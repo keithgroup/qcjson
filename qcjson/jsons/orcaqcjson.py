@@ -287,13 +287,13 @@ class orcaJSON(QCJSON):
                     break
             
             if kw_lower == 'frozencore':
-                keywords['frozencore'] = True
+                keywords['frozen_core'] = True
                 if kw not in _remove_keywords:
                     _remove_keywords.append(kw)
                 else:
                     break
             elif kw_lower == 'nofrozencore':
-                keywords['frozencore'] = False
+                keywords['frozen_core'] = False
                 if kw not in _remove_keywords:
                     _remove_keywords.append(kw)
                 else:
@@ -348,6 +348,11 @@ class orcaJSON(QCJSON):
                         continue
                     else:
                         data = data[iteration]
+                else:
+                    # Assumes we only have one iteration and a keyword that 
+                    # does not have more than one value per calculation.
+                    # One example is ``'frozen_electrons'``.
+                    data = data[iteration]
             keywords = {
                 **keywords, **{info: data}
             }

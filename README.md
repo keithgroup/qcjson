@@ -172,6 +172,8 @@ All custom keys are marked with a **\***.
       Note, this property is only included if true.
     - ``"dispersion"``**\***: str, if empirical dispersion corrections are used (with DFT), this specifies the method.
     - ``"final_grid_level"``**\***: int, specifies program-specific integration grid level for the final energy calculation.
+    - ``"frozen_core"``**\***: bool, if the core electrons are frozen.
+    - ``"frozen_electrons"``**\***: int, the number of frozen core electrons.
     - ``"implicit_solvent"``**\***: str, the implicit solvent model if used.
       For example, "SMD" or "CPCM".
       Note, this property is only included if included.

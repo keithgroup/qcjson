@@ -103,7 +103,14 @@ class orcaParser(outfileParser):
         #                         ORCA  MP2 
         # ----------------------------------------------------------
         if 'ORCA  MP2' == line.strip():
-            self._extract_mp_energies(outfile, line)
+            self._extract_mp_properties(outfile, line)
+
+        # Wavefunction type
+        # -----------------
+        # Correlation treatment                      ...      CCSD     
+        # Single excitations                         ... ON
+        if 'Wavefunction type' == line.strip():
+            self._extract_cc_method(outfile, line)
         
         # ------------------------------------------------
         #                   RHF COUPLED CLUSTER ITERATIONS
@@ -372,7 +379,7 @@ class orcaParser(outfileParser):
             float(line.split()[6])
         )
 
-    def _extract_mp_energies(self, outfile, line):
+    def _extract_mp_properties(self, outfile, line):
         """Moller-Plesset calculation properties.
 
         This is called directly after the ``'ORCA  MP2 '`` trigger, and 
@@ -390,6 +397,13 @@ class orcaParser(outfileParser):
             Parsed line from ``outfile``.
         """
         while '-     ORCA property calculations      *' != line.strip():
+            # Freezing NCore=10 chemical core electrons
+            if 'Freezing NCore=' == line.strip()[:15]:
+                if 'frozen_electrons' not in self.data['keywords'].keys():
+                    self.data['keywords']['frozen_electrons'] = []
+                frozen_electrons = int(line.split()[1][6:])
+                self.data['keywords']['frozen_electrons'].append(frozen_electrons)
+
             #  MP2 CORRELATION ENERGY   :     -3.132364939 Eh
             if 'MP2 CORRELATION ENERGY' in line:
                 if 'mp2_correlation_energy' not in self.data['properties'].keys():
@@ -402,6 +416,35 @@ class orcaParser(outfileParser):
                     float(line.split()[index])
                 )
                 break
+            
+            line = next(outfile)
+    
+    def _extract_cc_method(self, outfile, line):
+        """Coupled cluster method information.
+
+        Parameters
+        ----------
+        outfile : :obj:`io.TextIOWrapper`
+            Buffered text stream of the output file.
+        line : :obj:`str`
+            Parsed line from ``outfile``.
+        """
+        while 'Number of correlated electrons' != line.strip()[:30]:
+            # Frozen core treatment                      ... chemical core (0 el)
+            # or
+            # Frozen core treatment                      ... NO frozen core
+            if 'Frozen core treatment' == line.strip()[:21]:
+                if 'NO frozen core' == line.strip()[-14:]:
+                    self.data['keywords']['frozen_core'] = False
+                else:
+                    frozen_electrons = int(line.split()[6][1:])
+                    if frozen_electrons == 0:
+                        self.data['keywords']['frozen_core'] = False
+                    else:
+                        self.data['keywords']['frozen_core'] = True
+                        if 'frozen_electrons' not in self.data['keywords'].keys():
+                            self.data['keywords']['frozen_electrons'] = []
+                        self.data['keywords']['frozen_electrons'].append(frozen_electrons)
             
             line = next(outfile)
     

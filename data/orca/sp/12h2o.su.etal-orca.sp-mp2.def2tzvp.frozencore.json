@@ -23,6 +23,7 @@
     "keywords": {
         "scf_convergence_tolerance": "Tight",
         "scf_grid_level": 4,
+        "frozen_electrons": 24,
         "final_grid_level": 4,
         "frozen_core": true
     },

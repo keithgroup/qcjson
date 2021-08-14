@@ -23,6 +23,7 @@
         "keywords": {
             "scf_convergence_tolerance": "Tight",
             "scf_grid_level": 2,
+            "frozen_electrons": 8,
             "geo_rms_gradient_target": 0.0001,
             "geo_rms_gradient_value": 0.0037731736,
             "geo_max_gradient_target": 0.0003,
@@ -74,6 +75,7 @@
         "keywords": {
             "scf_convergence_tolerance": "Tight",
             "scf_grid_level": 2,
+            "frozen_electrons": 8,
             "geo_rms_gradient_target": 0.0001,
             "geo_rms_gradient_value": 0.000458502,
             "geo_max_gradient_target": 0.0003,
@@ -125,6 +127,7 @@
         "keywords": {
             "scf_convergence_tolerance": "Tight",
             "scf_grid_level": 2,
+            "frozen_electrons": 8,
             "geo_rms_gradient_target": 0.0001,
             "geo_rms_gradient_value": 0.0004419629,
             "geo_max_gradient_target": 0.0003,
@@ -176,6 +179,7 @@
         "keywords": {
             "scf_convergence_tolerance": "Tight",
             "scf_grid_level": 2,
+            "frozen_electrons": 8,
             "geo_rms_gradient_target": 0.0001,
             "geo_rms_gradient_value": 0.0002959325,
             "geo_max_gradient_target": 0.0003,
@@ -227,6 +231,7 @@
         "keywords": {
             "scf_convergence_tolerance": "Tight",
             "scf_grid_level": 2,
+            "frozen_electrons": 8,
             "geo_rms_gradient_target": 0.0001,
             "geo_rms_gradient_value": 0.0002005034,
             "geo_max_gradient_target": 0.0003,
@@ -278,6 +283,7 @@
         "keywords": {
             "scf_convergence_tolerance": "Tight",
             "scf_grid_level": 2,
+            "frozen_electrons": 8,
             "geo_rms_gradient_target": 0.0001,
             "geo_rms_gradient_value": 0.0001541695,
             "geo_max_gradient_target": 0.0003,
@@ -329,6 +335,7 @@
         "keywords": {
             "scf_convergence_tolerance": "Tight",
             "scf_grid_level": 2,
+            "frozen_electrons": 8,
             "geo_rms_gradient_target": 0.0001,
             "geo_rms_gradient_value": 0.0001162145,
             "geo_max_gradient_target": 0.0003,
@@ -380,6 +387,7 @@
         "keywords": {
             "scf_convergence_tolerance": "Tight",
             "scf_grid_level": 2,
+            "frozen_electrons": 8,
             "geo_rms_gradient_target": 0.0001,
             "geo_rms_gradient_value": 0.0001174564,
             "geo_max_gradient_target": 0.0003,
@@ -431,6 +439,7 @@
         "keywords": {
             "scf_convergence_tolerance": "Tight",
             "scf_grid_level": 2,
+            "frozen_electrons": 8,
             "geo_rms_gradient_target": 0.0001,
             "geo_rms_gradient_value": 0.0001165191,
             "geo_max_gradient_target": 0.0003,
@@ -482,6 +491,7 @@
         "keywords": {
             "scf_convergence_tolerance": "Tight",
             "scf_grid_level": 2,
+            "frozen_electrons": 8,
             "geo_rms_gradient_target": 0.0001,
             "geo_rms_gradient_value": 0.0001066249,
             "geo_max_gradient_target": 0.0003,
@@ -533,6 +543,7 @@
         "keywords": {
             "scf_convergence_tolerance": "Tight",
             "scf_grid_level": 2,
+            "frozen_electrons": 8,
             "geo_rms_gradient_target": 0.0001,
             "geo_rms_gradient_value": 8.00243e-05,
             "geo_max_gradient_target": 0.0003,
@@ -584,6 +595,7 @@
         "keywords": {
             "scf_convergence_tolerance": "Tight",
             "scf_grid_level": 2,
+            "frozen_electrons": 8,
             "geo_rms_gradient_target": 0.0001,
             "geo_rms_gradient_value": 4.64055e-05,
             "geo_max_gradient_target": 0.0003,
@@ -635,6 +647,7 @@
         "keywords": {
             "scf_convergence_tolerance": "Tight",
             "scf_grid_level": 2,
+            "frozen_electrons": 8,
             "geo_rms_gradient_target": 0.0001,
             "geo_rms_gradient_value": 3.05807e-05,
             "geo_max_gradient_target": 0.0003,
@@ -686,6 +699,7 @@
         "keywords": {
             "scf_convergence_tolerance": "Tight",
             "scf_grid_level": 2,
+            "frozen_electrons": 8,
             "geo_rms_gradient_target": 0.0001,
             "geo_max_gradient_target": 0.0003,
             "geo_rms_step_target": 0.002,
