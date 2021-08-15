@@ -22,11 +22,6 @@
 
 import os
 
-from qcjson import __version__ as qcjson_version
-from qcjson.utils import get_files
-from qcjson.utils import select_files
-from qcjson.utils import cclib_version_check
-
 from qcjson.jsons import orcaJSON
 from qcjson.jsons import xtbJSON
 
@@ -90,8 +85,8 @@ def qcjson_creator(output_file, save_dir, debug, prettify):
     if json_package in geom_splits:
         raise TypeError('This code needs to be used as geom_split')
     
-    out_json = json_package(output_file)
-    json_dict = out_json.get_json(debug=debug)
+    out_json = json_package(output_file, debug)
+    json_dict = out_json.get_json()
     if out_json.path not in out_json.error_files:
         if save_dir == './':
             abs_path = os.path.dirname(out_json.path)
@@ -130,8 +125,8 @@ def qcjson_creator_split(output_file, geom_file, save_dir, debug, prettify):
     """
     # pylint: disable=too-many-function-args
     json_package = identify_package(output_file)
-    out_json = json_package(output_file, geom_file)
-    json_dict = out_json.get_json(debug=debug)
+    out_json = json_package(output_file, geom_file, debug)
+    json_dict = out_json.get_json()
     if out_json.path not in out_json.error_files:
         if save_dir == './':
             abs_path = os.path.dirname(out_json.path)

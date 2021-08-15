@@ -55,10 +55,11 @@ class orcaJSON(QCJSON):
         Manually parse information from output file.
     """
 
-    def __init__(self, outfile_path):
+    def __init__(self, outfile_path, debug=False):
         super().__init__()
         self.cclib_data = None
         self.outfile_path = outfile_path
+        self.debug = debug
         self.parse_output()
     
     def parse_output(self):
@@ -72,17 +73,27 @@ class orcaJSON(QCJSON):
         self.path = os.path.abspath(self.outfile_path)
         self.name = '.'.join(filename_with_extension.split('.')[:-1])
 
-        # cclib parsed information.
-        self.cclib_data = cclib.io.ccread(self.outfile_path)
-        if self.cclib_data.atomcoords.shape[0] > 1:
-            self.multiple = True
-        elif self.cclib_data.atomcoords.shape[0] == 1:
-            self.multiple = False
-        
-        # Custom parsed information.
-        self.parser = orcaParser(self.path)
-        self.parser.parse()
-        self.parsed_data = self.parser.data
+        try:
+            # cclib parsed information.
+            self.cclib_data = cclib.io.ccread(self.outfile_path)
+            if self.cclib_data.atomcoords.shape[0] > 1:
+                self.multiple = True
+            elif self.cclib_data.atomcoords.shape[0] == 1:
+                self.multiple = False
+            
+            # Custom parsed information.
+            self.parser = orcaParser(self.path)
+            self.parser.parse()
+            self.parsed_data = self.parser.data
+        except Exception:
+            if self.debug:
+                raise
+            else:
+                # These functions and variables are in the qcjson-creator
+                # script.
+                global error_files
+                if self.path not in self.error_files:
+                    self.error_out(self.path, 'Uncaught exceptions.')
     
     def get_topology(self, iteration=-1):
         """A full description of the overall molecule its geometry, fragments,
@@ -632,7 +643,7 @@ class orcaJSON(QCJSON):
         }
         return provenance
     
-    def get_json(self, debug=False):
+    def get_json(self):
         """QCJSON of an ORCA output file.
 
         Calculations supported:
@@ -673,7 +684,7 @@ class orcaJSON(QCJSON):
                     else:
                         self._json = all_jsons
                 except Exception:
-                    if debug:
+                    if self.debug:
                         raise
                     else:
                         # These functions and variables are in the qcjson-creator

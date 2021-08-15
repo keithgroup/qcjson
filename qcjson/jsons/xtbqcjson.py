@@ -59,10 +59,11 @@ class xtbJSON(QCJSON):
         Manually parse information from output file.
     """
 
-    def __init__(self, outfile_path, geomfile_path):
+    def __init__(self, outfile_path, geomfile_path, debug=False):
         super().__init__()
         self.outfile_path = outfile_path
         self.geomfile_path = geomfile_path
+        self.debug = debug
         self.parse_output()
         self.method_type = None
     
@@ -278,7 +279,7 @@ class xtbJSON(QCJSON):
         }
         return provenance
     
-    def get_json(self, debug=False):
+    def get_json(self):
         """QCJSON of an ORCA output file.
 
         Calculations supported:
@@ -313,7 +314,7 @@ class xtbJSON(QCJSON):
                     else:
                         self._json = all_jsons
                 except Exception:
-                    if debug:
+                    if self.debug:
                         raise
                     else:
                         # These functions and variables are in the qcjson-creator
