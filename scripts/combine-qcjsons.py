@@ -24,29 +24,36 @@
 
 import os
 from functools import reduce
-import json
 import argparse
-from qcjson.creator import qcjson_creator
 
 from qcjson import __version__ as qcjson_version
 from qcjson.jsons.qcjson import QCJSON
 from qcjson.utils import read_json
 
-def combine_jsons(save_dir, nest_jsons):
+def dict_cleaner(data):
+    new_data = {}
+    for k, v in data.items():
+        if isinstance(v, dict):
+            v = dict_cleaner(v)
+        if not v in (u'', None, {}):
+            new_data[k] = v
+    return new_data
+
+def combine_jsons(json_dir, nest_jsons):
     """Writes a combined JSON file containing all files.
 
     Parameters
     ----------
-    save_dir : :obj:`str`
+    json_dir : :obj:`str`
         Path to directory where chemical JSON files will be saved.
     name : :obj:`str`
         File name for cumulative chemical JSON file.
     """
     all_json_dict = {}
 
-    start = save_dir.rfind(os.sep) + 1
+    start = json_dir.rfind(os.sep) + 1
     # Walks through every dir inside save_dir
-    for path, _, files in os.walk(save_dir):
+    for path, _, files in os.walk(json_dir):
 
         files = [i for i in files if '.json' in i]  # List of json files in current search dir.
         folders = path[start:].split(os.sep)  # List of the folders from the save dir to current search dir.
@@ -89,14 +96,8 @@ def combine_jsons(save_dir, nest_jsons):
             pass
     
     # Checks and removes empty dictionaries.
-    remove_keys = []
-    for key in all_json_dict.keys():
-        if len(all_json_dict[key]) == 0:
-            remove_keys.append(key)
-    
-    if len(remove_keys) != 0:
-        for key in remove_keys:
-            del all_json_dict[key]
+    all_json_dict = dict_cleaner(all_json_dict)
+
     return all_json_dict
 
 def main():
@@ -156,7 +157,7 @@ def main():
         looking_string += ', recursively'
     print(looking_string)
     
-    json_dict = combine_jsons(save_dir, args.nest_jsons)
+    json_dict = combine_jsons(json_dir, args.nest_jsons)
 
     qcjson = QCJSON()
     qcjson.write(args.name, json_dict, save_dir, prettify=args.prettify)
