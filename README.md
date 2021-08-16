@@ -15,6 +15,8 @@ This repository contains scripts for the creation and use of Quantum Chemistry J
   - [qcjson-creator](#qcjson-creator)
     - [qcjson-creator options](#qcjson-creator-options)
     - [qcjson-creator examples](#qcjson-creator-examples)
+  - [combine-qcjsons](#combine-qcjsons)
+    - [combine-qcjsons options](#combine-qcjsons-options)
 - [QCJSON Format](#qcjson-format)
   - [Keys](#keys)
 - [Units](#units)
@@ -139,6 +141,27 @@ Here are the example calculations provided in the `data/xtb` directory.
 - `5h2o.example-xtb.opt-gfn2.out`: An optimization using GFN2-xTB.
 - `5h2o.example.xtb-xtb.md-gfn2.md`: A NVT molecular dynamics simulation using GFN2-xTB with no pre-optimization.
 
+### combine-qcjsons
+
+Python script that combines JSON files into a single JSON.
+Useful for aggregating many calculations into a single JSON file.
+
+#### combine-qcjsons options
+
+- `-r`, `--recursive`: Recursively find output files to make QCJSONs.
+- `-o`, `--overwrite`: Overwrite JSON file if it already exists.
+- `-p`, `--prettify`: Indent JSON properties.
+- `-n`, `--name`: Name of the combined JSON file.
+  Defaults to 'combined'.
+- `--nest_jsons`: Nest a single JSON file under a directory key if there is only one JSON.
+  The default behavior assumes that each calculation (and respective JSON) is in its own directory.
+  When the script encounters this situation, it will add the JSON file at the same level as the directory instead of nested under the directory.
+  For example, suppose you have a file `./cl/cl.ccsdt/cl.ccsdt.anopvtz.json` with no other json files in `./cl/cl.ccsdt/`.
+  With the default script behavior you would access `cl.ccsdt.anopvtz.json` by using `['cl']['cl.ccsdt.anopvtz']`.
+  With `--nest_jsons`, you would have to use `['cl']['cl.ccsdt']['cl.ccsdt.anopvtz']`.
+- `--save_dir`: Path to directory to store JSON files; for example, `--save_dir json_dir`.
+  Defaults to the current directory.
+
 ## QCJSON Format
 
 Custom modifications are made to [QCSchema](https://github.com/MolSSI/QCSchema) to meet the immediate needs of our research.
@@ -146,13 +169,14 @@ Custom modifications are made to [QCSchema](https://github.com/MolSSI/QCSchema) 
 - [QCSchema](https://github.com/MolSSI/QCSchema) does not support multiple configurations in a single JSON file: one file per structure and calculation.
   This is inherently incompatible with geometry optimizations, trajectories, or any other iterative procedure.
   At of the time of writing (2021-02-09), there has been no consensus of how to manage these files.
-  Our immediate solution is to list each [QCSchema](https://github.com/MolSSI/QCSchema) inside a list (i.e., [ { }, { }, { }, ... ] ).
+
+  Our immediate solution is to have lists of each [QCSchema](https://github.com/MolSSI/QCSchema) (i.e., [ { }, { }, { }, ... ] ).
   Furthermore, only iterations that have the same topology are supported (no checks are provided).
 - Other information with keywords not defined in the [QCSchema](https://github.com/MolSSI/QCSchema).
 
 ### Keys
 
-Here are definitions of all [QCSchema](https://github.com/MolSSI/QCSchema) and custom keys used in this script.
+Here are definitions of all [QCSchema](https://github.com/MolSSI/QCSchema) and custom keys used in this package.
 Not all QCJSONs will have every key all the time; some are method dependent like the frozen core approximation.
 All custom keys are marked with a **\***.
 

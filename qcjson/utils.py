@@ -273,7 +273,7 @@ def read_json(json_path):
         Contents of JSON file.
     """
     with open(json_path, 'r') as reader:
-        json_dict = json.loads(reader.readline())
+        json_dict = json.load(reader)
     
     return json_dict
 
