@@ -14,6 +14,7 @@
     "molecular_multiplicity": 2,
     "name": "cr.c6.o6.chrg-1.mult2-orca.sp-dlpnoccsdt.madef2tzvp.smd.mecn",
     "atomic_numbers": [6, 24, 6, 6, 6, 6, 6, 8, 8, 8, 8, 8, 8],
+    "n_electrons": 109,
     "driver": "energy",
     "return_result": -1723.148746656,
     "model": {

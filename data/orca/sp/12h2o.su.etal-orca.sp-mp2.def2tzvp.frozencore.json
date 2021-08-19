@@ -14,6 +14,7 @@
     "molecular_multiplicity": 1,
     "name": "12h2o.su.etal-orca.sp-mp2.def2tzvp.frozencore",
     "atomic_numbers": [8, 1, 1, 8, 1, 1, 8, 1, 1, 8, 1, 1, 8, 1, 1, 8, 1, 1, 8, 1, 1, 8, 1, 1, 8, 1, 1, 8, 1, 1, 8, 1, 1, 8, 1, 1],
+    "n_electrons": 120,
     "driver": "energy",
     "return_result": -915.963620092,
     "model": {

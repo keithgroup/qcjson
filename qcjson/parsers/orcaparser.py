@@ -563,6 +563,13 @@ class orcaParser(outfileParser):
                     line = next(outfile)
                 hf_type = line.split()[4]
                 self.data['keywords']['hf_type'] = hf_type
+            
+            #  Number of Electrons    NEL             ....    3
+            if 'Number of Electrons' == line.strip()[:19]:
+                if 'n_electrons' not in self.data.keys():
+                    self.data['n_electrons'] = []
+                n_electrons = int(line.split()[5])
+                self.data['n_electrons'].append(n_electrons)
 
             #  RI-approximation to the Coulomb term is turned on
             if 'RI-approximation to the Coulomb term is turned on' in line:

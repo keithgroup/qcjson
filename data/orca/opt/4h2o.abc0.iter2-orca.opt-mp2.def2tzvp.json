@@ -15,6 +15,7 @@
         "molecular_multiplicity": 1,
         "name": "4h2o.abc0.iter2-orca.opt-mp2.def2tzvp",
         "atomic_numbers": [8, 1, 1, 8, 1, 1, 8, 1, 1, 8, 1, 1],
+        "n_electrons": 40,
         "driver": "optimization",
         "model": {
             "method": "MP2",
@@ -68,6 +69,7 @@
         "molecular_multiplicity": 1,
         "name": "4h2o.abc0.iter2-orca.opt-mp2.def2tzvp",
         "atomic_numbers": [8, 1, 1, 8, 1, 1, 8, 1, 1, 8, 1, 1],
+        "n_electrons": 40,
         "driver": "optimization",
         "model": {
             "method": "MP2",
@@ -121,6 +123,7 @@
         "molecular_multiplicity": 1,
         "name": "4h2o.abc0.iter2-orca.opt-mp2.def2tzvp",
         "atomic_numbers": [8, 1, 1, 8, 1, 1, 8, 1, 1, 8, 1, 1],
+        "n_electrons": 40,
         "driver": "optimization",
         "model": {
             "method": "MP2",
@@ -174,6 +177,7 @@
         "molecular_multiplicity": 1,
         "name": "4h2o.abc0.iter2-orca.opt-mp2.def2tzvp",
         "atomic_numbers": [8, 1, 1, 8, 1, 1, 8, 1, 1, 8, 1, 1],
+        "n_electrons": 40,
         "driver": "optimization",
         "model": {
             "method": "MP2",
@@ -227,6 +231,7 @@
         "molecular_multiplicity": 1,
         "name": "4h2o.abc0.iter2-orca.opt-mp2.def2tzvp",
         "atomic_numbers": [8, 1, 1, 8, 1, 1, 8, 1, 1, 8, 1, 1],
+        "n_electrons": 40,
         "driver": "optimization",
         "model": {
             "method": "MP2",
@@ -280,6 +285,7 @@
         "molecular_multiplicity": 1,
         "name": "4h2o.abc0.iter2-orca.opt-mp2.def2tzvp",
         "atomic_numbers": [8, 1, 1, 8, 1, 1, 8, 1, 1, 8, 1, 1],
+        "n_electrons": 40,
         "driver": "optimization",
         "model": {
             "method": "MP2",
@@ -333,6 +339,7 @@
         "molecular_multiplicity": 1,
         "name": "4h2o.abc0.iter2-orca.opt-mp2.def2tzvp",
         "atomic_numbers": [8, 1, 1, 8, 1, 1, 8, 1, 1, 8, 1, 1],
+        "n_electrons": 40,
         "driver": "optimization",
         "model": {
             "method": "MP2",
@@ -386,6 +393,7 @@
         "molecular_multiplicity": 1,
         "name": "4h2o.abc0.iter2-orca.opt-mp2.def2tzvp",
         "atomic_numbers": [8, 1, 1, 8, 1, 1, 8, 1, 1, 8, 1, 1],
+        "n_electrons": 40,
         "driver": "optimization",
         "model": {
             "method": "MP2",
@@ -439,6 +447,7 @@
         "molecular_multiplicity": 1,
         "name": "4h2o.abc0.iter2-orca.opt-mp2.def2tzvp",
         "atomic_numbers": [8, 1, 1, 8, 1, 1, 8, 1, 1, 8, 1, 1],
+        "n_electrons": 40,
         "driver": "optimization",
         "model": {
             "method": "MP2",
@@ -492,6 +501,7 @@
         "molecular_multiplicity": 1,
         "name": "4h2o.abc0.iter2-orca.opt-mp2.def2tzvp",
         "atomic_numbers": [8, 1, 1, 8, 1, 1, 8, 1, 1, 8, 1, 1],
+        "n_electrons": 40,
         "driver": "optimization",
         "model": {
             "method": "MP2",
@@ -545,6 +555,7 @@
         "molecular_multiplicity": 1,
         "name": "4h2o.abc0.iter2-orca.opt-mp2.def2tzvp",
         "atomic_numbers": [8, 1, 1, 8, 1, 1, 8, 1, 1, 8, 1, 1],
+        "n_electrons": 40,
         "driver": "optimization",
         "model": {
             "method": "MP2",
@@ -598,6 +609,7 @@
         "molecular_multiplicity": 1,
         "name": "4h2o.abc0.iter2-orca.opt-mp2.def2tzvp",
         "atomic_numbers": [8, 1, 1, 8, 1, 1, 8, 1, 1, 8, 1, 1],
+        "n_electrons": 40,
         "driver": "optimization",
         "model": {
             "method": "MP2",
@@ -651,6 +663,7 @@
         "molecular_multiplicity": 1,
         "name": "4h2o.abc0.iter2-orca.opt-mp2.def2tzvp",
         "atomic_numbers": [8, 1, 1, 8, 1, 1, 8, 1, 1, 8, 1, 1],
+        "n_electrons": 40,
         "driver": "optimization",
         "model": {
             "method": "MP2",
@@ -704,6 +717,7 @@
         "molecular_multiplicity": 1,
         "name": "4h2o.abc0.iter2-orca.opt-mp2.def2tzvp",
         "atomic_numbers": [8, 1, 1, 8, 1, 1, 8, 1, 1, 8, 1, 1],
+        "n_electrons": 40,
         "driver": "optimization",
         "model": {
             "method": "MP2",

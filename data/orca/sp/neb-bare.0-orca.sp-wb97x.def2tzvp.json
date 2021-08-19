@@ -14,6 +14,7 @@
     "molecular_multiplicity": 1,
     "name": "neb-bare.0-orca.sp-wb97x.def2tzvp",
     "atomic_numbers": [5, 6, 1, 1, 1, 1, 8, 8, 8, 1, 1],
+    "n_electrons": 42,
     "driver": "energy",
     "return_result": -292.490475649,
     "model": {

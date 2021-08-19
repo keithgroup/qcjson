@@ -136,8 +136,16 @@ class orcaJSON(QCJSON):
                 'molecular_charge': self.cclib_data.charge,
                 'molecular_multiplicity': self.cclib_data.mult,
                 'name': self.name,
-                'atomic_numbers': self.cclib_data.atomnos
+                'atomic_numbers': self.cclib_data.atomnos,
             }
+
+            # Handles n_electrons for optimizations (only has two values).
+            if iteration >= len(self.parsed_data['n_electrons']):
+                n_electrons = self.parsed_data['n_electrons'][0]
+            else:
+                n_electrons = self.parsed_data['n_electrons'][iteration]
+            topology['n_electrons'] = n_electrons
+
         except:
             raise ValueError('Topology data not succussfully parsed.')
         return topology

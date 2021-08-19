@@ -11,6 +11,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Support for coupled cluster calculations. (ORCA)
 - Track Hartree&ndash;Fock type for ab initio methods. (ORCA)
 - A script to combine JSON files recursively.
+- Adds `n_electrons` to JSON files. (ORCA)
 
 ### Changed
 

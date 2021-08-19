@@ -221,9 +221,10 @@ All custom keys are marked with a **\***.
 - ``"molecule"``: dict, a full description of the overall molecule(s) (e.g., its geometry, fragments, and charges).
     - ``"geometry"``: list [[float, float, float], [float, float, float], ...], vector of XYZ coordinates of the atoms of length equal to the number of atoms.
     - ``"symbols"``: list [str, str, ...], atom symbols in title case (e.g., "H" and "Na").
-- ``"molecular_charge"``: int, the overall charge of the molecule.
-- ``"molecular_multiplicity"``: int, the overall multiplicity of the molecule.
-- ``"name"``: str, desired name of the molecule or system (currently is just the file name).
+- ``"molecular_charge"``: int, the overall charge of the system.
+- ``"molecular_multiplicity"``: int, the overall multiplicity of the system.
+- ``"name"``: str, desired name of the system (currently is just the file name).
+- ``"n_electrons"``**\***: int, the total number of electrons of the system.
 - ``"properties"``: dict, a list of valid quantum chemistry properties tracked by the schema.
     - ``"alpha_homo_energy"``**\***: float, highest occupied molecular orbital energy of the alpha electron.
     - ``"alpha_homo_lumo_gap_energy"``**\***: float, energy difference between lowest unoccupied and highest occupied molecule orbital of the alpha electron.

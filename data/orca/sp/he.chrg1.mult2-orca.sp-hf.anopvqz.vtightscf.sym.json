@@ -14,6 +14,7 @@
     "molecular_multiplicity": 2,
     "name": "he.chrg1.mult2-orca.sp-hf.anopvqz.vtightscf.sym",
     "atomic_numbers": [2],
+    "n_electrons": 1,
     "driver": "energy",
     "return_result": -1.99976116,
     "model": {

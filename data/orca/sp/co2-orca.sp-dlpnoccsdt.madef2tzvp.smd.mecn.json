@@ -14,6 +14,7 @@
     "molecular_multiplicity": 1,
     "name": "co2-orca.sp-dlpnoccsdt.madef2tzvp.smd.mecn",
     "atomic_numbers": [6, 8, 8],
+    "n_electrons": 22,
     "driver": "energy",
     "return_result": -188.393098128,
     "model": {
