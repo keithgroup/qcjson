@@ -1,0 +1,49 @@
+{
+    "schema_name": "qc_schema_output",
+    "schema_version": 1,
+    "qcjson_creator_version": "0.2.0",
+    "provenance": {
+        "creator": "ORCA",
+        "version": "4.2.0"
+    },
+    "molecule": {
+        "geometry": [[0.0, 0.0, 0.0]],
+        "symbols": [ "Na" ]
+    },
+    "molecular_charge": 1,
+    "molecular_multiplicity": 1,
+    "name": "na.chrg1.mult1-orca.sp.esp-wb97mv.anopvqz.vtightscf",
+    "atomic_numbers": [11],
+    "n_electrons": 10,
+    "driver": "energy",
+    "return_result": -162.07645926,
+    "model": {
+        "method": "wB97M-V",
+        "basis": "ano-pVQZ"
+    },
+    "keywords": {
+        "scf_convergence_tolerance": "VeryTight",
+        "scf_grid_level": 2,
+        "final_grid_level": 4,
+        "other": [ "KeepDens" ]
+    },
+    "properties": {
+        "scf_total_energy": -162.07645926,
+        "scf_iterations": 9,
+        "scf_dipole_moment": [ 0.0, 0.0, 0.0 ],
+        "return_energy": -162.07645926,
+        "calcinfo_nbasis": 32,
+        "calcinfo_nmo": 32,
+        "nuclear_repulsion_energy": 0.0,
+        "scf_one_electron_energy": -224.76948499,
+        "scf_two_electron_energy": 62.69302573,
+        "scf_xc_energy": -10.789802201792,
+        "mulliken_charges": [ 1.0 ],
+        "loewdin_charges": [ 1.0 ],
+        "alpha_homo_energy": -1.556154,
+        "alpha_homo_lumo_gap_energy": 1.338983,
+        "beta_homo_energy": -1.556154,
+        "beta_homo_lumo_gap_energy": 1.338983
+    },
+    "success": true
+}

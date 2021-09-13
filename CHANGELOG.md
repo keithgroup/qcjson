@@ -20,6 +20,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - More consistent information about frozen core electrons. Also changed
   `'frozencore'` to ``'frozen_core'``.
 - Parsing errors will not stop qcjson-creator.py if debug is False.
+- UHF spin contamination correctly parsed for DFT methods. (ORCA)
+- Adding missing &omega;B97M-V and &omega;B97M-D3BJ functionals. (ORCA)
 
 ## [0.2.0] 2021-02-09
 

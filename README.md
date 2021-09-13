@@ -113,6 +113,8 @@ ORCA calculation examples descriptions.
 - `he.chrg1.mult2-orca.sp-hf.anopvqz.vtightscf.sym.out`: A UHF/ano-pVQZ calculation on He<sup>+</sup>.
 - `he.chrg0.mult1-orca.sp-ccsd.anopvqz.vtightscf.sym.out`: A CCSD/ano-pVQZ calculation on He.
 - `li.chrg0.mult2-orca.sp-ccsdt.anopvqz.vtightscf.sym.out`: A CCSD(T)/ano-pVQZ calculation on Li.
+- `na.chrg1.mult1-orca.sp.esp-wb97mv.anopvqz.vtightscf.out`: &omega;B97M-V/ano-pVQZ calculation on Na<sup>+</sup>.
+- `na.chrg1.mult3-orca.sp.esp-wb97mv.anopvqz.vtightscf.out`: &omega;B97M-V/ano-pVQZ calculation on excited Na<sup>+</sup>.
 - `neb-bare.0-orca.sp-bp86.def2svp.out`: A single-point energy calculation using BP86-D3BJ/def2-TZVP.
 - `neb-bare.0-orca.sp-bp86.def2tzvp.smd.out`: A single-point energy calculation using BP86-D3BJ/def2-TZVP with a water implicit solvent model (SMD).
 - `neb-bare.0-orca.sp-wb97x.def2tzvp.out`: A single-point energy calculation using &omega;B97X-D3BJ/def2-TZVP.

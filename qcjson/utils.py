@@ -65,7 +65,8 @@ methods = {
             'lc-blyp', 'b2plyp', 'b2plyp-d', 'b2plyp-d3', 'mpw2plpy',
             'mpw2plyp-d', 'b2gp-plyp', 'b2k-plyp', 'b2t-plyp', 'pwpb95',
             'dsd-blyp', 'dsd-pbep86', 'dsd-pbep95', 'wb2plyp', 'wb2gp-plyp',
-            'b97-d3', 'b97-d', 'bnull', 'bvwn', 'gp', 'opbe', 'pwp1', 'b97'
+            'b97-d3', 'b97-d', 'bnull', 'bvwn', 'gp', 'opbe', 'pwp1', 'b97',
+            'wb97m-v', 'wb97m-d3bj'
         ],
         'moller-plesset': [
             'mp2', 'ri-mp2', 'scs-mp2', 'ri-scs-mp2', 'oo-ri-mp2',

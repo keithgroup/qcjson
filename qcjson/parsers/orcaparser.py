@@ -370,6 +370,9 @@ class orcaParser(outfileParser):
         """
         for _ in range(0, 3):
             line = next(outfile)
+        if line.strip() == 'Warning: in a DFT calculation there is little theoretical justification to':
+            for _ in range(0, 4):
+                line = next(outfile)
         
         if 'uhf_ideal_average_total_spin_squared' not in self.data['properties'].keys():
             self.data['properties']['uhf_ideal_average_total_spin_squared'] = []

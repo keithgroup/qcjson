@@ -1,0 +1,49 @@
+{
+    "schema_name": "qc_schema_output",
+    "schema_version": 1,
+    "qcjson_creator_version": "0.2.0",
+    "provenance": {
+        "creator": "ORCA",
+        "version": "4.2.0"
+    },
+    "molecule": {
+        "geometry": [[0.0, 0.0, 0.0]],
+        "symbols": [ "Na" ]
+    },
+    "molecular_charge": 1,
+    "molecular_multiplicity": 3,
+    "name": "na.chrg1.mult3-orca.sp.esp-wb97mv.anopvqz.vtightscf",
+    "atomic_numbers": [11],
+    "n_electrons": 10,
+    "driver": "energy",
+    "return_result": -160.80260969,
+    "model": {
+        "method": "wB97M-V",
+        "basis": "ano-pVQZ"
+    },
+    "keywords": {
+        "scf_convergence_tolerance": "VeryTight",
+        "scf_grid_level": 2,
+        "final_grid_level": 4,
+        "other": [ "KeepDens" ]
+    },
+    "properties": {
+        "scf_total_energy": -160.80260969,
+        "scf_iterations": 16,
+        "scf_dipole_moment": [ 0.0, -0.0, -0.0 ],
+        "return_energy": -160.80260969,
+        "calcinfo_nbasis": 32,
+        "calcinfo_nmo": 32,
+        "nuclear_repulsion_energy": 0.0,
+        "scf_one_electron_energy": -217.99555605,
+        "scf_two_electron_energy": 57.19294635,
+        "scf_xc_energy": -10.344089993141,
+        "uhf_ideal_average_total_spin_squared": 2.0,
+        "uhf_calculated_average_total_spin_squared": 2.000849,
+        "alpha_homo_energy": -0.482087,
+        "alpha_homo_lumo_gap_energy": 0.918741,
+        "beta_homo_energy": -2.084857,
+        "beta_homo_lumo_gap_energy": 0.324684
+    },
+    "success": true
+}
