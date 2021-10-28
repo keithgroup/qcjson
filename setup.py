@@ -38,4 +38,5 @@ setup(
     url='https://github.com/keithgroup/qcjson',
     version='0.2.0',
     zip_safe=False,
+    scripts=['scripts/combine-qcjsons.py', 'scripts/qcjson-creator.py']
 )

@@ -47,11 +47,8 @@ Python 3 with the following packages:
 
    ```text
    cd qcjson
-   pip3 install --user .
+   pip install . --user
    ```
-
-3. Add scripts to your path to use them from anywhere (optional).
-   For example, if you cloned the repository in your home directory on Linux you would add `export PATH="$HOME/qcjson/scripts:$PATH"` to your ~/.bashrc file.
 
 ## Scripts
 
