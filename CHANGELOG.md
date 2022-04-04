@@ -4,6 +4,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+## [0.3.0] 2022-04-04
+
 ### Added
 
 - Support for xtb optimizations, single-point energies, and molecular dynamics. (xtb)
@@ -22,6 +24,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Parsing errors will not stop qcjson-creator.py if debug is False.
 - UHF spin contamination correctly parsed for DFT methods. (ORCA)
 - Adding missing &omega;B97M-V and &omega;B97M-D3BJ functionals. (ORCA)
+
+### Removed
+
+- Examples and support for parsing CCSD(T) calculations using ORCA. There is
+a cclib (v1.7.1) error when parsing these output files.
 
 ## [0.2.0] 2021-02-09
 

@@ -78,20 +78,23 @@ For example, this is how to create QCJSONs for all of the examples in the `orca`
 
 ```text
 $ qcjson-creator.py -rop .
-QCJSON creator v0.2.0
+QCJSON creator v0.3.0
 Written by Alex M. Maldonado (@aalexmmaldonado)
 Energies and distances are Hartrees and Angstroms
 
-Looking for output files in ./, recursively
-Found 11 output files
+Looking for output files in data/orca/, recursively
+Found 14 output files
 
-Making QCJSON for 12h2o.su.etal-orca.sp-mp2.def2tzvp.frozencore
-Making QCJSON for neb-bare.0-orca.sp-bp86.def2tzvp.smd
-Making QCJSON for li.chrg0.mult2-orca.sp-ccsdt.anopvqz.vtightscf.sym
-Making QCJSON for he.chrg0.mult1-orca.sp-ccsd.anopvqz.vtightscf.sym
-Making QCJSON for he.chrg1.mult2-orca.sp-hf.anopvqz.vtightscf.sym
 Making QCJSON for neb-bare.0-orca.sp-wb97x.def2tzvp
+Making QCJSON for neb-bare.0-orca.sp-bp86.def2tzvp.smd
+Making QCJSON for he.chrg1.mult2-orca.sp-hf.anopvqz.vtightscf.sym
+Making QCJSON for na.chrg1.mult3-orca.sp.esp-wb97mv.anopvqz.vtightscf
+Making QCJSON for cr.c6.o6.chrg-1.mult2-orca.sp-dlpnoccsdt.madef2tzvp.smd.mecn
 Making QCJSON for neb-bare.0-orca.sp-bp86.def2svp
+Making QCJSON for na.chrg1.mult1-orca.sp.esp-wb97mv.anopvqz.vtightscf
+Making QCJSON for co2-orca.sp-dlpnoccsdt.madef2tzvp.smd.mecn
+Making QCJSON for he.chrg0.mult1-orca.sp-ccsd.anopvqz.vtightscf.sym
+Making QCJSON for 12h2o.su.etal-orca.sp-mp2.def2tzvp.frozencore
 Making QCJSON for alo3h3.h2o-orca.freq-bp86.def2svp.cpcm
 Making QCJSON for alo4h5-orca.freq-bp86.def2svp
 Making QCJSON for 5h2o.abc0.iter1.mp2.md.300k.iter1.mol0,1,2,3,4-orca.engrad-mp2.def2tzvp
@@ -109,7 +112,6 @@ ORCA calculation examples descriptions.
 - `alo4h5-orca.freq-bp86.def2svp.out`: An analytical frequency calculation with zero imaginary frequencies.
 - `he.chrg1.mult2-orca.sp-hf.anopvqz.vtightscf.sym.out`: A UHF/ano-pVQZ calculation on He<sup>+</sup>.
 - `he.chrg0.mult1-orca.sp-ccsd.anopvqz.vtightscf.sym.out`: A CCSD/ano-pVQZ calculation on He.
-- `li.chrg0.mult2-orca.sp-ccsdt.anopvqz.vtightscf.sym.out`: A CCSD(T)/ano-pVQZ calculation on Li.
 - `na.chrg1.mult1-orca.sp.esp-wb97mv.anopvqz.vtightscf.out`: &omega;B97M-V/ano-pVQZ calculation on Na<sup>+</sup>.
 - `na.chrg1.mult3-orca.sp.esp-wb97mv.anopvqz.vtightscf.out`: &omega;B97M-V/ano-pVQZ calculation on excited Na<sup>+</sup>.
 - `neb-bare.0-orca.sp-bp86.def2svp.out`: A single-point energy calculation using BP86-D3BJ/def2-TZVP.
@@ -124,7 +126,7 @@ Here is an example used to create a QCJSON for an xtb optimization.
 
 ```text
 $ qcjson-creator.py -opd 5h2o.example-xtb.opt-gfn2.out --geom_split 5h2o.example-xtb.opt-gfn2.log
-QCJSON creator v0.2.0
+QCJSON creator v0.3.0
 Written by Alex M. Maldonado (@aalexmmaldonado)
 Energies and distances are Hartrees and Angstroms
 

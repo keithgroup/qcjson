@@ -1,7 +1,7 @@
 {
     "schema_name": "qc_schema_output",
     "schema_version": 1,
-    "qcjson_creator_version": "0.2.0",
+    "qcjson_creator_version": "0.3.0",
     "provenance": {
         "creator": "ORCA",
         "version": "4.2.0"
