@@ -1,3 +1,5 @@
+**Note:** qcjson is no longer actively developed or maintained. The main developer (Alex Maldonado) has created [reptar](https://github.com/aalexmmaldonado/reptar) as a more robust computational chemistry parser and data management framework.
+
 # qcjson
 
 Reproducibility is a cornerstone of science, and computational chemistry is no different.
